@@ -1,0 +1,322 @@
+.header
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px
+    &__control
+        display: flex
+        align-items: center
+        padding: 5px 0
+    
+.section
+    &__list
+        display: flex
+        align-items: center
+    &__item
+        &--active
+            .section__link
+                background: $light-yellow-color
+    &__item + &__item
+        margin-left: 10px
+    &__link
+        padding: 10px 20px
+        font-family: $sfui-medium
+        font-size: 12px
+        font-weight: 500
+        text-transform: uppercase
+        &:hover,
+        &:focus
+            background: $light-grey-color
+        &:focus
+            outline: none
+
+.icons
+    &__list
+        display: flex
+        align-items: center
+    &__item + &__item
+        margin-left: 10px
+    &__link
+        display: block
+        width: 24px
+        height: 24px
+        font-size: 0
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
+.personal-area
+    margin-left: 10px
+
+.nav
+    &__list
+        display: flex
+        align-items: center
+    &__link
+        padding: 5px
+        text-transform: uppercase
+        &:hover
+            text-decoration: underline
+
+.submenu
+    display: none
+    &--active
+        display: block
+    &__item
+        border-top: 1px solid $light-grey-color
+    &__link
+        padding: 15px 10px 15px 25px
+        width: 100%
+        font-size: 12px
+        text-transform: uppercase
+
+.header-brand
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    &__list
+        display: flex
+        align-items: center
+        &--sm
+            .header-brand__item + .header-brand__item
+                margin-left: 10px
+    &__item + &__item
+        margin-left: 22px
+    &__link
+        padding: 5px
+        font-family: $sfui-bold
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        &:hover
+            background: $light-grey-color
+
+.hamburger
+    display: inline-block
+    position: relative
+    padding: 0
+    margin: 0
+    min-width: 16px
+    height: 16px
+    font-size: 0
+    text-align: center
+    background: none
+    border: none
+    cursor: pointer
+    &:focus
+        outline: none
+    &--active
+        z-index: 1002
+        .hamburger__inner
+            &:first-child
+                top: 7px
+                transform: rotate(45deg)
+            &:nth-child(2)
+                width: 0
+                opacity: 0
+            &:last-child
+                top: 7px
+                transform: rotate(-45deg)
+    &__inner
+        display: block
+        position: absolute
+        width: 100%
+        height: 1px
+        background: $primary-color
+        transition: all 0.5s ease-in-out
+        &:first-child
+            top: 2px
+        &:nth-child(2)
+            top: 7px
+        &:last-child
+            top: 12px
+
+// MEDIA QUARIES
+@media (min-width: 1024px)
+    .header
+        &__wrapper--top
+            padding: 35px 10px
+        &__wrapper--middle
+            padding: 16px 10px
+    .section
+        &--mobile
+            display: none
+    .nav
+        &__item--accent
+            .nav__link
+                font-family: $sfui-bold
+                font-weight: bold
+        &__item + &__item
+            margin-left: 10px
+        &__link
+            font-family: $sfui-medium
+            font-size: 10px
+            font-weight: 500
+    .hamburger,
+    .mobile-menu
+        display: none
+
+@media (min-width: 1024px) and (max-width: 1099px)
+    .header-brand
+        &__list + &__list
+            display: none
+
+@media (max-width: 1023px)
+    .header
+        &__wrapper--middle
+            display: none
+    .mobile-menu
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1001
+        transform-origin: left top
+        transform: scale(0)
+        overflow: hidden
+        visibility: hidden
+        width: 270px
+        height: 100%
+        opacity: 0
+        background: $white-color
+        transition: all 0.5s ease-in-out
+        &--open
+            transform: scale(1)
+            visibility: visible
+            opacity: 1
+        &__top
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 16px 10px 10px 36px
+            width: 100%
+        &__content
+            width: 100%
+            height: 100%
+            overflow-y: scroll
+        &__contacts
+            padding: 25px 0
+            width: 100%
+        &__phone
+            display: block
+            font-family: $sfui-medium
+            font-size: 18px
+            font-weight: 500
+            text-align: center
+        &__list
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 10px
+            margin-top: 25px
+        &__link
+            font-size: 12px
+            &::before
+                content: ''
+                display: inline-block
+                margin-top: -1px
+                margin-right: 5px
+                width: 12px
+                height: 12px
+                vertical-align: middle
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+            &--instagram
+                &::before
+                    background-image: url(../img/dist/sprite.svg#icon-instagram)
+            &--telegram
+                &::before
+                    background-image: url(../img/dist/sprite.svg#icon-telegram)
+            &--facebook
+                &::before
+                    background-image: url(../img/dist/sprite.svg#icon-facebook)
+    .logotype
+        max-width: 129px
+    .nav
+        width: 100%
+        &__list
+            flex-direction: column
+            align-items: flex-start
+            border-bottom: 1px solid $light-grey-color
+        &__item
+            width: 100%
+            &--accent
+                .nav__link
+                    font-family: $sfui-medium
+                    font-weight: 500
+        &__item + &__item
+            border-top: 1px solid $light-grey-color
+        &__link
+            padding: 15px 10px
+            width: 100%
+            font-family: $sfui-regular
+            font-size: 12px
+            font-weight: normal
+            &--dropdown
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 50%
+                    right: 10px
+                    transform: translateY(-50%)
+                    display: inline-block
+                    width: 12px
+                    height: 10px
+                    background-image: url(../img/dist/sprite.svg#icon-dropdown-arrow)
+                    background-repeat: no-repeat
+                    background-size: cover
+                    background-position: center center
+                    transition: transform 0.25s
+            &--active
+                &::after
+                    transform: translateY(-50%) rotate(-90deg)
+    .section
+        width: 100%
+        &--desktop
+            display: none
+        &__list
+            justify-content: space-between
+        &__item
+            width: 100%
+            &--active
+                .section__link
+                    border: 1px solid transparent
+        &__item + &__item
+            margin-left: 0
+        &__link
+            padding: 10px
+            width: 100%
+            text-align: center
+            border: 1px solid $light-grey-color
+    .icons
+        &__item + &__item
+            margin-left: 25px
+        &__item
+            &:last-child
+                display: none
+        &__link
+            width: 16px
+            height: 16px
+    .personal-area
+        display: none
+    .header-brand
+        &__item + &__item
+            margin-left: 8px
+
+@media (max-width: 767px)
+    .header
+        &__wrapper--bottom
+            display: none
+    .logotype
+        margin-left: 25px
+        margin-right: auto
+    .mobile-menu
+        &__top
+            .logotype
+                margin-left: auto

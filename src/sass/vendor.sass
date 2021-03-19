@@ -1,0 +1,17 @@
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl1, $furl2, $furl3)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+        src: local($fname), url($furl1) format('woff2'), url($furl2) format('woff'), url($furl3) format('embedded-opentype')
+
+@include font('SFUIDisplay-Regular', normal, 400, '../fonts/SFUIDisplay/SFUIDisplay-Regular.woff2', '../fonts/SFUIDisplay/SFUIDisplay-Regular.woff', '../fonts/SFUIDisplay/SFUIDisplay-Regular.eot')
+@include font('SFUIDisplay-Medium', normal, 500, '../fonts/SFUIDisplay/SFUIDisplay-Medium.woff2', '../fonts/SFUIDisplay/SFUIDisplay-Medium.woff', '../fonts/SFUIDisplay/SFUIDisplay-Medium.eot')
+@include font('SFUIDisplay-Semibold', normal, 600, '../fonts/SFUIDisplay/SFUIDisplay-Semibold.woff2', '../fonts/SFUIDisplay/SFUIDisplay-Semibold.woff', '../fonts/SFUIDisplay/SFUIDisplay-Semibold.eot')
+@include font('SFUIDisplay-Bold', normal, 700, '../fonts/SFUIDisplay/SFUIDisplay-Bold.woff2', '../fonts/SFUIDisplay/SFUIDisplay-Bold.woff', '../fonts/SFUIDisplay/SFUIDisplay-Bold.eot')
+@include font('SFUIDisplay-Heavy', normal, 900, '../fonts/SFUIDisplay/SFUIDisplay-Heavy.woff2', '../fonts/SFUIDisplay/SFUIDisplay-Heavy.woff', '../fonts/SFUIDisplay/SFUIDisplay-Heavy.eot')
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection

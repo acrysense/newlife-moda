@@ -1,0 +1,91 @@
+// VARIABLES SECTION
+$sfui-regular: 'SFUIDisplay-Regular', sans-serif // SF UI Display font-family
+$sfui-medium: 'SFUIDisplay-Medium', sans-serif // SF UI Display font-family
+$sfui-semibold: 'SFUIDisplay-Semibold', sans-serif // SF UI Display font-family
+$sfui-bold: 'SFUIDisplay-Bold', sans-serif // SF UI Display font-family
+$sfui-heavy: 'SFUIDisplay-Heavy', sans-serif // SF UI Display font-family
+$primary-font-size: 14px // Body font-size
+$primary-color: #000000 // Primary color
+$white-color: #FFFFFF // White color
+$light-yellow-color: #FCF7F1 // Light yellow color
+$light-grey-color: #F7F7F7 // Light grey color
+
+// COMMON DOCUMENT STYLES
+body
+    position: relative
+    overflow-x: hidden
+    font-family: $sfui-regular
+    color: $primary-color
+    line-height: 1.2
+
+ul,
+ol,
+li
+    display: block
+    padding: 0
+    margin: 0
+    list-style: none
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+
+p
+    margin: 0
+
+a
+    display: inline-block
+    color: inherit
+    transition: all 0.5s
+    &:hover
+        color: inherit
+        text-decoration: none
+
+img
+    max-width: 100%
+
+svg path,
+    transition: fill 0.5s, stroke 0.5s
+
+// COMMON FOR PAGE ˆ
+.scroll-disabled
+    overflow: hidden
+
+.container
+    margin: 0 auto
+    max-width: 1200px
+
+.link
+    padding: 10px 20px
+    font-family: $sfui-medium
+    font-size: 12px
+    font-weight: 500
+    text-transform: uppercase
+    &:hover,
+    &:focus
+        background: $light-grey-color
+    &:focus
+        outline: none
+    &--bg
+        background: $light-yellow-color
+
+.overlay
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background: rgba($primary-color, 0.75)
+    transition: all 0.5s ease-in-out
+    &--active
+        opacity: 1
+        visibility: visible
+
+// MEDIA QUARIES
+@media (min-width: 1200px)
+    .container
+        padding: 0 15px
