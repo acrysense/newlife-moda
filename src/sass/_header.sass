@@ -8,6 +8,10 @@
         display: flex
         align-items: center
         padding: 5px 0
+
+.logotype
+    img
+        width: 100%
     
 .section
     &__list
@@ -17,6 +21,9 @@
         &--active
             .section__link
                 background: $light-yellow-color
+                &:hover,
+                &:focus
+                    background: $light-grey-hover-color
     &__item + &__item
         margin-left: 10px
     &__link
@@ -24,6 +31,7 @@
         font-family: $sfui-medium
         font-size: 12px
         font-weight: 500
+        letter-spacing: 1px
         text-transform: uppercase
         &:hover,
         &:focus
@@ -55,6 +63,7 @@
         align-items: center
     &__link
         padding: 5px
+        letter-spacing: 1px
         text-transform: uppercase
         &:hover
             text-decoration: underline
@@ -152,7 +161,7 @@
             margin-left: 10px
         &__link
             font-family: $sfui-medium
-            font-size: 10px
+            font-size: 11px
             font-weight: 500
     .hamburger,
     .mobile-menu
@@ -160,8 +169,8 @@
 
 @media (min-width: 1024px) and (max-width: 1099px)
     .header-brand
-        &__list + &__list
-            display: none
+        &__item + &__item
+            margin-left: 10px
 
 @media (max-width: 1023px)
     .header
@@ -193,11 +202,20 @@
             width: 100%
             height: 100%
             overflow-y: scroll
+        &__search
+            margin: 10px
+            width: calc(100% - 20px)
         &__contacts
             padding: 25px 0
             width: 100%
+        &__appraisal
+            display: block
+            width: fit-content
+            margin: 0 auto
+            text-align: center
         &__phone
             display: block
+            margin-top: 25px
             font-family: $sfui-medium
             font-size: 18px
             font-weight: 500
@@ -281,12 +299,16 @@
             width: 100%
             &--active
                 .section__link
+                    font-family: $sfui-medium
+                    font-weight: 500
                     border: 1px solid transparent
         &__item + &__item
             margin-left: 0
         &__link
             padding: 10px
             width: 100%
+            font-family: $sfui-regular
+            font-weight: normal
             text-align: center
             border: 1px solid $light-grey-color
     .icons

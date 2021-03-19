@@ -7,8 +7,10 @@ $sfui-heavy: 'SFUIDisplay-Heavy', sans-serif // SF UI Display font-family
 $primary-font-size: 14px // Body font-size
 $primary-color: #000000 // Primary color
 $white-color: #FFFFFF // White color
+$accent-yellow-color: #FFF596 // Accent yellow color
 $light-yellow-color: #FCF7F1 // Light yellow color
 $light-grey-color: #F7F7F7 // Light grey color
+$light-grey-hover-color: #FDFBF8 // Light grey hover color
 
 // COMMON DOCUMENT STYLES
 body
@@ -59,6 +61,7 @@ svg path,
     font-family: $sfui-medium
     font-size: 12px
     font-weight: 500
+    letter-spacing: 1px
     text-transform: uppercase
     &:hover,
     &:focus
@@ -67,6 +70,14 @@ svg path,
         outline: none
     &--bg
         background: $light-yellow-color
+        &:hover,
+        &:focus
+            background: $light-grey-hover-color
+    &--accent-bg
+        background: $accent-yellow-color
+        &:hover,
+        &:focus
+            background: $light-grey-hover-color
 
 .overlay
     opacity: 0
@@ -84,6 +95,16 @@ svg path,
     &--active
         opacity: 1
         visibility: visible
+
+.input
+    padding: 10px
+    font-family: $sfui-medium
+    font-size: 12px
+    font-weight: 500
+    text-align: center
+    background: $light-grey-color
+    border: 0
+    appearance: none
 
 // MEDIA QUARIES
 @media (min-width: 1200px)
