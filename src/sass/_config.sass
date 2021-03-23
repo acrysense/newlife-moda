@@ -1,22 +1,25 @@
 // VARIABLES SECTION
-$sfui-regular: 'SF UI Display', sans-serif // SF UI Display font-family
-$sfui-medium: 'SF UI Display', sans-serif // SF UI Display font-family
-$sfui-semibold: 'SF UI Display', sans-serif // SF UI Display font-family
-$sfui-bold: 'SF UID isplay', sans-serif // SF UI Display font-family
-$sfui-heavy: 'SF UI Display', sans-serif // SF UI Display font-family
+$sfuidisplay: 'SF UI Display', sans-serif // SF UI Display font-family
+$cormorant: 'Cormorant', serif // Cormorant font-family
 $primary-font-size: 14px // Body font-size
 $primary-color: #000000 // Primary color
 $white-color: #FFFFFF // White color
+$background-color: #FBFBFB // Background color
+$alabaster-color: #F7F7F7 // Alabaster color
 $accent-yellow-color: #FFF596 // Accent yellow color
 $light-yellow-color: #FCF7F1 // Light yellow color
 $light-grey-color: #F7F7F7 // Light grey color
 $light-grey-hover-color: #FDFBF8 // Light grey hover color
+$dark-gray-color: #979797 // Dark gray color
+$gray-color: #E0E0E0 // Gray color
+$light-gray-color: #DDDDDD // Light gray color
+$boulder-color: #767676 // Boulder color
 
 // COMMON DOCUMENT STYLES
 body
     position: relative
     overflow-x: hidden
-    font-family: $sfui-regular
+    font-family: $sfuidisplay
     color: $primary-color
     line-height: 1.2
 
@@ -58,16 +61,14 @@ svg path,
 
 .link
     padding: 10px 20px
-    font-family: $sfui-medium
     font-size: 12px
     font-weight: 500
     letter-spacing: 1px
+    text-align: center
     text-transform: uppercase
     &:hover,
     &:focus
         background: $light-grey-color
-    &:focus
-        outline: none
     &--bg
         background: $light-yellow-color
         &:hover,
@@ -78,6 +79,24 @@ svg path,
         &:hover,
         &:focus
             background: $light-grey-hover-color
+    &--lg
+        padding: 15px 25px
+
+.btn
+    padding: 14px
+    font-size: 12px
+    font-weight: 600
+    letter-spacing: 2px
+    text-align: center
+    text-transform: uppercase
+    color: $white-color
+    background: $primary-color
+    border: 1px solid transparent
+    transition: color 0.5s, background 0.5s, border 0.5s
+    &:hover
+        color: $primary-color
+        background: $white-color
+        border: 1px solid $primary-color
 
 .overlay
     opacity: 0
@@ -96,15 +115,24 @@ svg path,
         opacity: 1
         visibility: visible
 
-.input
-    padding: 10px
-    font-family: $sfui-medium
-    font-size: 12px
-    font-weight: 500
+.input-shell
+    position: relative
+    margin: 10px
+    width: 100%
+    &__input
+        padding: 10px
+        font-size: 12px
+        font-weight: 500
+        text-align: center
+        background: $light-grey-color
+        border: 0
+        appearance: none
+
+.section-heading
+    font-family: $cormorant
+    font-size: 36px
+    font-weight: normal
     text-align: center
-    background: $light-grey-color
-    border: 0
-    appearance: none
 
 // MEDIA QUARIES
 @media (min-width: 1200px)

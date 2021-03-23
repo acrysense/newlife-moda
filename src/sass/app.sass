@@ -1,6 +1,436 @@
 @import "config" // Always at the beginning
 @import "header"
+@import "breadcrumb"
 
-//
+// CONTENT
+.content
+    margin: 40px 0
+
+// SOCIAL
+.social
+    &--gray
+        .social
+            &__item + .social__item
+                margin-left: 14px
+            &__link
+                color: #767676
+                &--instagram
+                    &::before
+                        background-image: url(../img/dist/sprite.svg#icon-instagram-grey)
+                &--telegram
+                    &::before
+                        background-image: url(../img/dist/sprite.svg#icon-telegram-grey)
+                &--facebook
+                    &::before
+                        background-image: url(../img/dist/sprite.svg#icon-facebook-grey)
+    &__list
+        display: flex
+        align-items: center
+        padding: 10px
+        margin-top: 25px
+        &--space-between
+            justify-content: space-between
+    &__link
+        font-size: 12px
+        &::before
+            content: ''
+            display: inline-block
+            margin-top: -1px
+            margin-right: 5px
+            width: 12px
+            height: 12px
+            vertical-align: middle
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+        &--instagram
+            &::before
+                background-image: url(../img/dist/sprite.svg#icon-instagram)
+        &--telegram
+            &::before
+                background-image: url(../img/dist/sprite.svg#icon-telegram)
+        &--facebook
+            &::before
+                background-image: url(../img/dist/sprite.svg#icon-facebook)
+
+// PRODUCT
+.product
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &__copyright
+        padding: 10px 0
+        margin: 10px 0 10px auto
+        max-width: 545px
+        width: 100%
+        font-size: 9px
+        text-align: center
+        color: $dark-gray-color
+        border-bottom: 1px solid $gray-color
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin-top: 25px
+        &--center
+            align-items: center
+        &--wrap
+            flex-wrap: wrap
+    &__block
+        width: calc(100% - 88px)
+        &--full
+            margin-bottom: 25px
+            width: 100%
+    &__status
+        display: inline-block
+        padding: 5px 15px
+        font-family: $cormorant
+        font-size: 18px
+        font-weight: 500
+        background: $light-yellow-color
+    &__name
+        font-family: $cormorant
+        font-size: 48px
+        font-weight: normal
+    &__description
+        font-size: 18px
+        font-weight: 300
+        color: $dark-gray-color
+    &__id
+        padding: 10px 8px
+        font-size: 12px
+        font-weight: 500
+        color: $white-color
+        background: $primary-color
+        span
+            margin-left: 2px
+    &__price
+        font-size: 24px
+        font-weight: bold
+        &--new,
+        &--old
+            display: inline-block
+        &--old
+            margin-left: 8px
+            text-decoration: line-through
+            color: $light-gray-color
+    &__help
+        display: block
+        margin-top: 5px
+        font-size: 12px
+        color: $dark-gray-color
+    &__info
+        display: block
+        font-size: 14px
+        font-weight: 300
+        text-decoration: underline
+        &:hover
+            text-decoration: underline
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 5px
+            width: 14px
+            height: 14px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#icon-info)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__info--route
+        &::before
+            background-image: url(../img/dist/sprite.svg#icon-route)
+    &__btn
+        width: 100%
+    &__reserve
+        margin-left: 10px
+        margin-right: 10px
+    &__title
+        font-size: 18px
+        font-weight: normal
+    &__location
+        margin-top: 50px
+    &__address
+        display: block
+        margin-top: 15px
+        font-size: 14px
+        color: $boulder-color
+    &__address + &__info
+        margin-top: 15px
+    &__more
+        padding: 10px
+        margin-top: 15px
+        width: 100%
+        background: $alabaster-color
+        &--yellow
+            background: $light-yellow-color
+    &__text
+        display: block
+        font-size: 14px
+        &:first-child
+            padding: 4px 0
+            &::after
+                content: ''
+                display: inline-block
+                margin-left: 10px
+                width: 12px
+                height: 12px
+                vertical-align: middle
+                background-image: url(../img/dist/sprite.svg#icon-info)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+    &__text + &__text
+        margin-top: 10px
+    &__inner
+        margin-top: 25px
+        &--delimiter
+            margin-top: 35px
+            padding-top: 35px
+            border-top: 1px solid $gray-color
+    &__trigger
+        padding: 0
+        font-size: 18px
+        font-weight: normal
+        background: transparent
+        border: 0
+        &::after
+            content: ''
+            display: inline-block
+            margin-left: 10px
+            width: 10px
+            height: 10px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#icon-dropdown-arrow)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            transform: rotate(90deg)
+            transition: transform 0.25s
+    &__content
+        margin-top: 50px
+        &--flex
+            display: flex
+            flex-wrap: wrap
+            .product__group
+                width: 50%
+                &:nth-child(2)
+                    margin-top: 0
+    &__group + &__group
+        margin-top: 25px
+    &__group + &__more
+        margin-top: 50px
+    &__subtitle,
+    &__subdescription
+        display: block
+        font-size: 14px
+    &__subdescription
+        margin-top: 10px
+        color: $boulder-color
+        a
+            font-weight: 500
+            text-decoration: underline
+    &__item
+        display: flex
+        align-items: center
+        font-size: 14px
+        color: $boulder-color
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 6px
+            min-width: 6px
+            min-height: 6px
+            max-width: 6px
+            max-height: 6px
+            background: $boulder-color
+            border-radius: 50%
+    &__item + &__item
+        margin-top: 10px
+
+.product__pagination
+    position: absolute
+    left: 15px
+    bottom: 15px
+    z-index: 1
+
+.product__slider
+    position: relative
+    display: flex
+    .gallery-thumbs
+        overflow: hidden
+        margin-right: 50px
+        height: 415px
+        flex-shrink: 0
+        width: 75px
+    .gallery-thumbs .swiper-slide
+        width: 75px
+        height: 75px
+    .swiper-img
+        position: relative
+        overflow: hidden
+        img
+            width: 75px
+            height: 75px
+            object-fit: cover
+    .gallery-main
+        overflow: hidden
+        width: 100%
+        height: 100%
+        &:hover
+            .swiper-buttons
+                opacity: 1
+    .swiper-pagination
+        display: flex
+        align-items: center
+    .swiper-pagination-bullet
+        display: block
+        width: 5px
+        height: 5px
+        background: $dark-gray-color
+        border-radius: 50%
+        transition: background 0.5s
+    .swiper-pagination-bullet + .swiper-pagination-bullet
+        margin-left: 7px
+    .swiper-pagination-bullet-active
+        background: $primary-color
+
+.down-payment
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px
+    width: 100%
+    background: $background-color
+    &__text
+        font-size: 14px
+    &__img
+        margin-left: 10px
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 6px
+            width: 12px
+            height: 12px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#icon-info-grey)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center center
+
+.state
+    margin-top: 25px
+    width: 100%
+    &__list
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            width: 100%
+            height: 1px
+            background: $gray-color
+    &__item
+        position: relative
+        padding: 14px 0 8px
+        font-size: 14px
+        color: $dark-gray-color
+        &--current
+            color: $primary-color
+            &::before
+                content: ''
+                position: absolute
+                top: -20px
+                left: 50%
+                transform: translate(-50%, 50%)
+                width: 2px
+                height: 20px
+                background: $primary-color
+
+// PRODUCT SLIDER
+.products-slider
+    padding-bottom: 100px
+    &__item
+        padding: 10px
+        margin: 0 auto
+        max-width: 220px
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__status
+        display: inline-block
+        padding: 2.5px 20px
+        font-family: $cormorant
+        font-size: 16px
+        font-weight: 500
+        background: $light-yellow-color
+    &__img
+        margin-top: 10px
+        text-align: center
+    &__info
+        margin-top: 10px
+        text-align: center
+    &__title
+        font-family: $cormorant
+        font-size: 24px
+        font-weight: normal
+    &__description
+        font-size: 14px
+        font-weight: 300
+        color: $dark-gray-color
+    &__price
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 10px
+    &__new-price,
+    &__old-price
+        font-size: 12px
+        font-weight: bold
+    &__old-price
+        margin-left: 10px
+        text-decoration: line-through
+        color: $light-gray-color
+    &__state
+        display: inline-block
+        padding: 10px 20px
+        margin-top: 10px
+        font-size: 12px
+        font-weight: 500
+        text-align: center
+        text-transform: uppercase
+        color: $boulder-color
+        border: 1px solid $gray-color
+
+.tabs
+    margin-top: 35px
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+    &__item
+        &--active
+            .tabs__button
+                background: $light-yellow-color
+                border: 1px solid transparent
+                -webkit-text-stroke: 0.4px
+    &__item:not(.tabs__item--active) + &__item:not(.tabs__item--active)
+        .tabs__button
+            border-left: 1px solid transparent
+    &__button
+        padding: 10px 25px
+        font-size: 12px
+        background: transparent
+        border: 1px solid $light-grey-color
+        transition: all 0.5s
+    &__content
+        display: none
+        margin: 35px 0
+        &--active
+            display: block
 
 @import "media" // Always at the end

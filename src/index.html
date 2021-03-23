@@ -21,7 +21,9 @@
                 </button>
                 <div class="mobile-menu">
                     <div class="mobile-menu__content">
-                        <input type="text" class="mobile-menu__search input" placeholder="Поиск по брендам, по товару...">
+                        <label for="mobile-search" class="input-shell">
+                            <input type="text" id="mobile-search" class="mobile-menu__search input-shell__input" placeholder="Поиск по брендам, по товару...">
+                        </label>
                         <div class="section section--mobile">
                             <ul class="section__list">
                                 <li class="section__item section__item--active">
@@ -80,17 +82,19 @@
                         <div class="mobile-menu__contacts">
                             <a href="#" class="mobile-menu__appraisal link link--accent-bg">ОЦЕНИТЬ ТОВАР</a>
                             <a href="tel:88123456789" class="mobile-menu__phone">8 812 345 6789</a>
-                            <ul class="mobile-menu__list">
-                                <li class="mobile-menu__item">
-                                    <a href="#" class="mobile-menu__link mobile-menu__link--instagram">Instagram</a>
-                                </li>
-                                <li class="mobile-menu__item">
-                                    <a href="#" class="mobile-menu__link mobile-menu__link--telegram">Telegram</a>
-                                </li>
-                                <li class="mobile-menu__item">
-                                    <a href="#" class="mobile-menu__link mobile-menu__link--facebook">Facebook</a>
-                                </li>
-                            </ul>
+                            <div class="social">
+                                <ul class="social__list social__list--space-between">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--instagram">Instagram</a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--telegram">Telegram</a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">Facebook</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,8 +256,742 @@
             </div>
         </div>
     </header>
-    <div class="overlay overlay--"></div>
+    <div class="overlay"></div>
     <!-- End of header -->
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" href="#">Мужское</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" href="#">Мужская одежда</a>
+                    </li>
+                </ol>
+            </nav>
+            <!-- End of breadcrumb -->
+            <div class="product">
+                <div class="product__left">
+                    <div class="product__wrapper product__wrapper--wrap product__wrapper--desktop-hidden">
+                        <div class="product__block product__block--full">
+                            <span class="product__status">Аукцион</span>
+                        </div>
+                        <div class="product__block">
+                            <h2 class="product__name">Gucci Chanel</h2>
+                            <span class="product__description">Кожаные кроссовки Rhyton на шнуровке</span>
+                        </div>
+                        <span class="product__id">id:<span>3456665</span></span>
+                    </div>
+                    <div class="product__slider">
+                        <div class="gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-img">
+                                        <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-img">
+                                        <img src="img/dist/product-slide-02.png" alt="Gucci Chanel">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-img">
+                                        <img src="img/dist/product-slide-03.png" alt="Gucci Chanel">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-img">
+                                        <img src="img/dist/product-slide-04.png" alt="Gucci Chanel">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-img">
+                                        <img src="img/dist/product-slide-05.png" alt="Gucci Chanel">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-main">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/dist/product-slide-02.png" alt="Gucci Chanel">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/dist/product-slide-03.png" alt="Gucci Chanel">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/dist/product-slide-04.png" alt="Gucci Chanel">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/dist/product-slide-05.png" alt="Gucci Chanel">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__pagination">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <p class="product__copyright">Это профессиональные фотографии актуального товара предоженные Newlife.moda</p>
+                </div>
+                <div class="product__right">
+                    <div class="product__wrapper product__wrapper--wrap product__wrapper--mobile-hidden">
+                        <div class="product__block product__block--full">
+                            <span class="product__status">Аукцион</span>
+                        </div>
+                        <div class="product__block">
+                            <h2 class="product__name">Gucci Chanel</h2>
+                            <span class="product__description">Кожаные кроссовки Rhyton на шнуровке</span>
+                        </div>
+                        <span class="product__id">id:<span>3456665</span></span>
+                    </div>
+                    <div class="product__wrapper product__wrapper--center product__wrapper--mobile-wrap">
+                        <div class="product__group">
+                            <div class="product__price">
+                                <span class="product__price--new">23 000</span>
+                                <span class="product__price--old">33 000</span>
+                            </div>
+                            <span class="product__help">Цена новой 45,000</span>
+                        </div>
+                        <a href="#" class="product__bid link link--bg">ПРЕДЛОЖИТЬ ЦЕНУ</a>
+                    </div>
+                    <div class="product__wrapper product__wrapper--justify-center">
+                        <a href="#" class="product__info">сообщить о следующей скидке</a>
+                    </div>
+                    <div class="product__wrapper">
+                        <div class="down-payment">
+                            <span class="down-payment__text">Первый внос 0% от</span>
+                            <div class="down-payment__img">
+                                <img src="img/dist/logotype-tinkoff.svg" alt="Tinkoff">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__wrapper product__wrapper--center">
+                        <button class="product__btn btn">в корзину</button>
+                        <a href="#" class="product__reserve link link--bg link--lg">РЕЗЕРВ</a>
+                        <div class="icons">
+                            <ul class="icons__list">
+                                <li class="icons__item">
+                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product__inner">
+                        <h3 class="product__title">Состояние</h3>
+                        <div class="state">
+                            <ul class="state__list">
+                                <li class="state__item">Удовлетворительное</li>
+                                <li class="state__item">Хорошее</li>
+                                <li class="state__item state__item--current">Отличное</li>
+                                <li class="state__item">Безупречное</li>
+                            </ul>
+                        </div>
+                        <div class="product__location">
+                            <h3 class="product__title">Местоположение</h3>
+                            <span class="product__address">Санкт-Петербург, Садовая улица, дом 49</span>
+                            <a href="#" class="product__info product__info--route">построить маршрут</a>
+                            <div class="product__more product__more--yellow">
+                                <span class="product__text">Аутентик от Newlife.moda</span>
+                                <p class="product__text">Читайте подробнее о процессе отбора вещей</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__inner product__inner--delimiter">
+                        <button class="product__trigger">Характеристики</button>
+                        <div class="product__content product__content--flex">
+                            <div class="product__group">
+                                <span class="product__subtitle">Материал верха</span>
+                                <span class="product__subdescription">18К Tri colored Gold</span>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">Материал низа</span>
+                                <span class="product__subdescription">Хлопчатобумажная ткань</span>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">Бренд код</span>
+                                <span class="product__subdescription">0789-657GT-345</span>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">Артикул</span>
+                                <span class="product__subdescription">123445</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__inner product__inner--delimiter">
+                        <button class="product__trigger">Замеры</button>
+                        <div class="product__content">
+                            <ul class="product__list">
+                                <li class="product__item">11.5”W x 7.5”Hx3”D</li>
+                                <li class="product__item">13” handle drop</li>
+                                <li class="product__item">23” strap drop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product__inner product__inner--delimiter">
+                        <button class="product__trigger">Доставка и возврат</button>
+                        <div class="product__content">
+                            <div class="product__group">
+                                <span class="product__subtitle">US Standard (6-9 business days)</span>
+                                <p class="product__subdescription">Free shipping for orders of or above $500, or $20 under $500</p>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">US Expedited (3-5 business days)</span>
+                                <p class="product__subdescription">Shipping is $50 for all expedited US orders</p>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">International (7-10 business days)</span>
+                                <p class="product__subdescription">Shipping is $75 for all international orders (excluding taxes & customs; exotic skins cannot be shipped internationally)</p>
+                            </div>
+                            <div class="product__group">
+                                <span class="product__subtitle">Returns</span>
+                                <p class="product__subdescription">US returns accepted, for any reason, when initiated within 7 business days of delivery. Initial shipping costs and return shipping costs will be deducted from the total refund. <a href="#">See full details here.</a></p>
+                            </div>
+                            <div class="product__more">
+                                <span class="product__text">Лучшие условия</span>
+                                <p class="product__text">В течении 6 месяцев гарантированно заберем обратно, по сниенной комисионной ставке</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social social--gray">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a href="#" class="social__link social__link--instagram">Instagram</a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link social__link--telegram">Telegram</a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link social__link--facebook">Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of content-->
+    <!-- Products slider -->
+    <section class="products-slider">
+        <div class="container">
+            <h2 class="section-heading">Похожие</h2>
+            <div class="tabs">
+                <ul class="tabs__list" role="tablist">
+                    <li class="tabs__item tabs__item--active">
+                        <button class="tabs__button">Релевантные</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button">По бренду</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button">По стилю</button>
+                    </li>
+                </ul>
+                <div class="tabs__content tabs__content--active">
+                    <div class="products-slider__swiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="products-slider__swiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="products-slider__swiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="products-slider__item">
+                                        <div class="products-slider__top">
+                                            <span class="products-slider__status">Аукцион</span>
+                                            <div class="icons">
+                                                <ul class="icons__list">
+                                                    <li class="icons__item">
+                                                        <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="products-slider__img">
+                                            <img src="img/dist/products-slide.png" alt="Gucci Chanel">
+                                        </div>
+                                        <div class="products-slider__info">
+                                            <h3 class="products-slider__title">Gucci Chanel</h3>
+                                            <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="products-slider__price">
+                                                <span class="products-slider__new-price">23 000</span>
+                                                <span class="products-slider__old-price">33 000</span>
+                                            </div>
+                                            <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of products slider -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>

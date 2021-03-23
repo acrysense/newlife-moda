@@ -17,7 +17,9 @@ let paths = {
         dest: baseDir + '/js',
     },
     libs: {
-        src: [],
+        src:  [
+            'node_modules/swiper/swiper-bundle.min.js',
+        ],
         dest: baseDir + '/js',
     },
 	images: {
@@ -120,4 +122,4 @@ exports.libs = libs;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.browsersync = browsersync;
-exports.default = parallel(styles, scripts, images, sprites, browsersync, startwatch);
+exports.default = parallel(styles, libs, scripts, images, sprites, browsersync, startwatch);

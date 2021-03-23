@@ -49,4 +49,84 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
+
+    // SWIPER
+    const galleryThumb = document.querySelector('.gallery-thumbs')
+    const galleryMain = document.querySelector('.gallery-main')
+
+    let mySwiperThumb = new Swiper(galleryThumb, {
+        allowTouchMove: false,
+        slidesPerView: 5,
+        spaceBetween: 10,
+        freeMode: true,
+        direction: 'vertical',
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true
+    })
+    
+    let mySwiperMain = new Swiper(galleryMain, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 5,
+        thumbs: {
+            swiper: mySwiperThumb,
+        },
+        breakpoints: {
+            0: {
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+            },
+            768: {
+                pagination: {
+                    el: false,
+                    clickable: false
+                },
+            }
+        }
+    })
+
+    document.querySelectorAll('.products-slider__swiper').forEach(n => {
+        const mySwiperProductsSlider = new Swiper(n.querySelector('.swiper-container'), {
+            slidesPerView: 4,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                576: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                }
+            }
+        })
+    })
+
+    // TRIGGER
+    document.querySelectorAll('.product__trigger').forEach((item) => {
+        item.addEventListener("click", function() {
+            item.parentNode.classList.toggle('product__inner--hidden')
+        });
+    })
+    
+    // TABS
+    const tabsItems = document.querySelectorAll('.tabs__item')
+
+    if (tabsItems) {
+        tabsItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.tabs__item').forEach((child) => child.classList.remove('tabs__item--active'))
+                document.querySelectorAll('.tabs__content').forEach((child) => child.classList.remove('tabs__content--active'))
+    
+                item.classList.add('tabs__item--active')
+                document.querySelectorAll('.tabs__content')[i].classList.add('tabs__content--active')
+            })
+        })
+    }
 });

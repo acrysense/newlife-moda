@@ -7,9 +7,9 @@
     &__control
         display: flex
         align-items: center
-        padding: 5px 0
 
 .logotype
+    max-width: 234px
     img
         width: 100%
     
@@ -28,7 +28,6 @@
         margin-left: 10px
     &__link
         padding: 10px 20px
-        font-family: $sfui-medium
         font-size: 12px
         font-weight: 500
         letter-spacing: 1px
@@ -36,8 +35,6 @@
         &:hover,
         &:focus
             background: $light-grey-color
-        &:focus
-            outline: none
 
 .icons
     &__list
@@ -62,11 +59,16 @@
         display: flex
         align-items: center
     &__link
-        padding: 5px
+        margin: 5px
         letter-spacing: 1px
         text-transform: uppercase
-        &:hover
-            text-decoration: underline
+        border-bottom: 1px solid transparent
+        transition: border 0.5s
+        &:hover,
+        &:focus
+            border-bottom: 1px solid $primary-color
+        &:focus
+            outline: none
 
 .submenu
     display: none
@@ -95,7 +97,6 @@
         margin-left: 22px
     &__link
         padding: 5px
-        font-family: $sfui-bold
         font-size: 12px
         font-weight: bold
         text-transform: uppercase
@@ -107,8 +108,8 @@
     position: relative
     padding: 0
     margin: 0
-    min-width: 16px
-    height: 16px
+    min-width: 30px
+    height: 20px
     font-size: 0
     text-align: center
     background: none
@@ -120,27 +121,27 @@
         z-index: 1002
         .hamburger__inner
             &:first-child
-                top: 7px
+                top: 10px
                 transform: rotate(45deg)
             &:nth-child(2)
                 width: 0
                 opacity: 0
             &:last-child
-                top: 7px
+                top: 10px
                 transform: rotate(-45deg)
     &__inner
         display: block
         position: absolute
-        width: 100%
+        width: 18px
         height: 1px
         background: $primary-color
         transition: all 0.5s ease-in-out
         &:first-child
-            top: 2px
+            top: 5px
         &:nth-child(2)
-            top: 7px
+            top: 10px
         &:last-child
-            top: 12px
+            top: 15px
 
 // MEDIA QUARIES
 @media (min-width: 1024px)
@@ -149,18 +150,18 @@
             padding: 35px 10px
         &__wrapper--middle
             padding: 16px 10px
+        &__control
+            padding: 5px 0
     .section
         &--mobile
             display: none
     .nav
         &__item--accent
             .nav__link
-                font-family: $sfui-bold
                 font-weight: bold
         &__item + &__item
             margin-left: 10px
         &__link
-            font-family: $sfui-medium
             font-size: 11px
             font-weight: 500
     .hamburger,
@@ -176,6 +177,10 @@
     .header
         &__wrapper--middle
             display: none
+    .header
+        .icons__item
+            &:last-child
+                display: none
     .mobile-menu
         display: flex
         align-items: flex-start
@@ -201,9 +206,9 @@
             margin-top: 40px
             width: 100%
             height: 100%
+            overflow-x: hidden
             overflow-y: scroll
         &__search
-            margin: 10px
             width: calc(100% - 20px)
         &__contacts
             padding: 25px 0
@@ -216,40 +221,11 @@
         &__phone
             display: block
             margin-top: 25px
-            font-family: $sfui-medium
             font-size: 18px
             font-weight: 500
             text-align: center
-        &__list
-            display: flex
-            align-items: center
-            justify-content: space-between
-            padding: 10px
-            margin-top: 25px
-        &__link
-            font-size: 12px
-            &::before
-                content: ''
-                display: inline-block
-                margin-top: -1px
-                margin-right: 5px
-                width: 12px
-                height: 12px
-                vertical-align: middle
-                background-repeat: no-repeat
-                background-size: cover
-                background-position: center center
-            &--instagram
-                &::before
-                    background-image: url(../img/dist/sprite.svg#icon-instagram)
-            &--telegram
-                &::before
-                    background-image: url(../img/dist/sprite.svg#icon-telegram)
-            &--facebook
-                &::before
-                    background-image: url(../img/dist/sprite.svg#icon-facebook)
     .logotype
-        max-width: 129px
+        max-width: 132px
     .nav
         width: 100%
         &__list
@@ -260,16 +236,16 @@
             width: 100%
             &--accent
                 .nav__link
-                    font-family: $sfui-medium
                     font-weight: 500
         &__item + &__item
             border-top: 1px solid $light-grey-color
         &__link
             padding: 15px 10px
             width: 100%
-            font-family: $sfui-regular
             font-size: 12px
             font-weight: normal
+            &:hover
+                border-bottom: 1px solid transparent
             &--dropdown
                 position: relative
                 &::after
@@ -299,7 +275,6 @@
             width: 100%
             &--active
                 .section__link
-                    font-family: $sfui-medium
                     font-weight: 500
                     border: 1px solid transparent
         &__item + &__item
@@ -307,19 +282,15 @@
         &__link
             padding: 10px
             width: 100%
-            font-family: $sfui-regular
             font-weight: normal
             text-align: center
             border: 1px solid $light-grey-color
     .icons
         &__item + &__item
             margin-left: 25px
-        &__item
-            &:last-child
-                display: none
         &__link
-            width: 16px
-            height: 16px
+            width: 18px
+            height: 18px
     .personal-area
         display: none
     .header-brand
