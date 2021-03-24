@@ -144,6 +144,29 @@
         &:last-child
             top: 15px
 
+.mobile-nav
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 900
+    background: $white-color
+    border-top: 1px solid $background-color
+    border-bottom: 1px solid $background-color
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-around
+        padding: 14.25px 10px
+    &__item
+        text-align: center
+    &__link
+        font-size: 9px
+        font-weight: 500
+        span
+            display: block
+            margin-top: 5px
+
 // MEDIA QUARIES
 @media (min-width: 1024px)
     .header
@@ -297,6 +320,10 @@
     .header-brand
         &__item + &__item
             margin-left: 8px
+
+@media (min-width: 992px)
+    .mobile-nav
+        display: none
 
 @media (max-width: 767px)
     .header
