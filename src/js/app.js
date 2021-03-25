@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
     const mobileMenu = document.querySelector('.mobile-menu')
+    const mobileMenuClose = document.querySelector('.mobile-menu__close')
     const overlay = document.querySelector('.overlay')
     const subMenuDropdown = document.querySelectorAll('.nav__link--dropdown')
     const subMenu = document.querySelectorAll('.submenu')
@@ -24,6 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.classList.add('scroll-disabled')
             }
         });
+    }
+
+    if (mobileMenuClose && mobileMenu) {
+        mobileMenuClose.addEventListener('click', () => {
+            if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--open')) {
+                if (overlay.classList.contains('overlay--active')) {
+                    overlay.classList.remove('overlay--active')
+                }
+                hamburger.classList.remove('hamburger--active')
+                mobileMenu.classList.remove('mobile-menu--open')
+                document.body.classList.remove('scroll-disabled')
+            }
+        })
     }
 
     if (overlay) {
