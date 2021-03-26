@@ -1,9 +1,8 @@
 .header
-    &--sticky
-        position: sticky
-        top: 0
-        z-index: 100
-        background: $white-color
+    position: sticky
+    top: 0
+    z-index: 100
+    background: $white-color
     &__wrapper
         display: flex
         align-items: center
@@ -12,6 +11,13 @@
     &__control
         display: flex
         align-items: center
+
+.subheader
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px
 
 .logotype
     max-width: 234px
@@ -181,12 +187,13 @@
 // MEDIA QUARIES
 @media (min-width: 1024px)
     .header
-        &__wrapper--top
+        &__wrapper
             padding: 35px 10px
-        &__wrapper--middle
-            padding: 16px 10px
         &__control
             padding: 5px 0
+    .subheader
+        &__wrapper--top
+            padding: 16px 10px
     .section
         &--mobile
             display: none
@@ -210,12 +217,12 @@
 
 @media (max-width: 1023px)
     .header
-        &__wrapper--middle
-            display: none
-    .header
         .icons__item
             &:nth-child(2)
                 display: none
+    .subheader
+        &__wrapper--top
+            display: none
     .mobile-menu
         display: flex
         align-items: flex-start
@@ -369,10 +376,10 @@
         display: none
 
 @media (max-width: 767px)
-    .header
-        &__wrapper--bottom
-            display: none
     .mobile-menu
         &__top
             .logotype
                 margin-left: auto
+    .subheader
+        &__wrapper--bottom
+            display: none

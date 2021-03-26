@@ -10,9 +10,9 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="header header--sticky">
+    <header class="header" id="header">
         <div class="container">
-            <div class="header__wrapper header__wrapper--top">
+            <div class="header__wrapper">
                 <button class="hamburger" id="hamburger-toggle">
                     Меню
                     <span class="hamburger__inner"></span>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <div class="mobile-menu">
         <button class="mobile-menu__close">
             Закрыть
@@ -142,9 +142,9 @@
             </div>
         </div>
     </div>
-    <header class="header" id="header">
+    <div class="subheader">
         <div class="container">
-            <div class="header__wrapper header__wrapper--middle">
+            <div class="subheader__wrapper subheader__wrapper--top">
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item nav__item--accent">
@@ -178,7 +178,7 @@
                 </nav>
                 <a href="#" class="sell link link--bg">ПРОДАТЬ ТОВАР</a>
             </div>
-            <div class="header__wrapper header__wrapper--bottom">
+            <div class="subheader__wrapper subheader__wrapper--bottom">
                 <div class="header-brand">
                     <ul class="header-brand__list">
                         <li class="header-brand__item">
@@ -268,7 +268,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </div>
     <div class="overlay"></div>
     <!-- End of header -->
     <!-- Content -->
@@ -1005,11 +1005,138 @@
         </div>
     </section>
     <!-- End of products slider -->
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <a href="index.html" class="logotype">
+                        <img src="img/dist/logotype.svg" alt="NEWLIFE.MODA">
+                    </a>
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__heading">КУПИТЬ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Новинки</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Распродажа</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Бренды</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Одежда</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Обувь</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Сумки</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Аксессуары</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ПРОДАТЬ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Оценка вещей</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Resale vip</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Что продаём</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Условия сотрудничесва</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ИНФОРМАЦИЯ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">О нас</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Доставка</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Акции</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Карта клуба</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Для стилиста</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Для блогера</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ЛИЧНЫЙ КАБИНЕТ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Запись на оценку</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Оценить вещь</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Резерв и приемка</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Войти</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__wrapper">
+                    <div class="payment">
+                        <ul class="payment__list">
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/mastercard.svg" alt="Mastercard">
+                                </a>
+                            </li>
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/visa.svg" alt="VISA">
+                                </a>
+                            </li>
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/mir.svg" alt="МИР">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer__legal-list">
+                        <li class="footer__legal-item">©2021 NEWLIFE.MODA. Все права защищены.</li>
+                        <li class="footer__legal-item">
+                            <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer__legal-item">
+                            <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer__copyright">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с <a href="#">Политикой конфиденциальности.</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
     <!-- Mobile nav -->
     <div class="mobile-nav">
         <ul class="mobile-nav__list">
             <li class="mobile-nav__item mobile-nav__item--active">
-                <a href="index.html" class="mobile-nav__link">
+                <a href="#" class="mobile-nav__link">
                     <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.18585 11.7499C3.05437 11.7499 2.92382 11.7089 2.81239 11.6283C2.60484 11.4779 2.50788 11.2194 2.56437 10.9699L3.33636 7.56925L0.718255 5.27323C0.525806 5.10523 0.452287 4.83917 0.531299 4.59572C0.610311 4.35274 0.825283 4.1807 1.07981 4.15717L4.54388 3.84268L5.91346 0.637614C6.01444 0.402134 6.24443 0.250061 6.49996 0.250061C6.75549 0.250061 6.98548 0.402134 7.08646 0.637064L8.45603 3.84268L11.9196 4.15717C12.1746 4.18016 12.3896 4.35274 12.4686 4.59572C12.5476 4.83871 12.4746 5.10523 12.2821 5.27323L9.66401 7.56879L10.436 10.9693C10.4926 11.2194 10.3955 11.4779 10.1881 11.6279C9.98107 11.7779 9.70503 11.7894 9.48703 11.6584L6.49996 9.87333L3.51288 11.6594C3.4119 11.7194 3.29938 11.7499 3.18585 11.7499ZM6.49996 9.10435C6.61349 9.10435 6.72592 9.13484 6.82699 9.19481L9.64607 10.8809L8.91747 7.67124C8.86547 7.44281 8.94302 7.20431 9.11953 7.04977L11.5916 4.88174L8.32099 4.58474C8.08551 4.56322 7.88299 4.41518 7.79098 4.19819L6.49996 1.17358L5.20738 4.19865C5.11638 4.41417 4.91386 4.56221 4.67893 4.58373L1.40785 4.88073L3.87984 7.04876C4.0569 7.20376 4.13436 7.44181 4.0819 7.67078L3.35385 10.8803L6.17292 9.19481C6.27391 9.13484 6.38643 9.10435 6.49996 9.10435ZM4.51742 3.90467C4.51742 3.90467 4.51742 3.90522 4.51688 3.90567L4.51742 3.90467ZM8.48149 3.9032L8.48204 3.90421C8.48204 3.90366 8.48204 3.90366 8.48149 3.9032Z" fill="black"/>
                     </svg>                        
@@ -1017,7 +1144,7 @@
                 </a>
             </li>
             <li class="mobile-nav__item">
-                <a href="catalog.html" class="mobile-nav__link">
+                <a href="#" class="mobile-nav__link">
                     <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip40)">
                         <path d="M6.24999 12H0.749992C0.336492 12 -7.62939e-06 11.6635 -7.62939e-06 11.25V10.75C-7.62939e-06 10.3365 0.336492 10 0.749992 10H6.24999C6.66349 10 6.99999 10.3365 6.99999 10.75V11.25C6.99999 11.6635 6.66349 12 6.24999 12ZM0.749992 10.5C0.611992 10.5 0.499992 10.6125 0.499992 10.75V11.25C0.499992 11.3875 0.611992 11.5 0.749992 11.5H6.24999C6.38799 11.5 6.49999 11.3875 6.49999 11.25V10.75C6.49999 10.6125 6.38799 10.5 6.24999 10.5H0.749992Z" fill="black"/>
@@ -1036,7 +1163,7 @@
                 </a>
             </li>
             <li class="mobile-nav__item">
-                <a href="my-orders.html" class="mobile-nav__link">
+                <a href="#" class="mobile-nav__link">
                     <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip20)">
                         <path d="M6.5 0C3.1914 0 0.5 2.6914 0.5 6C0.5 9.3086 3.1914 12 6.5 12C9.8086 12 12.5 9.30813 12.5 6C12.5 2.69187 9.8086 0 6.5 0ZM6.5 11.0705C3.70449 11.0705 1.42951 8.79598 1.42951 6C1.42951 3.20402 3.70449 0.929508 6.5 0.929508C9.29551 0.929508 11.5705 3.20402 11.5705 6C11.5705 8.79598 9.29598 11.0705 6.5 11.0705Z" fill="black"/>
@@ -1052,7 +1179,7 @@
                 </a>
             </li>
             <li class="mobile-nav__item">
-                <a href="profile.html" class="mobile-nav__link">
+                <a href="#" class="mobile-nav__link">
                     <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip10)">
                         <path d="M5.91449 5.78045C6.70862 5.78045 7.39618 5.49563 7.95813 4.93368C8.51989 4.37182 8.80481 3.68435 8.80481 2.89013C8.80481 2.09619 8.51999 1.40863 7.95804 0.846587C7.39609 0.28482 6.70853 0 5.91449 0C5.12027 0 4.43281 0.28482 3.87095 0.846678C3.30909 1.40854 3.02418 2.0961 3.02418 2.89013C3.02418 3.68435 3.30909 4.37191 3.87095 4.93377C4.43299 5.49553 5.12055 5.78045 5.91449 5.78045ZM4.36826 1.3439C4.79938 0.912779 5.30512 0.703215 5.91449 0.703215C6.52377 0.703215 7.0296 0.912779 7.46081 1.3439C7.89194 1.77511 8.10159 2.28094 8.10159 2.89013C8.10159 3.49951 7.89194 4.00524 7.46081 4.43645C7.0296 4.86767 6.52377 5.07723 5.91449 5.07723C5.3053 5.07723 4.79956 4.86758 4.36826 4.43645C3.93705 4.00533 3.72739 3.49951 3.72739 2.89013C3.72739 2.28094 3.93705 1.77511 4.36826 1.3439Z" fill="black"/>
@@ -1068,7 +1195,7 @@
                 </a>
             </li>
             <li class="mobile-nav__item">
-                <a href="profile.html" class="mobile-nav__link">
+                <a href="#" class="mobile-nav__link">
                     <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip110)">
                         <path d="M1.70001 7.19999C2.36275 7.19999 2.90002 6.66273 2.90002 5.99998C2.90002 5.33723 2.36275 4.79997 1.70001 4.79997C1.03726 4.79997 0.5 5.33723 0.5 5.99998C0.5 6.66273 1.03726 7.19999 1.70001 7.19999Z" fill="black"/>

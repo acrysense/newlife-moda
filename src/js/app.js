@@ -128,6 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
             item.parentNode.classList.toggle('product__inner--hidden')
         });
     })
+
+    // FOOTER TRIGGER
+    document.querySelectorAll('.footer__heading').forEach((item) => {
+        item.addEventListener("click", function() {
+            item.parentNode.classList.toggle('footer__list--open')
+        });
+    })
     
     // TABS
     const tabsItems = document.querySelectorAll('.tabs__item')

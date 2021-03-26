@@ -1,0 +1,116 @@
+.footer
+    padding: 25px 20px
+    &__top
+        display: flex
+    &__logo
+        padding: 50px 18.5px
+        .logotype
+            max-width: 185px
+    &__logo + &__list
+        margin-left: 10px
+    &__list
+        padding: 10px
+    &__list + &__list
+        margin-left: auto
+    &__heading
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+    &__item
+        margin-top: 15px
+        font-size: 14px
+        color: $boulder-color
+    &__bottom
+        padding-top: 35px
+        margin-top: 35px
+        border-top: 1px solid $gray-color
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__legal-list
+        display: flex
+        align-items: center
+    &__legal-item
+        font-size: 12px
+        color: $boulder-color
+    &__legal-item + &__legal-item
+        margin-left: 25px
+    &__copyright
+        margin-top: 25px
+        font-size: 11px
+        color: $copyright-color
+        a
+            text-decoration: underline
+
+// MEDIA QUARIES
+@media (max-width: 991px)
+    .footer
+        padding-bottom: 90.5px
+        &__logo
+            display: none
+        &__logo + &__list
+            margin-left: 0
+        &__legal-item
+            font-size: 10px
+
+@media (min-width: 768px) and (max-width: 991px)
+    .footer
+        &__list
+            padding: 0
+
+@media (max-width: 767px)
+    .footer
+        &__top
+            flex-direction: column
+        &__list
+            overflow: hidden
+            max-height: 36px
+            transition: max-height 0.25s
+            &--open
+                max-height: 100vh
+                transition: max-height 0.75s
+                .footer__heading
+                    &::after
+                        transform: translateY(-50%) rotate(90deg)
+        &__list + &__list
+            padding-top: 30px
+            margin-top: 30px
+            margin-left: 0
+            max-height: 56px
+            border-top: 1px solid $primary-color
+            &--open
+                max-height: 100vh
+        &__heading
+            position: relative
+            &::before
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                width: 13px
+                height: 1px
+                background: $primary-color
+            &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 50%
+                right: 6.5px
+                transform: translateY(-50%)
+                width: 1px
+                height: 13px
+                background: $primary-color
+                transition: transform 0.35s
+        &__wrapper
+            flex-direction: column
+        &__legal-list
+            flex-direction: column
+            margin-top: 25px
+        &__legal-item + &__legal-item
+            margin-top: 10px
+            margin-left: 0
+        &__copyright
+            text-align: center
