@@ -93,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 10,
         loop: true,
         loopedSlides: 5,
+        preloadImages: false,
+        lazy: true,
         thumbs: {
             swiper: mySwiperThumb,
         },
@@ -116,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const mySwiperProductsSlider = new Swiper(n.querySelector('.swiper-container'), {
             slidesPerView: 4,
             loop: true,
+            preloadImages: false,
+            lazy: true,
             observer: true,
             observeParents: true,
             breakpoints: {
