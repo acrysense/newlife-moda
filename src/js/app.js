@@ -64,6 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    // TOP PROMO
+    const topPromoContainer = document.querySelector('.top-promo')
+    const topPromoCloseBtn = document.querySelector('.top-promo__close')
+
+    if (topPromoCloseBtn) {
+        topPromoCloseBtn.addEventListener('click', () => {
+            topPromoContainer.classList.add('top-promo--hidden')
+        })
+    }
+
     // SWIPER
     const galleryThumb = document.querySelector('.gallery-thumbs')
     const galleryMain = document.querySelector('.gallery-main')

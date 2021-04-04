@@ -1,3 +1,31 @@
+.top-promo
+    padding: 10px 0
+    text-align: center
+    background: $light-yellow-color
+    &--hidden
+        display: none
+    &__wrapper
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+    &__text
+        font-size: 14px
+        letter-spacing: 1px
+        strong
+            font-weight: 600
+    &__timer
+        display: inline-block
+        padding: 5px
+        margin-left: 10px
+        color: $white-color
+        background: $primary-color
+    &__close
+        position: absolute
+        top: 50%
+        right: 10px
+        transform: translateY(-50%)
+
 .header
     position: sticky
     top: 0
@@ -21,6 +49,7 @@
 
 .logotype
     max-width: 234px
+    width: 100%
     img
         width: 100%
     
@@ -376,6 +405,14 @@
         display: none
 
 @media (max-width: 767px)
+    .top-promo
+        padding: 15px 0
+        &__wrapper
+            flex-direction: column
+            padding: 0 30px
+        &__timer
+            margin-top: 5px
+            margin-left: 0
     .mobile-menu
         &__top
             .logotype
