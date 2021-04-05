@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWLIFE.MODA - Resale Store №1</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <div class="auth">
+        <div class="auth__left" style="background-image: url(img/dist/register-bg-01.jpg)"></div>
+        <div class="auth__right">
+            <div class="auth__wrapper">
+                <p class="auth__description auth__description--medium">Нам нужно еще немного информации, чтобы создать Ваш аккаунт</p>
+                <form action="" class="auth-form auth-form--sm">
+                    <div class="input-group auth-form__input-group">
+                        <input type="password" class="input-group__input auth-form__input" id="input-register-password" placeholder="Пароль*" required>
+                        <label for="input-register-password" class="input-group__label">Пароль*</label>
+                    </div>
+                    <div class="auth-form__inner">
+                        <div class="input-group">
+                            <input type="text" class="input-group__input auth-form__input" id="input-login" placeholder="Логин*" required>
+                            <label for="input-login" class="input-group__label">Логин*</label>
+                        </div>
+                        <div class="input-group">
+                            <select class="auth-form__select select">
+                                <option value="0" selected>Мужской</option>
+                                <option value="1">Женский</option>
+                            </select>
+                            <label for="input-login" class="input-group__label input-group__label--active">Пол</label>
+                        </div>
+                    </div>
+                    <div class="input-group auth-form__input-group">
+                        <select class="auth-form__select select">
+                            <option value="0" selected>Россия</option>
+                            <option value="1">Австралия</option>
+                        </select>
+                        <label for="input-login" class="input-group__label input-group__label--active">Страна</label>
+                    </div>
+                    <p class="auth-form__description">Получайте скидки и бонусы в свой День Рождения</p>
+                    <div class="input-group auth-form__input-group">
+                        <input type="text" class="input-group__input auth-form__input" id="input-dob" placeholder="Дата рождения*" required>
+                        <label for="input-dob" class="input-group__label">Дата рождения*</label>
+                    </div>
+                    <div class="input-group auth-form__input-group">
+                        <input type="tel" class="input-group__input auth-form__input" id="input-tel" placeholder="Телефон*" required>
+                        <label for="input-tel" class="input-group__label">Телефон*</label>
+                    </div>
+                    <div class="auth-form__inner">
+                        <label for="save-data-checkbox" class="square-checkbox">
+                            <input type="checkbox" class="square-checkbox__input" id="save-data-checkbox">
+                            <span class="square-checkbox__icon"></span>
+                            <span class="square-checkbox__label">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.</span>
+                        </label>
+                    </div>
+                    <button class="auth-form__btn btn" disabled>получить доступ</button>
+                </form>
+                <a href="#" class="auth__go-to">Войти</a>
+                <a href="#" class="auth__link">Узнать подробнее о передаваемой информации</a>
+            </div>
+            <button class="auth__close close-btn">Закрыть</button>
+        </div>
+    </div>
+    <div class="overlay overlay--active"></div>
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

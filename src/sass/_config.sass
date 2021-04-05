@@ -6,15 +6,18 @@ $primary-color: #000000 // Primary color
 $white-color: #FFFFFF // White color
 $background-color: #FBFBFB // Background color
 $alabaster-color: #F7F7F7 // Alabaster color
+$error-color: #FF3F3F // Error (red) color
 $accent-yellow-color: #FFF596 // Accent yellow color
 $light-yellow-color: #FCF7F1 // Light yellow color
 $light-grey-color: #F7F7F7 // Light grey color
-$light-grey-hover-color: #FDFBF8 // Light grey hover color
+$light-grey-hover-color: #FDFBF8// Light grey hover color
 $dark-gray-color: #979797 // Dark gray color
 $gray-color: #E0E0E0 // Gray color
 $light-gray-color: #DDDDDD // Light gray color
+$dull-gray-color: #656565 // Dull gray color
 $boulder-color: #767676 // Boulder color
 $copyright-color: #ABABAB // Copyright color
+$asphalt-color: #4D4D4D // Asphalt color
 
 // COMMON DOCUMENT STYLES
 body
@@ -108,6 +111,14 @@ svg path,
     &--lg
         padding: 14px 36px
 
+.btn[disabled]
+    color: $copyright-color
+    background: $light-grey-color
+    &:hover
+        color: $copyright-color
+        background: $light-grey-color
+        border: 1px solid transparent
+
 .overlay
     opacity: 0
     visibility: hidden
@@ -134,9 +145,65 @@ svg path,
         font-size: 12px
         font-weight: 500
         text-align: center
+        color: $primary-color
         background: $light-grey-color
         border: 0
         appearance: none
+
+.input-group
+    position: relative
+    &__input
+        display: block
+        appearance: none
+        padding: 0 0 5px
+        font-size: 18px
+        color: $primary-color
+        background: transparent
+        border: 0
+        border-bottom: 1px solid $copyright-color
+        transition: border 0.45s
+        &::-webkit-input-placeholder
+            opacity: 0
+        &::-moz-placeholder
+            opacity: 0
+        &:focus + label,
+        &:not(:placeholder-shown) + label
+            transform: translate(-17%, -22px) scale(0.65)
+        &:focus
+            outline: none
+            border-bottom: 1px solid $primary-color
+        &--error
+            color: $error-color
+            border-bottom: 1px solid $error-color
+    &__label
+        position: absolute
+        top: 0
+        left: 0
+        margin: 0
+        font-size: 18px
+        color: $copyright-color
+        cursor: text
+        transition: all 0.45s
+        &--active
+            transform: translate(-15%, -22px) scale(0.65)
+
+.select
+    appearance: none
+    padding: 0 0 5px
+    font-size: 18px
+    color: $asphalt-color
+    background-color: transparent
+    background-image: url(../img/dist/sprite.svg#icon-caret)
+    background-repeat: no-repeat
+    background-size: 12px
+    background-position: top 50% right 0
+    border: 0
+    border-bottom: 1px solid $copyright-color
+    border-radius: 0
+    transition: border 0.5s
+    &:focus
+        outline: none
+        border-bottom: 1px solid $primary-color
 
 .section-heading
     font-family: $cormorant
@@ -156,6 +223,33 @@ svg path,
     background-size: cover
     background-position: center center
     border: 0
+
+.square-checkbox
+    display: flex
+    align-items: center
+    margin: 0
+    cursor: pointer
+    &__input
+        display: none
+        &:checked + .square-checkbox__icon
+            background-image: url(../img/dist/sprite.svg#icon-checkbox-mark)
+    &__icon
+        display: block
+        margin-right: 10px
+        min-width: 14px
+        min-height: 14px
+        max-width: 14px
+        max-height: 14px
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: 70%
+        background-position: center center
+        border: 1px solid $copyright-color
+    &__label
+        display: block
+        font-size: 12px
+        text-align: left
+        color: $copyright-color
 
 // MEDIA QUARIES
 @media (min-width: 1200px)
