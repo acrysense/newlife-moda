@@ -41,11 +41,11 @@
                     </div>
                     <p class="auth-form__description">Получайте скидки и бонусы в свой День Рождения</p>
                     <div class="input-group auth-form__input-group">
-                        <input type="text" class="input-group__input auth-form__input" id="input-dob" placeholder="Дата рождения" required>
+                        <input type="text" class="input-group__input auth-form__input" id="input-dob" placeholder="Дата рождения" data-inputmask="'mask': '99.99.9999'" required>
                         <label for="input-dob" class="input-group__label">Дата рождения</label>
                     </div>
                     <div class="input-group auth-form__input-group">
-                        <input type="tel" class="input-group__input auth-form__input" id="input-tel" placeholder="Телефон" required>
+                        <input type="tel" class="input-group__input auth-form__input" id="input-tel" placeholder="Телефон" data-inputmask="'mask': '+7 (999) 999-99-99'" required>
                         <label for="input-tel" class="input-group__label">Телефон</label>
                     </div>
                     <div class="auth-form__inner">
@@ -57,8 +57,19 @@
                     </div>
                     <button class="auth-form__btn btn" disabled>получить доступ</button>
                 </form>
-                <a href="#" class="auth__go-to">Войти</a>
-                <a href="#" class="auth__link">Узнать подробнее о передаваемой информации</a>
+                <a href="login.html" class="auth__go-to">Войти</a>
+                <div class="pop-up">
+                    <a href="#" class="pop-up__btn" data-text="Узнать подробнее о передаваемой информации">Узнать подробнее о передаваемой информации</a>
+                    <div class="pop-up__wrapper">
+                        <p class="pop-up__description">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.</p>
+                    </div>
+                </div>
+                <div class="pop-up">
+                    <a href="#" class="pop-up__btn" data-text="Узнать подробнее о передаваемой информации">Узнать подробнее о передаваемой информации</a>
+                    <div class="pop-up__wrapper">
+                        <p class="pop-up__description">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности.</p>
+                    </div>
+                </div>
             </div>
             <button class="auth__close close-btn">Закрыть</button>
         </div>
@@ -66,6 +77,6 @@
     <div class="overlay overlay--active"></div>
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

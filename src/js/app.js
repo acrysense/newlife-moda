@@ -173,4 +173,29 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
+
+    // POP-UP
+    const popUpBtn = document.querySelectorAll('.pop-up__btn')
+    const popUp = document.querySelectorAll('.pop-up__wrapper')
+
+    if (popUpBtn) {
+        popUpBtn.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (!item.nextElementSibling.classList.contains('pop-up__wrapper--active')) {
+                    item.nextElementSibling.classList.add('pop-up__wrapper--active')
+                    item.classList.add('pop-up__btn--close')
+                    item.innerHTML = 'Закрыть' // Change text
+                } else {
+                    let dataText = item.getAttribute('data-text') // Get attribute text
+
+                    item.nextElementSibling.classList.remove('pop-up__wrapper--active')
+                    item.classList.remove('pop-up__btn--close')
+                    item.innerHTML = dataText // Return original text
+                }
+            })
+        })
+    }
+
+    // INPUTMASK
+    Inputmask().mask(document.querySelectorAll('input'))
 });
