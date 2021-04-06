@@ -178,23 +178,67 @@ document.addEventListener("DOMContentLoaded", function () {
     const popUpBtn = document.querySelectorAll('.pop-up__btn')
     const popUp = document.querySelectorAll('.pop-up__wrapper')
 
+    const useItemChecker = (el, onClickOutside) => {
+        const checkBodyClick = (e) => {
+            let currentEl = e.target;
+
+            while(currentEl) {
+                if(currentEl === el) break;
+                currentEl = currentEl.parentNode
+            }
+
+            if(!currentEl) {
+                onClickOutside()
+                removeBodyChecker()
+            }
+        }
+        function setBodyChecker  ()  {
+            document.documentElement.addEventListener('click', checkBodyClick)
+        }
+        function removeBodyChecker ()  {
+            document.documentElement.removeEventListener('click', checkBodyClick)
+        }
+        return {setBodyChecker, removeBodyChecker}
+    }
     if (popUpBtn) {
         popUpBtn.forEach((item) => {
+            const close = () => {
+                let dataText = item.getAttribute('data-text') // Get attribute text
+                item.nextElementSibling.classList.remove('pop-up__wrapper--active')
+                item.classList.remove('pop-up__btn--close')
+                item.innerHTML = dataText // Return original text 
+            }
+            const itemChecker = useItemChecker(item.parentNode, close)
             item.addEventListener('click', () => {
                 if (!item.nextElementSibling.classList.contains('pop-up__wrapper--active')) {
                     item.nextElementSibling.classList.add('pop-up__wrapper--active')
                     item.classList.add('pop-up__btn--close')
                     item.innerHTML = 'Закрыть' // Change text
+                    itemChecker.setBodyChecker()
                 } else {
-                    let dataText = item.getAttribute('data-text') // Get attribute text
-
-                    item.nextElementSibling.classList.remove('pop-up__wrapper--active')
-                    item.classList.remove('pop-up__btn--close')
-                    item.innerHTML = dataText // Return original text
+                    close()
                 }
             })
         })
     }
+
+    //if (popUpBtn) {
+    //    popUpBtn.forEach((item) => {
+    //        item.addEventListener('click', () => {
+    //            if (!item.nextElementSibling.classList.contains('pop-up__wrapper--active')) {
+    //                item.nextElementSibling.classList.add('pop-up__wrapper--active')
+    //                item.classList.add('pop-up__btn--close')
+    //                item.innerHTML = 'Закрыть' // Change text
+    //            } else {
+    //                let dataText = item.getAttribute('data-text') // Get attribute text
+
+    //                item.nextElementSibling.classList.remove('pop-up__wrapper--active')
+    //                item.classList.remove('pop-up__btn--close')
+    //                item.innerHTML = dataText // Return original text
+    //            }
+    //        })
+    //    })
+    //}
 
     // INPUTMASK
     Inputmask().mask(document.querySelectorAll('input'))
