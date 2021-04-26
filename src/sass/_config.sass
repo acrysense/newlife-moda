@@ -45,7 +45,7 @@ p
 a
     display: inline-block
     color: inherit
-    transition: all 0.5s
+    transition: all 0.4s
     &:hover
         color: inherit
         text-decoration: none
@@ -54,7 +54,7 @@ img
     max-width: 100%
 
 svg path,
-    transition: fill 0.5s, stroke 0.5s
+    transition: fill 0.4s, stroke 0.4s
 
 // COMMON FOR PAGE ˆ
 .scroll-disabled
@@ -87,6 +87,28 @@ svg path,
     &--lg
         padding: 15px 25px
 
+.share
+    display: block
+    padding: 0
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #710202
+    background: transparent
+    border: 0
+    &::before
+        content: ''
+        display: inline-block
+        margin-top: -2px
+        margin-right: 10px
+        width: 14px
+        height: 14px
+        vertical-align: middle
+        background-image: url(../img/dist/sprite.svg#icon-gift-box)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
 .btn
     padding: 14px
     font-size: 12px
@@ -97,7 +119,7 @@ svg path,
     color: $white-color
     background: $primary-color
     border: 1px solid transparent
-    transition: color 0.5s, background 0.5s, border 0.5s
+    transition: color 0.4s, background 0.4s, border 0.4s
     &:hover
         color: $primary-color
         background: transparent
@@ -132,7 +154,7 @@ svg path,
     height: 100%
     z-index: 1000
     background: rgba($primary-color, 0.75)
-    transition: all 0.5s ease-in-out
+    transition: all 0.4s ease-in-out
     &--active
         opacity: 1
         visibility: visible
@@ -154,6 +176,15 @@ svg path,
 
 .input-group
     position: relative
+    &--error
+        .input-group
+            &__input
+                color: $error-color
+                border-bottom: 1px solid $error-color
+                &:focus
+                    border-bottom: 1px solid $error-color
+            &__label
+                color: $error-color
     &__input
         display: block
         appearance: none
@@ -164,7 +195,7 @@ svg path,
         border: 0
         border-bottom: 1px solid $copyright-color
         border-radius: 0
-        transition: border 0.45s
+        transition: border 0.4s
         &::-webkit-input-placeholder
             opacity: 0
         &::-moz-placeholder
@@ -172,11 +203,14 @@ svg path,
         &:focus + label,
         &:not(:placeholder-shown) + label
             transform: translate(-17%, -22px) scale(0.65)
+            & > span
+                opacity: 0
+            & + .input-group__eye
+                opacity: 1
         &:focus
             outline: none
             border-bottom: 1px solid $primary-color
         &--error
-            color: $error-color
             border-bottom: 1px solid $error-color
     &__label
         position: absolute
@@ -186,15 +220,41 @@ svg path,
         font-size: 18px
         color: $copyright-color
         cursor: text
-        transition: all 0.45s
+        transition: all 0.4s
+        span
+            transition: opacity 0.2s
         &--active
             transform: translate(-15%, -22px) scale(0.65)
+    &__eye
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        display: block
+        padding: 0
+        width: 18px
+        height: 18px
+        font-size: 0
+        opacity: 0
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-password-eye)
+        background-repeat: no-repeat
+        background-size: 85%
+        background-position: center right
+        border: 0
+        transition: opacity 0.4s
+    &__error
+        position: absolute
+        bottom: -5px
+        transform: translateY(100%)
+        font-size: 9px
+        color: $error-color
 
 .select
     appearance: none
     padding: 0 0 5px
     font-size: 18px
-    color: $asphalt-color
+    color: $copyright-color
     background-color: transparent
     background-image: url(../img/dist/sprite.svg#icon-caret)
     background-repeat: no-repeat
@@ -203,10 +263,42 @@ svg path,
     border: 0
     border-bottom: 1px solid $copyright-color
     border-radius: 0
-    transition: border 0.5s
+    transition: border 0.4s
+    &.is-selected
+        color: $asphalt-color
     &:focus
         outline: none
         border-bottom: 1px solid $primary-color
+
+.sort
+    display: flex
+    align-items: center
+    &__help
+        display: block
+        font-size: 12px
+        font-weight: bold
+        letter-spacing: 1px
+        text-transform: uppercase
+    &__select
+        appearance: none
+        padding: 0 13px 0 1px
+        margin-left: 9px
+        margin-bottom: -1px
+        font-size: 12px
+        letter-spacing: 1px
+        text-transform: uppercase
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-caret-black)
+        background-repeat: no-repeat
+        background-size: 8px
+        background-position: top 50% right 0
+        border: 0
+        border-bottom: 1px solid transparent
+        border-radius: 0
+        transition: border 0.4s
+        &:focus
+            border-bottom: 1px solid $primary-color
+            outline: none
 
 .section-heading
     font-family: $cormorant

@@ -308,7 +308,7 @@
         height: 5px
         background: $dark-gray-color
         border-radius: 50%
-        transition: background 0.5s
+        transition: background 0.4s
     .swiper-pagination-bullet + .swiper-pagination-bullet
         margin-left: 7px
     .swiper-pagination-bullet-active
@@ -374,6 +374,9 @@
 // PRODUCT SLIDER
 .products-slider
     padding-bottom: 20px
+    &--cabinet
+        display: flex
+        flex-wrap: wrap
     &__item
         padding: 10px
         margin: 0 auto
@@ -449,7 +452,9 @@
         font-size: 12px
         background: transparent
         border: 1px solid $light-grey-color
-        transition: all 0.5s
+        transition: all 0.4s
+        &:hover
+            background: $light-grey-color
     &__content
         display: none
         margin: 35px 0
@@ -612,5 +617,96 @@
         color: $copyright-color
         a
             text-decoration: underline
+
+// PERSONAL AREA
+.cabinet
+    margin: 39px 10px
+    &__wrapper
+        display: flex
+        width: 100%
+    &__item
+        white-space: nowrap
+        text-align: right
+        &--active
+            .cabinet__button
+                color: $primary-color
+    &__item + &__item
+        margin-top: 20px
+    &__button
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        color: $dark-gray-color
+        background: transparent
+        border: 0
+        transition: color 0.4s
+        &:hover
+            color: $primary-color
+    &__content
+        display: none
+        margin-left: 75px
+        width: 100%
+        &--active
+            display: block
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 10px
+        margin-bottom: 50px
+        border-bottom: 1px solid $light-grey-color
+    &__title
+        font-size: 18px
+        font-weight: bold
+        text-transform: uppercase
+        &--normal
+            font-weight: normal
+    &__group
+        display: flex
+        align-items: center
+        & > * + *
+            margin-left: 25px
+    &__block
+        margin-top: 167px
+        text-align: center
+    &__text
+        max-width: 286px
+        margin: 0 auto
+        font-size: 12px
+        font-weight: 300
+        text-align: center
+        color: $dark-gray-color
+    &__text + &__link
+        margin-top: 18px
+    &__link
+        font-size: 12px
+        font-weight: 500
+        text-align: center
+        text-transform: uppercase
+        border-bottom: 1px solid transparent
+        &:hover
+            border-bottom: 1px solid $primary-color
+
+.profile
+    &__group + &__group
+        margin-top: 50px
+    &__title
+        margin-bottom: 30px
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+    &__inner
+        display: flex
+        align-items: center
+        .input-group
+            width: 100%
+            &__input
+                width: 100%
+        .input-group + .input-group
+            margin-left: 25px
+    &__inner + &__inner
+        margin-top: 36px
+    &__btn
+        display: block
 
 @import "media" // Always at the end

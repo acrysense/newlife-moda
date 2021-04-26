@@ -17,12 +17,13 @@
                 <form action="" class="auth-form auth-form--sm">
                     <div class="input-group auth-form__input-group">
                         <input type="password" class="input-group__input auth-form__input" id="input-register-password" placeholder="Пароль" required>
-                        <label for="input-register-password" class="input-group__label">Пароль</label>
+                        <label for="input-register-password" class="input-group__label">Пароль<span>*</span></label>
+                        <button class="input-group__eye">Показать/скрыть пароль</button>
                     </div>
                     <div class="auth-form__inner auth-form__inner--column">
                         <div class="input-group">
                             <input type="text" class="input-group__input auth-form__input" id="input-login" placeholder="Логин" required>
-                            <label for="input-login" class="input-group__label">Логин</label>
+                            <label for="input-login" class="input-group__label">Логин<span>*</span></label>
                         </div>
                         <div class="input-group">
                             <select class="auth-form__select select">
@@ -42,11 +43,11 @@
                     <p class="auth-form__description">Получайте скидки и бонусы в свой День Рождения</p>
                     <div class="input-group auth-form__input-group">
                         <input type="text" class="input-group__input auth-form__input" id="input-dob" placeholder="Дата рождения" data-inputmask="'mask': '99.99.9999'" required>
-                        <label for="input-dob" class="input-group__label">Дата рождения</label>
+                        <label for="input-dob" class="input-group__label">Дата рождения<span>*</span></label>
                     </div>
                     <div class="input-group auth-form__input-group">
                         <input type="tel" class="input-group__input auth-form__input" id="input-tel" placeholder="Телефон" data-inputmask="'mask': '+7 (999) 999-99-99'" required>
-                        <label for="input-tel" class="input-group__label">Телефон</label>
+                        <label for="input-tel" class="input-group__label">Телефон<span>*</span></label>
                     </div>
                     <div class="auth-form__inner">
                         <label for="save-data-checkbox" class="square-checkbox">

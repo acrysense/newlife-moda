@@ -182,12 +182,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkBodyClick = (e) => {
             let currentEl = e.target;
 
-            while(currentEl) {
-                if(currentEl === el) break;
+            while (currentEl) {
+                if (currentEl === el) break;
                 currentEl = currentEl.parentNode
             }
 
-            if(!currentEl) {
+            if (!currentEl) {
                 onClickOutside()
                 removeBodyChecker()
             }
@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return {setBodyChecker, removeBodyChecker}
     }
+
     if (popUpBtn) {
         popUpBtn.forEach((item) => {
             const close = () => {
@@ -222,23 +223,44 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    //if (popUpBtn) {
-    //    popUpBtn.forEach((item) => {
-    //        item.addEventListener('click', () => {
-    //            if (!item.nextElementSibling.classList.contains('pop-up__wrapper--active')) {
-    //                item.nextElementSibling.classList.add('pop-up__wrapper--active')
-    //                item.classList.add('pop-up__btn--close')
-    //                item.innerHTML = 'Закрыть' // Change text
-    //            } else {
-    //                let dataText = item.getAttribute('data-text') // Get attribute text
+    // PERSONAL AREA
+    const cabinetItems = document.querySelectorAll('.cabinet__item')
 
-    //                item.nextElementSibling.classList.remove('pop-up__wrapper--active')
-    //                item.classList.remove('pop-up__btn--close')
-    //                item.innerHTML = dataText // Return original text
-    //            }
-    //        })
-    //    })
-    //}
+    if (cabinetItems) {
+        cabinetItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.cabinet__item').forEach((child) => child.classList.remove('cabinet__item--active'))
+                document.querySelectorAll('.cabinet__content').forEach((child) => child.classList.remove('cabinet__content--active'))
+    
+                item.classList.add('cabinet__item--active')
+                document.querySelectorAll('.cabinet__content')[i].classList.add('cabinet__content--active')
+            })
+        })
+    }
+
+    // SELECT
+    document.querySelectorAll('.select').forEach(select => {
+        select.addEventListener('change', function(evt) {
+            select.classList.toggle('is-selected', !!evt.target.value)
+        })
+    })
+
+    // EYE PASSWORD
+    const inputEye = document.querySelectorAll('.input-group__eye')
+
+    if (inputEye) {
+        inputEye.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                if (item.previousElementSibling.previousElementSibling.type == 'password') {
+                    item.previousElementSibling.previousElementSibling.type = 'text'
+                } else {
+                    item.previousElementSibling.previousElementSibling.type = 'password'
+                }
+            })
+        })
+    }
 
     // INPUTMASK
     Inputmask().mask(document.querySelectorAll('input'))

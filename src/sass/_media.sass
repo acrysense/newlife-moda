@@ -10,6 +10,13 @@
         margin-right: 22.5px
         margin-left: 22.5px
 
+@media (max-width: 1023px)
+    .cabinet
+        &__list
+            display: none
+        &__content
+            margin-left: 0
+
 @media (min-width: 992px) and (max-width: 1199px)
     .product
         &__left
@@ -140,6 +147,16 @@
             margin-left: auto
             margin-right: 0
 
+@media (min-width: 576px)
+    .products-slider--cabinet
+        .products-slider__item
+            margin-right: 5%
+            width: 30%
+            &:nth-child(3n)
+                margin-right: 0
+            &:nth-child(n + 4)
+                margin-top: 50px
+
 @media (max-width: 575px)
     .content
         margin-right: 10px
@@ -170,6 +187,11 @@
             font-size: 12px
         &__item
             font-size: 12px
+    .products-slider--cabinet
+        .products-slider__item
+            width: 50%
+            &:nth-child(n + 3)
+                margin-top: 50px
     .state
         &__item
             font-size: 10px
@@ -208,6 +230,16 @@
                 margin-top: 29px
         &__description
             font-size: 11px
+    .cabinet
+        margin: 25px 10px
+    .profile
+        &__inner
+            flex-direction: column
+            .input-group + .input-group
+                margin-top: 36px
+                margin-left: 0
+        &__btn
+            margin: 0 auto
 
 @media (max-width: 459px)
     .product
@@ -221,7 +253,9 @@
             margin-top: 25px
             margin-left: 0
 
-@media (max-height: 719px)
+@media (max-height: 729px)
     .auth
         &__wrapper
             overflow-y: scroll
+            &::-webkit-scrollbar
+                display: none

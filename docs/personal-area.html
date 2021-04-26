@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWLIFE.MODA - Resale Store №1</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="hamburger" id="hamburger-toggle">
+                    Меню
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+                <div class="section section--desktop">
+                    <ul class="section__list">
+                        <li class="section__item section__item--active">
+                            <a href="#" class="section__link">МУЖСКОЕ</a>
+                        </li>
+                        <li class="section__item">
+                            <a href="#" class="section__link">ЖЕНСКОЕ</a>
+                        </li>
+                        <li class="section__item">
+                            <a href="#" class="section__link">ДЕТСКОЕ</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype.svg" alt="NEWLIFE.MODA">
+                </a>
+                <div class="header__control">
+                    <ul class="icons">
+                        <li class="icons__item">
+                            <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-search);">Поиск</a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-basket);">Корзина</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="personal-area link">ЛИЧНЫЙ КАБИНЕТ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <button class="mobile-menu__close">
+            Закрыть
+            <span class="mobile-menu__close--inner"></span>
+            <span class="mobile-menu__close--inner"></span>
+            <span class="mobile-menu__close--inner"></span>
+        </button>
+        <div class="mobile-menu__content">
+            <label for="mobile-search" class="input-shell">
+                <input type="text" id="mobile-search" class="mobile-menu__search input-shell__input" placeholder="Поиск по брендам, по товару...">
+            </label>
+            <div class="section section--mobile">
+                <ul class="section__list">
+                    <li class="section__item section__item--active">
+                        <a href="#" class="section__link">МУЖСКОЕ</a>
+                    </li>
+                    <li class="section__item">
+                        <a href="#" class="section__link">ЖЕНСКОЕ</a>
+                    </li>
+                    <li class="section__item">
+                        <a href="#" class="section__link">ДЕТСКОЕ</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--accent">
+                        <a href="#" class="nav__link">НОВИНКИ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">АУКЦИОН</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">SALE</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link nav__link--dropdown">ОДЕЖДА</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">брюки</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Верхняя одежда</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">джинсы</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">ОБУВЬ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">СУМКИ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">АКСЕССУАРЫ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">LOOK</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">БРЕНДЫ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">АКЦИИ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__contacts">
+                <a href="#" class="mobile-menu__appraisal link link--accent-bg">ОЦЕНИТЬ ТОВАР</a>
+                <a href="tel:88123456789" class="mobile-menu__phone">8 812 345 6789</a>
+                <div class="social">
+                    <ul class="social__list social__list--space-between">
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--instagram">Instagram</a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--telegram">Telegram</a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--whatsapp">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subheader">
+        <div class="container">
+            <div class="subheader__wrapper subheader__wrapper--top">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item--accent">
+                            <a href="#" class="nav__link">НОВИНКИ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">АУКЦИОН</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">SALE</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">ОДЕЖДА</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">ОБУВЬ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">СУМКИ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">АКСЕССУАРЫ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">LOOK</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">БРЕНДЫ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="sell link link--bg">ПРОДАТЬ ТОВАР</a>
+            </div>
+            <div class="subheader__wrapper subheader__wrapper--bottom">
+                <div class="header-brand">
+                    <ul class="header-brand__list">
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">A</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">B</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">C</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">D</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">E</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">F</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">G</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">H</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">I</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">J</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">K</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">L</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">M</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">N</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">O</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">Q</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">R</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">S</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">T</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">U</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">V</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">W</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">X</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">Y</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">Z</a>
+                        </li>
+                    </ul>
+                    <ul class="header-brand__list header-brand__list--sm">
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">РУС</a>
+                        </li>
+                        <li class="header-brand__item">
+                            <a href="#" class="header-brand__link">123</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- End of header -->
+    <!-- Content -->
+    <div class="cabinet">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb breadcrumb--mobile" aria-label="Breadcrumb">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" href="personal-area.html">Личный кабинет</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" href="#">Мой профиль</a>
+                    </li>
+                </ol>
+            </nav>
+            <!-- End of breadcrumb -->
+            <div class="cabinet__wrapper">
+                <ul class="cabinet__list" role="tablist">
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">МОЙ SEARCH LIST</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">запись на оценку</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">запись на выплату</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">запись к стилисту</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">мои договоры</button>
+                    </li>
+                    <li class="cabinet__item cabinet__item--active">
+                        <button class="cabinet__button">мой профиль</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">избранное</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">резерв</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">мои заказы</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">подписки</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">аукцион</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">скидки и бонусы</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">персональные предложения</button>
+                    </li>
+                    <li class="cabinet__item">
+                        <button class="cabinet__button">продать вещь</button>
+                    </li>
+                </ul>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content cabinet__content--active">
+                    <div class="cabinet__inner">
+                        <h2 class="cabinet__title">МОЙ ПРОФИЛЬ</h2>
+                    </div>
+                    <div class="profile">
+                        <div class="profile__group">
+                            <h3 class="profile__title">личные данные</h3>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-email" class="profile__input input-group__input" placeholder="E-mail">
+                                    <label for="input-email" class="input-group__label">E-mail</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="tel" id="input-tel" class="profile__input input-group__input" placeholder="Телефон">
+                                    <label for="input-tel" class="input-group__label">Телефон</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-email" class="profile__input input-group__input" placeholder="Сменить пароль">
+                                    <label for="input-email" class="input-group__label">Сменить пароль</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-sex" class="profile__input input-group__input" placeholder="Пол">
+                                    <label for="input-sex" class="input-group__label">Пол</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-surname" class="profile__input input-group__input" placeholder="Фамилия">
+                                    <label for="input-surname" class="input-group__label">Фамилия</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-name" class="profile__input input-group__input" placeholder="Имя">
+                                    <label for="input-name" class="input-group__label">Имя</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-patronymic" class="profile__input input-group__input" placeholder="Отчество">
+                                    <label for="input-patronymic" class="input-group__label">Отчество</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-dob" class="profile__input input-group__input" placeholder="Дата рождения">
+                                    <label for="input-dob" class="input-group__label">Дата рождения</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__group">
+                            <h3 class="profile__title">информация о доставке</h3>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-country" class="profile__input input-group__input" placeholder="Страна">
+                                    <label for="input-country" class="input-group__label">Страна</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-city" class="profile__input input-group__input" placeholder="Город">
+                                    <label for="input-city" class="input-group__label">Город</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-district" class="profile__input input-group__input" placeholder="Район">
+                                    <label for="input-district" class="input-group__label">Район</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-index" class="profile__input input-group__input" placeholder="Индекс">
+                                    <label for="input-index" class="input-group__label">Индекс</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-address" class="profile__input input-group__input" placeholder="Адрес">
+                                    <label for="input-address" class="input-group__label">Адрес</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__group">
+                            <h3 class="profile__title">реквизиты для перевода</h3>
+                            <div class="profile__inner">
+                                <div class="input-group input-group--error">
+                                    <input type="text" id="input-client-data" class="profile__input input-group__input" value="771" placeholder="Данные клиента">
+                                    <label for="input-client-data" class="input-group__label">Данные клиента</label>
+                                    <span class="input-group__error">Ошибка ввода данных</span>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-name-bank" class="profile__input input-group__input" placeholder="Наименование банка">
+                                    <label for="input-name-bank" class="input-group__label">Наименование банка</label>
+                                </div>
+                            </div>
+                            <div class="profile__inner">
+                                <div class="input-group">
+                                    <input type="text" id="input-bik-bank" class="profile__input input-group__input" placeholder="БИК банка клиента">
+                                    <label for="input-bik-bank" class="input-group__label">БИК банка клиента</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" id="input-bank-score" class="profile__input input-group__input" placeholder="Расчетный счет">
+                                    <label for="input-bank-score" class="input-group__label">Расчетный счет</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__group">
+                            <button class="profile__btn btn" disabled>СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__content">
+                    <div class="cabinet__inner">
+                        <h2 class="cabinet__title">Избранное</h2>
+                        <div class="cabinet__group">
+                            <button class="share">поделиться избранным</button>
+                            <div class="sort">
+                                <span class="sort__help">Сортировать по:</span>
+                                <select class="sort__select">
+                                    <option value="0" selected>дате добавления</option>
+                                    <option value="1">рейтингу</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <ul class="tabs__list" role="tablist">
+                            <li class="tabs__item tabs__item--active">
+                                <button class="tabs__button">Все</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button">В наличии</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button">Проданные</button>
+                            </li>
+                        </ul>
+                        <div class="tabs__content tabs__content--active">
+                            <div class="products-slider products-slider--cabinet">
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="products-slider products-slider--cabinet">
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__content">
+                            <div class="products-slider products-slider--cabinet">
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                                <div class="products-slider__item">
+                                    <div class="products-slider__top">
+                                        <span class="products-slider__status">Аукцион</span>
+                                        <div class="icons">
+                                            <ul class="icons__list">
+                                                <li class="icons__item">
+                                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-favorites);">Избранное</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="products-slider__img">
+                                        <picture>
+                                            <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                            <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                        </picture>
+                                    </a>
+                                    <div class="products-slider__info">
+                                        <h3 class="products-slider__title">Gucci Chanel</h3>
+                                        <p class="products-slider__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                        <div class="products-slider__price">
+                                            <span class="products-slider__new-price">23 000</span>
+                                            <span class="products-slider__old-price">33 000</span>
+                                        </div>
+                                        <span class="products-slider__state">ОТЛИЧНОЕ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cabinet__content">
+                    <div class="cabinet__inner">
+                        <h2 class="cabinet__title cabinet__title--normal">Резерв товаров</h2>
+                    </div>
+                    <div class="cabinet__block">
+                        <p class="cabinet__text">На данный момент Вы не зарезервировали <br>ни одного товара.</p>
+                        <a href="#" class="cabinet__link">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    </div>
+                </div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+                <div class="cabinet__content"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End of content-->
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <a href="index.html" class="logotype">
+                        <img src="img/dist/logotype.svg" width="185" height="26" alt="NEWLIFE.MODA">
+                    </a>
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__heading">КУПИТЬ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Новинки</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Распродажа</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Бренды</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Одежда</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Обувь</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Сумки</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Аксессуары</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ПРОДАТЬ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Оценка вещей</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Resale vip</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Что продаём</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Условия сотрудничесва</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ИНФОРМАЦИЯ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">О нас</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Доставка</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Акции</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Карта клуба</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Вакансии</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Для стилиста</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Для блогера</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__heading">ЛИЧНЫЙ КАБИНЕТ</li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Запись на оценку</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Оценить вещь</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Резерв и приемка</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Войти</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__wrapper">
+                    <div class="payment">
+                        <ul class="payment__list">
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/mastercard.svg" width="26" height="16" alt="Mastercard">
+                                </a>
+                            </li>
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/visa.svg" width="51" height="16" alt="VISA">
+                                </a>
+                            </li>
+                            <li class="payment__item">
+                                <a href="#" class="payment__link">
+                                    <img src="img/dist/mir.svg" width="54" height="16" alt="МИР">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer__legal-list">
+                        <li class="footer__legal-item">©2021 NEWLIFE.MODA. Все права защищены.</li>
+                        <li class="footer__legal-item">
+                            <a href="#" class="footer__legal-link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer__legal-item">
+                            <a href="#" class="footer__legal-link">Пользовательское соглашение</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footer__copyright">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с <a href="#">Политикой конфиденциальности.</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+    <!-- Mobile nav -->
+    <div class="mobile-nav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item mobile-nav__item--active">
+                <a href="#" class="mobile-nav__link">
+                    <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.18585 11.7499C3.05437 11.7499 2.92382 11.7089 2.81239 11.6283C2.60484 11.4779 2.50788 11.2194 2.56437 10.9699L3.33636 7.56925L0.718255 5.27323C0.525806 5.10523 0.452287 4.83917 0.531299 4.59572C0.610311 4.35274 0.825283 4.1807 1.07981 4.15717L4.54388 3.84268L5.91346 0.637614C6.01444 0.402134 6.24443 0.250061 6.49996 0.250061C6.75549 0.250061 6.98548 0.402134 7.08646 0.637064L8.45603 3.84268L11.9196 4.15717C12.1746 4.18016 12.3896 4.35274 12.4686 4.59572C12.5476 4.83871 12.4746 5.10523 12.2821 5.27323L9.66401 7.56879L10.436 10.9693C10.4926 11.2194 10.3955 11.4779 10.1881 11.6279C9.98107 11.7779 9.70503 11.7894 9.48703 11.6584L6.49996 9.87333L3.51288 11.6594C3.4119 11.7194 3.29938 11.7499 3.18585 11.7499ZM6.49996 9.10435C6.61349 9.10435 6.72592 9.13484 6.82699 9.19481L9.64607 10.8809L8.91747 7.67124C8.86547 7.44281 8.94302 7.20431 9.11953 7.04977L11.5916 4.88174L8.32099 4.58474C8.08551 4.56322 7.88299 4.41518 7.79098 4.19819L6.49996 1.17358L5.20738 4.19865C5.11638 4.41417 4.91386 4.56221 4.67893 4.58373L1.40785 4.88073L3.87984 7.04876C4.0569 7.20376 4.13436 7.44181 4.0819 7.67078L3.35385 10.8803L6.17292 9.19481C6.27391 9.13484 6.38643 9.10435 6.49996 9.10435ZM4.51742 3.90467C4.51742 3.90467 4.51742 3.90522 4.51688 3.90567L4.51742 3.90467ZM8.48149 3.9032L8.48204 3.90421C8.48204 3.90366 8.48204 3.90366 8.48149 3.9032Z" fill="black"/>
+                    </svg>                        
+                    <span>Новинки</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip40)">
+                        <path d="M6.24999 12H0.749992C0.336492 12 -7.62939e-06 11.6635 -7.62939e-06 11.25V10.75C-7.62939e-06 10.3365 0.336492 10 0.749992 10H6.24999C6.66349 10 6.99999 10.3365 6.99999 10.75V11.25C6.99999 11.6635 6.66349 12 6.24999 12ZM0.749992 10.5C0.611992 10.5 0.499992 10.6125 0.499992 10.75V11.25C0.499992 11.3875 0.611992 11.5 0.749992 11.5H6.24999C6.38799 11.5 6.49999 11.3875 6.49999 11.25V10.75C6.49999 10.6125 6.38799 10.5 6.24999 10.5H0.749992Z" fill="black"/>
+                        <path d="M5.3465 6.31398C5.23 6.31398 5.1185 6.27998 5.0265 6.18798L3.2715 4.43298C2.9645 4.12598 3.302 3.59498 3.4125 3.42098C3.62 3.09498 3.943 2.70598 4.323 2.32598C4.7035 1.94498 5.093 1.62098 5.419 1.41348C5.594 1.30198 6.1255 0.964483 6.4325 1.27148L8.1875 3.02648C8.495 3.33398 8.1565 3.86598 8.0455 4.04048C7.8375 4.36698 7.5135 4.75648 7.1325 5.13698C6.7525 5.51698 6.3635 5.83998 6.038 6.04698C5.9165 6.12498 5.619 6.31398 5.3465 6.31398ZM6.0795 1.62498C5.992 1.62848 5.4435 1.91298 4.6785 2.67748C3.9135 3.44248 3.6285 3.99148 3.6465 4.11548L5.3805 5.83448C5.4685 5.83098 6.017 5.54648 6.7825 4.78148C7.5185 4.04498 7.8095 3.50948 7.8145 3.35948L6.0795 1.62498Z" fill="black"/>
+                        <path d="M4.5015 7.4595C4.3105 7.4595 4.119 7.3865 3.9735 7.241L2.2185 5.486C2.0775 5.3455 2 5.158 2 4.9585C2 4.759 2.0775 4.5715 2.219 4.4305L2.57 4.0795C2.861 3.7885 3.3345 3.7885 3.6255 4.0795L5.3805 5.8345C5.6715 6.1255 5.6715 6.599 5.3805 6.89L5.0295 7.241C4.8835 7.3865 4.6925 7.4595 4.5015 7.4595ZM3.0975 4.361C3.0345 4.361 2.9715 4.3855 2.923 4.4335L2.5725 4.784C2.5255 4.831 2.5 4.8925 2.5 4.9585C2.5 5.0245 2.5255 5.086 2.5725 5.133L4.3275 6.888C4.424 6.984 4.58 6.9835 4.676 6.888L5.027 6.537C5.123 6.441 5.123 6.2845 5.027 6.1885L3.272 4.4335C3.2235 4.3855 3.1605 4.361 3.0975 4.361Z" fill="black"/>
+                        <path d="M8.3625 3.59799C8.1715 3.59799 7.98 3.52499 7.8345 3.37949L6.0795 1.62449C5.7885 1.33349 5.7885 0.860494 6.0795 0.569494L6.4305 0.218494C6.7215 -0.0725059 7.195 -0.0725059 7.486 0.218494L9.241 1.97349C9.532 2.26449 9.532 2.73799 9.241 3.02899L8.89 3.37999C8.7445 3.52549 8.5535 3.59799 8.3625 3.59799ZM6.9585 0.500494C6.8955 0.500494 6.8325 0.524494 6.784 0.572494L6.433 0.923494C6.337 1.01949 6.337 1.17549 6.433 1.27149L8.188 3.02649C8.284 3.12199 8.4405 3.12199 8.5365 3.02649L8.8875 2.67599C8.9835 2.57999 8.9835 2.42349 8.8875 2.32749L7.1325 0.572494C7.0845 0.524494 7.0215 0.500494 6.9585 0.500494ZM9.064 2.85249H9.069H9.064Z" fill="black"/>
+                        <path d="M11.0485 10.0015C10.747 10.0015 10.4225 9.829 10.0775 9.484C9.7325 9.139 7.704 6.9065 6.445 5.422C6.3555 5.317 6.3685 5.159 6.474 5.07C6.579 4.9805 6.737 4.993 6.8265 5.099C8.1395 6.647 10.133 8.8325 10.431 9.1305C10.994 9.6945 11.2135 9.475 11.3445 9.345C11.4045 9.285 11.487 9.203 11.4985 9.0855C11.5155 8.915 11.388 8.689 11.1305 8.431C10.835 8.135 8.653 6.1445 7.099 4.8255C6.9935 4.736 6.9805 4.5785 7.07 4.4735C7.16 4.367 7.3175 4.3555 7.4225 4.4445C8.913 5.709 11.143 7.735 11.485 8.0775C11.8575 8.45 12.03 8.806 11.997 9.135C11.9675 9.4295 11.786 9.611 11.699 9.698C11.496 9.9005 11.279 10.0015 11.0485 10.0015Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip40">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Аукцион</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">
+                    <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip20)">
+                        <path d="M6.5 0C3.1914 0 0.5 2.6914 0.5 6C0.5 9.3086 3.1914 12 6.5 12C9.8086 12 12.5 9.30813 12.5 6C12.5 2.69187 9.8086 0 6.5 0ZM6.5 11.0705C3.70449 11.0705 1.42951 8.79598 1.42951 6C1.42951 3.20402 3.70449 0.929508 6.5 0.929508C9.29551 0.929508 11.5705 3.20402 11.5705 6C11.5705 8.79598 9.29598 11.0705 6.5 11.0705Z" fill="black"/>
+                        <path d="M8.82378 5.49343H6.96476V3.63441C6.96476 3.37787 6.75701 3.16965 6.5 3.16965C6.24298 3.16965 6.03523 3.37787 6.03523 3.63441V5.49343H4.17622C3.9192 5.49343 3.71145 5.70165 3.71145 5.95819C3.71145 6.21474 3.9192 6.42296 4.17622 6.42296H6.03523V8.28198C6.03523 8.53852 6.24298 8.74674 6.5 8.74674C6.75701 8.74674 6.96476 8.53852 6.96476 8.28198V6.42296H8.82378C9.0808 6.42296 9.28855 6.21474 9.28855 5.95819C9.28855 5.70165 9.0808 5.49343 8.82378 5.49343Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip20">
+                        <rect width="16" height="16" fill="white" transform="translate(0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Продать</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip10)">
+                        <path d="M5.91449 5.78045C6.70862 5.78045 7.39618 5.49563 7.95813 4.93368C8.51989 4.37182 8.80481 3.68435 8.80481 2.89013C8.80481 2.09619 8.51999 1.40863 7.95804 0.846587C7.39609 0.28482 6.70853 0 5.91449 0C5.12027 0 4.43281 0.28482 3.87095 0.846678C3.30909 1.40854 3.02418 2.0961 3.02418 2.89013C3.02418 3.68435 3.30909 4.37191 3.87095 4.93377C4.43299 5.49553 5.12055 5.78045 5.91449 5.78045ZM4.36826 1.3439C4.79938 0.912779 5.30512 0.703215 5.91449 0.703215C6.52377 0.703215 7.0296 0.912779 7.46081 1.3439C7.89194 1.77511 8.10159 2.28094 8.10159 2.89013C8.10159 3.49951 7.89194 4.00524 7.46081 4.43645C7.0296 4.86767 6.52377 5.07723 5.91449 5.07723C5.3053 5.07723 4.79956 4.86758 4.36826 4.43645C3.93705 4.00533 3.72739 3.49951 3.72739 2.89013C3.72739 2.28094 3.93705 1.77511 4.36826 1.3439Z" fill="black"/>
+                        <path d="M10.9718 9.2274C10.9556 8.99357 10.9228 8.7385 10.8745 8.46916C10.8258 8.1978 10.7631 7.94126 10.688 7.7068C10.6104 7.46446 10.505 7.22514 10.3746 6.9958C10.2393 6.75776 10.0804 6.55049 9.90207 6.37993C9.71558 6.20149 9.48724 6.05803 9.22321 5.95338C8.96008 5.84929 8.66849 5.79655 8.35657 5.79655C8.23407 5.79655 8.1156 5.84682 7.88681 5.99577C7.746 6.0876 7.5813 6.1938 7.39746 6.31126C7.24027 6.41142 7.02732 6.50526 6.76429 6.59022C6.50766 6.67326 6.24711 6.71538 5.98984 6.71538C5.73276 6.71538 5.47221 6.67326 5.2154 6.59022C4.95264 6.50535 4.7396 6.41151 4.58268 6.31135C4.40058 6.19499 4.23579 6.08879 4.09287 5.99568C3.86427 5.84673 3.7458 5.79646 3.6233 5.79646C3.31129 5.79646 3.01979 5.84929 2.75676 5.95348C2.4929 6.05794 2.26448 6.2014 2.0778 6.38002C1.89946 6.55067 1.74052 6.75786 1.60539 6.9958C1.47511 7.22514 1.36964 7.46437 1.29201 7.70689C1.21703 7.94136 1.15431 8.1978 1.10561 8.46916C1.05727 8.73814 1.02458 8.9933 1.00838 9.22767C0.992447 9.45683 0.98439 9.69532 0.98439 9.93629C0.98439 10.5627 1.18352 11.0698 1.57619 11.4438C1.964 11.8128 2.47706 12 3.10118 12H8.87924C9.50317 12 10.0162 11.8128 10.4041 11.4438C10.7969 11.0701 10.996 10.5628 10.996 9.93619C10.9959 9.6944 10.9878 9.45591 10.9718 9.2274ZM9.91928 10.9343C9.66302 11.1782 9.32281 11.2968 8.87915 11.2968H3.10118C2.65742 11.2968 2.31721 11.1782 2.06105 10.9344C1.80974 10.6952 1.68761 10.3686 1.68761 9.93629C1.68761 9.71143 1.69502 9.48942 1.70985 9.27628C1.72432 9.06718 1.75389 8.83747 1.79774 8.59339C1.84105 8.35234 1.89616 8.12611 1.96171 7.92131C2.02461 7.72493 2.1104 7.53047 2.21678 7.34315C2.31831 7.16462 2.43513 7.01146 2.56404 6.88804C2.68461 6.7726 2.83659 6.67811 3.01567 6.60725C3.18129 6.5417 3.36741 6.50581 3.56947 6.50041C3.5941 6.5135 3.63795 6.5385 3.70899 6.58482C3.85356 6.67903 4.02018 6.78651 4.20439 6.90416C4.41203 7.03654 4.67954 7.15611 4.99915 7.25929C5.3259 7.36494 5.65916 7.41859 5.98993 7.41859C6.32071 7.41859 6.65406 7.36494 6.98063 7.25938C7.30051 7.15602 7.56793 7.03654 7.77585 6.90397C7.96436 6.78349 8.12631 6.67912 8.27088 6.58482C8.34192 6.53859 8.38577 6.5135 8.4104 6.50041C8.61255 6.50581 8.79868 6.5417 8.96439 6.60725C9.14337 6.67811 9.29535 6.77269 9.41592 6.88804C9.54483 7.01137 9.66165 7.16453 9.76318 7.34324C9.86966 7.53047 9.95553 7.72502 10.0183 7.92121C10.084 8.12629 10.1392 8.35243 10.1824 8.5933C10.2262 8.83784 10.2558 9.06764 10.2703 9.27638V9.27656C10.2852 9.48887 10.2927 9.71079 10.2928 9.93629C10.2927 10.3687 10.1706 10.6952 9.91928 10.9343Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip10">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Профиль</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#" class="mobile-nav__link">
+                    <svg width="17" height="16" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip110)">
+                        <path d="M1.70001 7.19999C2.36275 7.19999 2.90002 6.66273 2.90002 5.99998C2.90002 5.33723 2.36275 4.79997 1.70001 4.79997C1.03726 4.79997 0.5 5.33723 0.5 5.99998C0.5 6.66273 1.03726 7.19999 1.70001 7.19999Z" fill="black"/>
+                        <path d="M6.49998 7.19999C7.16273 7.19999 7.69999 6.66273 7.69999 5.99998C7.69999 5.33723 7.16273 4.79997 6.49998 4.79997C5.83723 4.79997 5.29997 5.33723 5.29997 5.99998C5.29997 6.66273 5.83723 7.19999 6.49998 7.19999Z" fill="black"/>
+                        <path d="M11.3 7.19999C11.9627 7.19999 12.5 6.66273 12.5 5.99998C12.5 5.33723 11.9627 4.79997 11.3 4.79997C10.6372 4.79997 10.1 5.33723 10.1 5.99998C10.1 6.66273 10.6372 7.19999 11.3 7.19999Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip110">
+                        <rect width="17" height="16" fill="white" transform="translate(0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Ещё</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of mobile nav -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
