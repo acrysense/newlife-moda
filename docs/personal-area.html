@@ -301,14 +301,14 @@
                     <li class="cabinet__item">
                         <button class="cabinet__button">мои договоры</button>
                     </li>
-                    <li class="cabinet__item cabinet__item--active">
+                    <li class="cabinet__item">
                         <button class="cabinet__button">мой профиль</button>
                     </li>
                     <li class="cabinet__item">
                         <button class="cabinet__button">избранное</button>
                     </li>
-                    <li class="cabinet__item">
-                        <button class="cabinet__button">резерв</button>
+                    <li class="cabinet__item cabinet__item--active">
+                        <button class="cabinet__button">резерв (3)</button>
                     </li>
                     <li class="cabinet__item">
                         <button class="cabinet__button">мои заказы</button>
@@ -334,7 +334,7 @@
                 <div class="cabinet__content"></div>
                 <div class="cabinet__content"></div>
                 <div class="cabinet__content"></div>
-                <div class="cabinet__content cabinet__content--active">
+                <div class="cabinet__content">
                     <div class="cabinet__inner">
                         <h2 class="cabinet__title">МОЙ ПРОФИЛЬ</h2>
                     </div>
@@ -966,13 +966,174 @@
                         </div>
                     </div>
                 </div>
-                <div class="cabinet__content">
-                    <div class="cabinet__inner">
+                <div class="cabinet__content cabinet__content--active">
+                    <div class="cabinet__inner cabinet__inner--sm">
                         <h2 class="cabinet__title cabinet__title--normal">Резерв товаров</h2>
                     </div>
-                    <div class="cabinet__block">
+                    <!-- If empty reserve -->
+                    <!--<div class="cabinet__block">
                         <p class="cabinet__text">На данный момент Вы не зарезервировали <br>ни одного товара.</p>
                         <a href="#" class="cabinet__link">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    </div>-->
+                    <div class="reserve">
+                        <div class="reserve__item">
+                            <a href="#" class="reserve__img">
+                                <picture>
+                                    <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                    <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                </picture>
+                            </a>
+                            <div class="reserve__content">
+                                <div class="reserve__top">
+                                    <h3 class="reserve__title">Gucci Chanel</h3>
+                                    <p class="reserve__description">
+                                        Кожанные кросовки Phyton на шнуровке<br>
+                                        Размер: <span>44</span><br>
+                                        Цвет: <span>коричневый</span>
+                                    </p>
+                                </div>
+                                <div class="reserve__price">
+                                    <span class="reserve__price--new">23 000₽</span>
+                                    <span class="reserve__price--old">33 000₽</span>
+                                </div>
+                                <div class="reserve__inner">
+                                    <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
+                                    <div class="reserve__timing link link--bg link--thin">
+                                        <p>Время резерва истечет через</p>
+                                        <span>14:00:00</span>
+                                    </div>
+                                    <a href="#" class="reserve__info">3 человека в очереди</a>
+                                </div>
+                                <div class="reserve__controls">
+                                    <button class="reserve__control">
+                                        Вопрос
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.0547 0C12.0483 0.00643031 12.0354 0.00643031 12.0161 0.00643031C5.50863 0.00643031 0.216476 5.29858 0.216476 11.806C0.216476 14.4618 1.12315 17.0403 2.78217 19.1173L1.06528 23.1041C0.923811 23.432 1.07814 23.8114 1.39965 23.9465C1.5154 23.9979 1.64401 24.0108 1.76618 23.9915L8.06146 22.8855C9.32181 23.342 10.6465 23.5735 11.984 23.5671C18.4914 23.5671 23.7836 18.2749 23.7836 11.7675C23.7964 5.27928 18.5429 0.00643031 12.0547 0ZM11.9904 22.2875C10.7493 22.2875 9.52114 22.0624 8.35726 21.6251C8.24794 21.5801 8.1322 21.5737 8.01645 21.593L2.71787 22.5189L4.11968 19.2588C4.21613 19.0337 4.17755 18.7701 4.01679 18.5836C3.25802 17.7026 2.65357 16.6995 2.22917 15.6128C1.75332 14.3975 1.50897 13.105 1.50897 11.7996C1.50897 5.99948 6.22882 1.28606 12.0225 1.28606C17.8034 1.2732 22.4975 5.94804 22.504 11.7289C22.504 11.7417 22.504 11.7546 22.504 11.7675C22.504 17.574 17.7841 22.2875 11.9904 22.2875Z" fill="#5F5F5F"/>
+                                            <path d="M11.4888 9.43311H8.01641C7.66274 9.43311 7.37337 9.72247 7.37337 10.0761C7.37337 10.4298 7.66274 10.7192 8.01641 10.7192H11.4888C11.8424 10.7192 12.1318 10.4298 12.1318 10.0761C12.1318 9.72247 11.8424 9.43311 11.4888 9.43311Z" fill="#5F5F5F"/>
+                                            <path d="M15.99 12.6482H8.01641C7.66274 12.6482 7.37337 12.9376 7.37337 13.2913C7.37337 13.6449 7.66274 13.9343 8.01641 13.9343H15.99C16.3437 13.9343 16.633 13.6449 16.633 13.2913C16.633 12.9376 16.3437 12.6482 15.99 12.6482Z" fill="#5F5F5F"/>
+                                        </svg>
+                                    </button>
+                                    <button class="reserve__control">
+                                        Отмена
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip-close)">
+                                            <path d="M12.5494 12.9973L23.8864 1.66031C24.0375 1.50918 24.0375 1.26419 23.8864 1.11306C23.7353 0.961979 23.4903 0.961979 23.3392 1.11306L12.0022 12.4501L0.665153 1.11306C0.511408 0.964592 0.266424 0.968849 0.117904 1.12259C-0.0269385 1.27256 -0.0269385 1.51034 0.117904 1.66031L11.4549 12.9973L0.117904 24.3343C-0.03584 24.4829 -0.0400972 24.7278 0.108422 24.8816C0.256942 25.0353 0.501926 25.0396 0.655671 24.8911C0.658912 24.888 0.662056 24.8848 0.665153 24.8816L12.0022 13.5446L23.3392 24.8816C23.4929 25.0301 23.7379 25.0259 23.8864 24.8721C24.0313 24.7221 24.0313 24.4843 23.8864 24.3343L12.5494 12.9973Z" fill="#5F5F5F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip-close">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 1)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reserve__item">
+                            <a href="#" class="reserve__img">
+                                <picture>
+                                    <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                    <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                </picture>
+                            </a>
+                            <div class="reserve__content">
+                                <div class="reserve__top">
+                                    <h3 class="reserve__title">Gucci Chanel</h3>
+                                    <p class="reserve__description">
+                                        Кожанные кросовки Phyton на шнуровке<br>
+                                        Размер: <span>44</span><br>
+                                        Цвет: <span>коричневый</span>
+                                    </p>
+                                </div>
+                                <div class="reserve__price">
+                                    <span class="reserve__price--new">23 000₽</span>
+                                    <span class="reserve__price--old">33 000₽</span>
+                                </div>
+                                <div class="reserve__inner">
+                                    <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
+                                    <div class="reserve__timing link link--bg link--thin">
+                                        <p>Время резерва истечет через</p>
+                                        <span>14:00:00</span>
+                                    </div>
+                                </div>
+                                <div class="reserve__controls">
+                                    <button class="reserve__control">
+                                        Вопрос
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.0547 0C12.0483 0.00643031 12.0354 0.00643031 12.0161 0.00643031C5.50863 0.00643031 0.216476 5.29858 0.216476 11.806C0.216476 14.4618 1.12315 17.0403 2.78217 19.1173L1.06528 23.1041C0.923811 23.432 1.07814 23.8114 1.39965 23.9465C1.5154 23.9979 1.64401 24.0108 1.76618 23.9915L8.06146 22.8855C9.32181 23.342 10.6465 23.5735 11.984 23.5671C18.4914 23.5671 23.7836 18.2749 23.7836 11.7675C23.7964 5.27928 18.5429 0.00643031 12.0547 0ZM11.9904 22.2875C10.7493 22.2875 9.52114 22.0624 8.35726 21.6251C8.24794 21.5801 8.1322 21.5737 8.01645 21.593L2.71787 22.5189L4.11968 19.2588C4.21613 19.0337 4.17755 18.7701 4.01679 18.5836C3.25802 17.7026 2.65357 16.6995 2.22917 15.6128C1.75332 14.3975 1.50897 13.105 1.50897 11.7996C1.50897 5.99948 6.22882 1.28606 12.0225 1.28606C17.8034 1.2732 22.4975 5.94804 22.504 11.7289C22.504 11.7417 22.504 11.7546 22.504 11.7675C22.504 17.574 17.7841 22.2875 11.9904 22.2875Z" fill="#5F5F5F"/>
+                                            <path d="M11.4888 9.43311H8.01641C7.66274 9.43311 7.37337 9.72247 7.37337 10.0761C7.37337 10.4298 7.66274 10.7192 8.01641 10.7192H11.4888C11.8424 10.7192 12.1318 10.4298 12.1318 10.0761C12.1318 9.72247 11.8424 9.43311 11.4888 9.43311Z" fill="#5F5F5F"/>
+                                            <path d="M15.99 12.6482H8.01641C7.66274 12.6482 7.37337 12.9376 7.37337 13.2913C7.37337 13.6449 7.66274 13.9343 8.01641 13.9343H15.99C16.3437 13.9343 16.633 13.6449 16.633 13.2913C16.633 12.9376 16.3437 12.6482 15.99 12.6482Z" fill="#5F5F5F"/>
+                                        </svg>
+                                    </button>
+                                    <button class="reserve__control">
+                                        Отмена
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip-close)">
+                                            <path d="M12.5494 12.9973L23.8864 1.66031C24.0375 1.50918 24.0375 1.26419 23.8864 1.11306C23.7353 0.961979 23.4903 0.961979 23.3392 1.11306L12.0022 12.4501L0.665153 1.11306C0.511408 0.964592 0.266424 0.968849 0.117904 1.12259C-0.0269385 1.27256 -0.0269385 1.51034 0.117904 1.66031L11.4549 12.9973L0.117904 24.3343C-0.03584 24.4829 -0.0400972 24.7278 0.108422 24.8816C0.256942 25.0353 0.501926 25.0396 0.655671 24.8911C0.658912 24.888 0.662056 24.8848 0.665153 24.8816L12.0022 13.5446L23.3392 24.8816C23.4929 25.0301 23.7379 25.0259 23.8864 24.8721C24.0313 24.7221 24.0313 24.4843 23.8864 24.3343L12.5494 12.9973Z" fill="#5F5F5F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip-close">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 1)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="reserve__item reserve__item--disabled">
+                            <a href="#" class="reserve__img">
+                                <picture>
+                                    <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                    <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                </picture>
+                            </a>
+                            <div class="reserve__content">
+                                <div class="reserve__top">
+                                    <h3 class="reserve__title">Gucci Chanel</h3>
+                                    <p class="reserve__description">
+                                        Кожанные кросовки Phyton на шнуровке<br>
+                                        Размер: <span>44</span><br>
+                                        Цвет: <span>коричневый</span>
+                                    </p>
+                                </div>
+                                <div class="reserve__price">
+                                    <span class="reserve__price--new">23 000₽</span>
+                                    <span class="reserve__price--old">33 000₽</span>
+                                </div>
+                                <div class="reserve__inner"></div>
+                                <div class="reserve__controls">
+                                    <button class="reserve__control">
+                                        Вопрос
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.0547 0C12.0483 0.00643031 12.0354 0.00643031 12.0161 0.00643031C5.50863 0.00643031 0.216476 5.29858 0.216476 11.806C0.216476 14.4618 1.12315 17.0403 2.78217 19.1173L1.06528 23.1041C0.923811 23.432 1.07814 23.8114 1.39965 23.9465C1.5154 23.9979 1.64401 24.0108 1.76618 23.9915L8.06146 22.8855C9.32181 23.342 10.6465 23.5735 11.984 23.5671C18.4914 23.5671 23.7836 18.2749 23.7836 11.7675C23.7964 5.27928 18.5429 0.00643031 12.0547 0ZM11.9904 22.2875C10.7493 22.2875 9.52114 22.0624 8.35726 21.6251C8.24794 21.5801 8.1322 21.5737 8.01645 21.593L2.71787 22.5189L4.11968 19.2588C4.21613 19.0337 4.17755 18.7701 4.01679 18.5836C3.25802 17.7026 2.65357 16.6995 2.22917 15.6128C1.75332 14.3975 1.50897 13.105 1.50897 11.7996C1.50897 5.99948 6.22882 1.28606 12.0225 1.28606C17.8034 1.2732 22.4975 5.94804 22.504 11.7289C22.504 11.7417 22.504 11.7546 22.504 11.7675C22.504 17.574 17.7841 22.2875 11.9904 22.2875Z" fill="#5F5F5F"/>
+                                            <path d="M11.4888 9.43311H8.01641C7.66274 9.43311 7.37337 9.72247 7.37337 10.0761C7.37337 10.4298 7.66274 10.7192 8.01641 10.7192H11.4888C11.8424 10.7192 12.1318 10.4298 12.1318 10.0761C12.1318 9.72247 11.8424 9.43311 11.4888 9.43311Z" fill="#5F5F5F"/>
+                                            <path d="M15.99 12.6482H8.01641C7.66274 12.6482 7.37337 12.9376 7.37337 13.2913C7.37337 13.6449 7.66274 13.9343 8.01641 13.9343H15.99C16.3437 13.9343 16.633 13.6449 16.633 13.2913C16.633 12.9376 16.3437 12.6482 15.99 12.6482Z" fill="#5F5F5F"/>
+                                        </svg>
+                                    </button>
+                                    <button class="reserve__control">
+                                        Отмена
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip-close)">
+                                            <path d="M12.5494 12.9973L23.8864 1.66031C24.0375 1.50918 24.0375 1.26419 23.8864 1.11306C23.7353 0.961979 23.4903 0.961979 23.3392 1.11306L12.0022 12.4501L0.665153 1.11306C0.511408 0.964592 0.266424 0.968849 0.117904 1.12259C-0.0269385 1.27256 -0.0269385 1.51034 0.117904 1.66031L11.4549 12.9973L0.117904 24.3343C-0.03584 24.4829 -0.0400972 24.7278 0.108422 24.8816C0.256942 25.0353 0.501926 25.0396 0.655671 24.8911C0.658912 24.888 0.662056 24.8848 0.665153 24.8816L12.0022 13.5446L23.3392 24.8816C23.4929 25.0301 23.7379 25.0259 23.8864 24.8721C24.0313 24.7221 24.0313 24.4843 23.8864 24.3343L12.5494 12.9973Z" fill="#5F5F5F"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip-close">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 1)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="reserve__block">
+                                <div class="reserve__timing link link--bg link--thin">
+                                    <p>Вещь станет доступна к покупке через</p>
+                                    <span>09:14:49</span>
+                                </div>
+                                <a href="#" class="reserve__info">Еще 2 человека в очереди резерва на эту вещь</a>
+                            </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="cabinet__content"></div>

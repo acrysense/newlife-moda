@@ -5,6 +5,12 @@
         &__right
             width: 450px
 
+@media (max-width: 1199px)
+    .reserve
+        &__timing
+            & > *:not(span)
+                display: none
+
 @media (min-width: 1024px) and (max-width: 1199px)
     .content
         margin-right: 22.5px
@@ -133,6 +139,34 @@
             font-size: 18px
         &__subtitle
             font-size: 16px
+    .reserve
+        &__item
+            flex-direction: column
+            align-items: center
+        &__item + &__item
+            .reserve__timing
+                top: 32px
+        &__content
+            margin-top: 10px
+            margin-left: 0
+            text-align: center
+        &__price
+            margin-top: 9px
+        &__inner
+            flex-direction: column
+            margin-top: 12px
+        &__info
+            margin-top: 12px
+            margin-left: 0
+        &__timing
+            position: absolute
+            top: 0
+            left: 0
+        &__controls
+            flex-direction: column-reverse
+        &__control + &__control
+            margin-bottom: 20px
+            margin-left: 0
 
 @media (min-width: 576px) and (max-width: 991px)
     .content
@@ -240,6 +274,16 @@
                 margin-left: 0
         &__btn
             margin: 0 auto
+    .reserve
+        &__item + &__item
+            margin-top: 12px
+            padding-top: 10px
+            .reserve
+                &__timing,
+                &__controls
+                    top: 10px
+        &__timing
+            padding: 2.5px 5px
 
 @media (max-width: 459px)
     .product
