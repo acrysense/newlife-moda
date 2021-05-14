@@ -1,11 +1,10 @@
 // VARIABLES SECTION
-$sfuidisplay: 'SF UI Display', sans-serif // SF UI Display font-family
+$helveticaneue: 'Helvetica Neue', sans-serif // Helvetica Neue font-family
 $cormorant: 'Cormorant Garamond', serif // Cormorant font-family
 $primary-font-size: 14px // Body font-size
 $primary-color: #000000 // Primary color
 $white-color: #FFFFFF // White color
 $background-color: #FBFBFB // Background color
-$alabaster-color: #F7F7F7 // Alabaster color
 $red-color: #FF0000 // Red color
 $error-color: #FF3F3F // Error (red) color
 $accent-yellow-color: #FFF596 // Accent yellow color
@@ -19,12 +18,13 @@ $dull-gray-color: #656565 // Dull gray color
 $boulder-color: #767676 // Boulder color
 $copyright-color: #ABABAB // Copyright color
 $asphalt-color: #4D4D4D // Asphalt color
+$bg-grey: #F6F6F6
 
 // COMMON DOCUMENT STYLES
 body
     position: relative
     overflow-x: hidden
-    font-family: $sfuidisplay
+    font-family: $helveticaneue
     color: $primary-color
     line-height: 1.2
 
@@ -349,6 +349,9 @@ svg path,
         font-size: 12px
         text-align: left
         color: $copyright-color
+
+.grey
+    background: $bg-grey
 
 // MEDIA QUARIES
 @media (min-width: 1200px)
