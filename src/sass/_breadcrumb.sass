@@ -1,11 +1,11 @@
 .breadcrumb
-    &--mobile
-        margin: 0 11.5px
+    &--tablet
+        display: none
+        margin: 0 11.5px 39px
     &__list
         display: flex
         align-items: center
         flex-wrap: wrap
-        margin-bottom: 39px
     &__item + &__item
         &::before
             content: '/'
@@ -15,9 +15,12 @@
     &__link
         font-size: 14px
         color: $dark-gray-color
+        &:focus
+            outline: none
+            color: $primary-color
 
 // MEDIA QUARIES
-@media (min-width: 1024px)
+@media (min-width: 768px) and (max-width: 1023px)
     .breadcrumb
-        &--mobile
-            display: none
+        &--tablet
+            display: block

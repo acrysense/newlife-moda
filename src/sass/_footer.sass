@@ -1,5 +1,5 @@
 .footer
-    padding: 25px 20px
+    padding: 25px 10px
     &__top
         display: flex
     &__logo
@@ -52,13 +52,13 @@
         padding-bottom: 90.5px
         &__logo
             display: none
-        &__logo + &__list
-            margin-left: 0
         &__legal-item
             font-size: 10px
 
 @media (min-width: 768px) and (max-width: 991px)
     .footer
+        &__logo + &__list
+            margin-left: 0
         &__list
             padding: 0
 
@@ -67,8 +67,12 @@
         &__top
             flex-direction: column
         &__list
+            padding: 10px 0
+            margin: 0 10px
+            //width: 100%
             overflow: hidden
             max-height: 36px
+            border-bottom: 1px solid $primary-color
             transition: max-height 0.25s
             &--open
                 max-height: 100vh
@@ -78,10 +82,8 @@
                         transform: translateY(-50%) rotate(90deg)
         &__list + &__list
             padding-top: 30px
-            margin-top: 30px
-            margin-left: 0
+            margin-left: 10px
             max-height: 56px
-            border-top: 1px solid $primary-color
             &--open
                 max-height: 100vh
         &__heading

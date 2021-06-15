@@ -7,17 +7,20 @@ $white-color: #FFFFFF // White color
 $background-color: #FBFBFB // Background color
 $red-color: #FF0000 // Red color
 $error-color: #FF3F3F // Error (red) color
+$brown-color: #710202 // Brown color
 $accent-yellow-color: #FFF596 // Accent yellow color
 $light-yellow-color: #FCF7F1 // Light yellow color
 $light-grey-color: #F7F7F7 // Light grey color
-$light-grey-hover-color: #FDFBF8// Light grey hover color
+$light-grey-hover-color: #FDFBF8 // Light grey hover color
 $dark-gray-color: #979797 // Dark gray color
 $gray-color: #E0E0E0 // Gray color
 $light-gray-color: #DDDDDD // Light gray color
 $dull-gray-color: #656565 // Dull gray color
 $boulder-color: #767676 // Boulder color
 $copyright-color: #ABABAB // Copyright color
+$copyright-light-color: #A6A6A6 // Copyright light color
 $asphalt-color: #4D4D4D // Asphalt color
+$black-color: #343434 // Black color
 
 // COMMON DOCUMENT STYLES
 body
@@ -60,13 +63,14 @@ svg path,
     overflow: hidden
 
 .container
+    padding: 0 10px
     margin: 0 auto
-    max-width: 1200px
+    max-width: 1220px
 
 .link
     padding: 10px 20px
     font-size: 12px
-    font-weight: 500
+    font-weight: 400
     letter-spacing: 1px
     text-align: center
     text-transform: uppercase
@@ -83,6 +87,13 @@ svg path,
         &:hover,
         &:focus
             background: $light-grey-hover-color
+    &--black
+        color: $white-color
+        background: $black-color
+        &:hover,
+        &:focus
+            color: $white-color
+            background: $primary-color
     &--thin
         font-weight: 100
     &--lg
@@ -94,7 +105,7 @@ svg path,
     font-size: 12px
     letter-spacing: 1px
     text-transform: uppercase
-    color: #710202
+    color: $brown-color
     background: transparent
     border: 0
     &::before
@@ -266,6 +277,7 @@ svg path,
     border: 0
     border-bottom: 1px solid $copyright-color
     border-radius: 0
+    cursor: pointer
     transition: border 0.4s
     &.is-selected
         color: $asphalt-color
@@ -279,9 +291,10 @@ svg path,
     &__help
         display: block
         font-size: 12px
-        font-weight: bold
+        font-weight: normal
         letter-spacing: 1px
         text-transform: uppercase
+        color: $black-color
     &__select
         appearance: none
         padding: 0 13px 0 1px
@@ -298,6 +311,7 @@ svg path,
         border: 0
         border-bottom: 1px solid transparent
         border-radius: 0
+        cursor: pointer
         transition: border 0.4s
         &:focus
             border-bottom: 1px solid $primary-color
@@ -327,10 +341,24 @@ svg path,
     align-items: center
     margin: 0
     cursor: pointer
+    &--md
+        .square-checkbox
+            &__icon
+                margin-right: 15px
+                min-width: 18px
+                min-height: 18px
+                max-width: 18px
+                max-height: 18px
+                background-size: 12px
+            &__label
+                font-size: 14px
     &__input
         display: none
-        &:checked + .square-checkbox__icon
-            background-image: url(../img/dist/sprite.svg#icon-checkbox-mark)
+        &:checked ~ .square-checkbox__icon
+            background-image: url(../img/dist/sprite.svg#icon-checkbox-mark-black)
+            border: 1px solid $black-color
+            & + .square-checkbox__label
+                color: $black-color
     &__icon
         display: block
         margin-right: 10px
@@ -340,14 +368,25 @@ svg path,
         max-height: 14px
         background-color: transparent
         background-repeat: no-repeat
-        background-size: 70%
+        background-size: 8px
         background-position: center center
         border: 1px solid $copyright-color
     &__label
         display: block
         font-size: 12px
+        font-weight: normal
         text-align: left
         color: $copyright-color
+        user-select: none
+        &--color
+            display: flex
+            align-items: center
+    &__color
+        display: block
+        margin-right: 10px
+        width: 16px
+        height: 16px
+        border-radius: 50%
 
 // MEDIA QUARIES
 @media (min-width: 1200px)
