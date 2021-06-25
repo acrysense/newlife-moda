@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mySwiperThumb = new Swiper(galleryThumb, {
         allowTouchMove: false,
         slidesPerView: 5,
-        spaceBetween: 10,
+        spaceBetween: 5,
         freeMode: true,
         direction: 'vertical',
         watchSlidesVisibility: true,
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // TRIGGER
-    document.querySelectorAll('.product__trigger').forEach((item) => {
+    document.querySelectorAll('.product__trigger:not(.product__trigger--static)').forEach((item) => {
         item.addEventListener('click', function() {
             item.parentNode.classList.toggle('product__inner--hidden')
         });
@@ -158,6 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // FOOTER TRIGGER
     document.querySelectorAll('.footer__heading').forEach((item) => {
         item.addEventListener('click', function() {
+            document.querySelectorAll('.footer__list').forEach((child) => child.classList.remove('footer__list--open'))
+
             item.parentNode.classList.toggle('footer__list--open')
         });
     })
@@ -326,6 +328,25 @@ document.addEventListener('DOMContentLoaded', function () {
     if (mobileFilterClose) {
         mobileFilterClose.addEventListener('click', () => {
             filter.classList.remove('filter--active')
+            document.body.classList.remove('scroll-disabled')
+        })
+    }
+
+    // SORT (MOBILE)
+    const mobileSort = document.querySelector('.mobile-sort')
+    const mobileSortBtn = document.querySelector('.sort-btn')
+    const mobileSortClose = document.querySelector('.mobile-sort__back')
+
+    if (mobileSortBtn) {
+        mobileSortBtn.addEventListener('click', () => {
+            mobileSort.classList.add('mobile-sort--active')
+            document.body.classList.add('scroll-disabled')
+        })
+    }
+
+    if (mobileSortClose) {
+        mobileSortClose.addEventListener('click', () => {
+            mobileSort.classList.remove('mobile-sort--active')
             document.body.classList.remove('scroll-disabled')
         })
     }

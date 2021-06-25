@@ -669,6 +669,25 @@
                             </div>
                             <div class="filter__item filter__item--plus">
                                 <div class="filter__trigger">
+                                    <button class="filter__btn">АУКЦИОН</button>
+                                </div>
+                                <div class="filter__content">
+                                    <div class="filter__list">
+                                        <label for="filter-auction-01" class="square-checkbox square-checkbox--md filter__checkbox">
+                                            <input type="checkbox" class="square-checkbox__input" id="filter-auction-01">
+                                            <span class="square-checkbox__icon"></span>
+                                            <span class="square-checkbox__label">Участвует в аукционе</span>
+                                        </label>
+                                        <label for="filter-auction-02" class="square-checkbox square-checkbox--md filter__checkbox">
+                                            <input type="checkbox" class="square-checkbox__input" id="filter-auction-02">
+                                            <span class="square-checkbox__icon"></span>
+                                            <span class="square-checkbox__label">Выкупить сейчас</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter__item filter__item--plus">
+                                <div class="filter__trigger">
                                     <button class="filter__btn">ЦЕНА</button>
                                     <a href="#" class="filter__link">очистить</a>
                                 </div>
@@ -677,22 +696,22 @@
                                         <label for="filter-price-01" class="square-checkbox square-checkbox--md filter__checkbox">
                                             <input type="checkbox" class="square-checkbox__input" id="filter-price-01">
                                             <span class="square-checkbox__icon"></span>
-                                            <span class="square-checkbox__label">ОТ 100Р ДО 5000Р</span>
+                                            <span class="square-checkbox__label">От 100Р до 5000Р</span>
                                         </label>
                                         <label for="filter-price-02" class="square-checkbox square-checkbox--md filter__checkbox">
                                             <input type="checkbox" class="square-checkbox__input" id="filter-price-02">
                                             <span class="square-checkbox__icon"></span>
-                                            <span class="square-checkbox__label">ОТ 5001Р ДО 10000Р</span>
+                                            <span class="square-checkbox__label">От 5001Р до 10000Р</span>
                                         </label>
                                         <label for="filter-price-03" class="square-checkbox square-checkbox--md filter__checkbox">
                                             <input type="checkbox" class="square-checkbox__input" id="filter-price-03">
                                             <span class="square-checkbox__icon"></span>
-                                            <span class="square-checkbox__label">ОТ 10001Р ДО 50000Р</span>
+                                            <span class="square-checkbox__label">От 10001Р до 50000Р</span>
                                         </label>
                                         <label for="filter-price-04" class="square-checkbox square-checkbox--md filter__checkbox">
                                             <input type="checkbox" class="square-checkbox__input" id="filter-price-04">
                                             <span class="square-checkbox__icon"></span>
-                                            <span class="square-checkbox__label">ОТ 50001Р ДО 100000Р</span>
+                                            <span class="square-checkbox__label">От 50001Р до 100000Р</span>
                                         </label>
                                     </div>
                                 </div>
@@ -708,7 +727,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #FDEEDC"></span>
-                                                <span>БЕЖЕВЫЙ</span>
+                                                <span>Бежевый</span>
                                             </span>
                                         </label>
                                         <label for="filter-color-02" class="square-checkbox square-checkbox--md filter__checkbox">
@@ -716,7 +735,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #FFE600"></span>
-                                                <span>ЖЕЛТЫЙ</span>
+                                                <span>Жёлтый</span>
                                             </span>
                                         </label>
                                         <label for="filter-color-03" class="square-checkbox square-checkbox--md filter__checkbox">
@@ -724,7 +743,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #867000"></span>
-                                                <span>КОРИЧНЕВЫЙ</span>
+                                                <span>Коричневый</span>
                                             </span>
                                         </label>
                                         <label for="filter-color-04" class="square-checkbox square-checkbox--md filter__checkbox">
@@ -732,7 +751,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #0047FF"></span>
-                                                <span>СИНИЙ</span>
+                                                <span>Синий</span>
                                             </span>
                                         </label>
                                         <label for="filter-color-05" class="square-checkbox square-checkbox--md filter__checkbox">
@@ -740,7 +759,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #BEBEBE"></span>
-                                                <span>СЕРЫЙ</span>
+                                                <span>Серый</span>
                                             </span>
                                         </label>
                                         <label for="filter-color-06" class="square-checkbox square-checkbox--md filter__checkbox">
@@ -748,7 +767,7 @@
                                             <span class="square-checkbox__icon"></span>
                                             <span class="square-checkbox__label square-checkbox__label--color">
                                                 <span class="square-checkbox__color" style="background: #FF0000"></span>
-                                                <span>КРАСНЫЙ</span>
+                                                <span>Красный</span>
                                             </span>
                                         </label>
                                     </div>
@@ -783,6 +802,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="filter__bottom">
+                                <span class="filter__mobile-count">199 товаров</span>
+                                <button class="filter__button btn btn--border">Сбросить</button>
+                                <button class="filter__button btn">Применить</button>
+                            </div>
                         </div>
                     </div>
                     <div class="catalog__content">
@@ -792,15 +816,35 @@
                             <div class="sort">
                                 <span class="sort__help">Сортировка:</span>
                                 <select class="sort__select">
-                                    <option value="0" selected>Популярность</option>
-                                    <option value="1">Рейтинг</option>
+                                    <option value="0" selected>По цене</option>
+                                    <option value="1">По дате добавления</option>
+                                    <option value="2">В наличии</option>
                                 </select>
                             </div>
-                            <select class="catalog__mobile-btn">
-                                <option value="" disabled selected>Cортировка</option>
-                                <option value="0">Популярность</option>
-                                <option value="1">Рейтинг</option>
-                            </select>
+                            <div class="mobile-sort">
+                                <span class="mobile-sort__back">Сортировка</span>
+                                <div class="mobile-sort__list">
+                                    <label for="mobile-sort-01" class="square-checkbox square-checkbox--radio mobile-sort__checkbox">
+                                        <input type="radio" class="square-checkbox__input" name="mobile-sort" id="mobile-sort-01">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">По цене</span>
+                                    </label>
+                                    <label for="mobile-sort-02" class="square-checkbox square-checkbox--radio mobile-sort__checkbox">
+                                        <input type="radio" class="square-checkbox__input" name="mobile-sort" id="mobile-sort-02">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">По дате добавления</span>
+                                    </label>
+                                    <label for="mobile-sort-03" class="square-checkbox square-checkbox--radio mobile-sort__checkbox">
+                                        <input type="radio" class="square-checkbox__input" name="mobile-sort" id="mobile-sort-03">
+                                        <span class="square-checkbox__icon"></span>
+                                        <span class="square-checkbox__label">В наличии</span>
+                                    </label>
+                                </div>
+                                <div class="mobile-sort__bottom">
+                                    <button class="mobile-sort__button btn">Применить</button>
+                                </div>
+                            </div>
+                            <button class="catalog__mobile-btn sort-btn">Cортировка</button>
                             <button class="catalog__mobile-btn filter-btn">Фильтры</button>
                         </div>
                         <div class="selected-filters">
@@ -842,7 +886,7 @@
                             <div class="goods__item">
                                 <div class="goods__top">
                                     <span class="goods__status">Аукцион</span>
-                                    <button class="goods__favorites goods__favorites--active" aria-label="Избранное">
+                                    <button class="goods__favorites" aria-label="Избранное">
                                         <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
                                         </svg>
@@ -868,7 +912,7 @@
                             <div class="goods__item">
                                 <div class="goods__top">
                                     <span class="goods__status">Аукцион</span>
-                                    <button class="goods__favorites goods__favorites--active" aria-label="Избранное">
+                                    <button class="goods__favorites" aria-label="Избранное">
                                         <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
                                         </svg>
@@ -894,7 +938,7 @@
                             <div class="goods__item">
                                 <div class="goods__top">
                                     <span class="goods__status">Аукцион</span>
-                                    <button class="goods__favorites goods__favorites--active" aria-label="Избранное">
+                                    <button class="goods__favorites" aria-label="Избранное">
                                         <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
                                         </svg>
@@ -920,7 +964,7 @@
                             <div class="goods__item">
                                 <div class="goods__top">
                                     <span class="goods__status">Аукцион</span>
-                                    <button class="goods__favorites goods__favorites--active" aria-label="Избранное">
+                                    <button class="goods__favorites" aria-label="Избранное">
                                         <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
                                         </svg>
@@ -946,7 +990,7 @@
                             <div class="goods__item">
                                 <div class="goods__top">
                                     <span class="goods__status">Аукцион</span>
-                                    <button class="goods__favorites goods__favorites--active" aria-label="Избранное">
+                                    <button class="goods__favorites" aria-label="Избранное">
                                         <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
                                         </svg>
