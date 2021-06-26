@@ -106,8 +106,9 @@
             <span class="mobile-menu__close--inner"></span>
         </button>
         <div class="mobile-menu__content">
-            <label for="mobile-search" class="input-shell">
-                <input type="text" id="mobile-search" class="mobile-menu__search input-shell__input" placeholder="Поиск по брендам, по товару...">
+            <label for="mobile-search" class="input-shell mobile-menu__search">
+                <input type="text" id="mobile-search" class="input-shell__input" placeholder="Поиск по брендам, по товару...">
+                <span class="input-shell__icon"></span>
             </label>
             <div class="section section--mobile">
                 <ul class="section__list">
@@ -618,6 +619,10 @@
                                     <a href="#" class="filter__link">очистить</a>
                                 </div>
                                 <div class="filter__content filter__content--hidden">
+                                    <label for="brand-search" class="input-shell filter__search">
+                                        <input type="text" id="brand-search" class="input-shell__input input-shell__input--transparent" placeholder="Поиск по брендам">
+                                        <span class="input-shell__icon"></span>
+                                    </label>
                                     <div class="filter__list">
                                         <label for="filter-brand-01" class="square-checkbox square-checkbox--md filter__checkbox">
                                             <input type="checkbox" class="square-checkbox__input" id="filter-brand-01">
@@ -1260,6 +1265,46 @@
         </ul>
     </div>
     <!-- End of mobile nav -->
+    <!-- Modal -->
+    <div class="modal">
+        <div class="auth">
+            <div class="auth__left" style="background-image: url(img/dist/register-bg-01.jpg)"></div>
+            <div class="auth__right">
+                <div class="auth__wrapper">
+                    <h3 class="auth__title">Добро пожаловать</h3>
+                    <h3 class="auth__subtitle">в закрытый клуб newlife.moda</h3>
+                    <form action="" class="auth-form">
+                        <div class="input-group auth-form__input-group">
+                            <input type="email" class="input-group__input auth-form__input" id="input-email" placeholder="Email" required>
+                            <label for="input-email" class="input-group__label">Email <span>*</span></label>
+                        </div>
+                        <div class="input-group auth-form__input-group">
+                            <input type="password" class="input-group__input auth-form__input" id="input-password" placeholder="Пароль" required>
+                            <label for="input-password" class="input-group__label">Пароль <span>*</span></label>
+                        </div>
+                        <div class="auth-form__inner">
+                            <label for="save-data-checkbox" class="square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="save-data-checkbox">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">Запомнить меня</span>
+                            </label>
+                            <a href="restore-password.html" class="auth-form__help">Забыли пароль?</a>
+                        </div>
+                        <button class="auth-form__btn btn" disabled>ВОЙТИ</button>
+                    </form>
+                    <a href="register.html" class="auth__go-to">Присоединиться к сообществу</a>
+                    <div class="pop-up">
+                        <a href="#" class="pop-up__btn" data-text="Узнать подробнее о передаваемой информации">Узнать подробнее о передаваемой информации</a>
+                        <div class="pop-up__wrapper">
+                            <p class="pop-up__description">Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с <a href="">Политикой конфиденциальности.</a>Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с <a href="">Политикой конфиденциальности.</a>Нажимая кнопку «Вступить в клуб», вы подтверждаете свое согласие на получение информации о товарах в вашей корзине по email, а также соглашаетесь на обработку персональных данных в соответствии с <a href="">Политикой конфиденциальности.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="auth__close close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of modal -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>

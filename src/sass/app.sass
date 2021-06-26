@@ -3,6 +3,7 @@
 @import "breadcrumb"
 @import "pagination"
 @import "footer"
+@import "modal"
 
 // CONTENT
 .content
@@ -1050,7 +1051,7 @@
             &:last-child
                 border-bottom: 1px solid $dark-gray-color
         &--active
-            max-height: 333px!important
+            max-height: 387px!important
             .filter__content
                 opacity: 1
     &__trigger
@@ -1106,6 +1107,8 @@
                 height: 33px
                 background: linear-gradient(to top, rgba($white-color, 1) 0, rgba($white-color, 0.6) 50%, rgba($white-color, 0) 100%)
                 pointer-events: none
+    &__search
+        margin-bottom: 20px
     &__list
         max-height: 252px
         overflow-y: scroll
