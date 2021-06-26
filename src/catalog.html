@@ -820,11 +820,21 @@
                             <span class="catalog__text catalog__text--gray">199 товаров</span>
                             <div class="sort">
                                 <span class="sort__help">Сортировка:</span>
-                                <select class="sort__select">
-                                    <option value="0" selected>По цене</option>
-                                    <option value="1">По дате добавления</option>
-                                    <option value="2">В наличии</option>
-                                </select>
+                                <div class="sort__container">
+                                    <div class="sort__option">
+                                        <input type="radio" class="sort__radio" id="desktop-sort-1" name="sort">
+                                        <label for="desktop-sort-1" class="sort__label">По цене</label>
+                                    </div>
+                                    <div class="sort__option">
+                                        <input type="radio" class="sort__radio" id="desktop-sort-2" name="sort">
+                                        <label for="desktop-sort-2" class="sort__label">По дате добавления</label>
+                                    </div>
+                                    <div class="sort__option">
+                                        <input type="radio" class="sort__radio" id="desktop-sort-3" name="sort">
+                                        <label for="desktop-sort-3" class="sort__label">В наличии</label>
+                                    </div>
+                                </div>
+                                <span class="sort__selected">По цене</span>
                             </div>
                             <div class="mobile-sort">
                                 <span class="mobile-sort__back">Сортировка</span>

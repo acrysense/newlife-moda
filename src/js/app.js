@@ -349,4 +349,43 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('scroll-disabled')
         })
     }
+
+    // SELECT
+    const selected = document.querySelectorAll('.sort__selected')
+    const optionsList = document.querySelectorAll('.sort__option')
+    
+    if (selected) {
+        selected.forEach(item => {
+            const close = () => {
+                document.querySelectorAll('.sort__container').forEach((child) => child.classList.remove('sort__container--active'))
+                document.querySelectorAll('.sort__selected').forEach((child) => child.classList.remove('sort__selected--active'))
+            }
+            const itemChecker = useItemChecker(item.parentNode, close)
+
+            item.addEventListener('click', () => {
+                if (item.previousElementSibling.classList.contains('sort__container--active')) {
+                    document.querySelectorAll('.sort__container').forEach((child) => child.classList.remove('sort__container--active'))
+                    document.querySelectorAll('.sort__selected').forEach((child) => child.classList.remove('sort__selected--active'))
+                }
+                else {
+                    document.querySelectorAll('.sort__container').forEach((child) => child.classList.remove('sort__container--active'))
+                    document.querySelectorAll('.sort__selected').forEach((child) => child.classList.remove('sort__selected--active'))
+                    item.previousElementSibling.classList.add('sort__container--active')
+                    item.classList.add('sort__selected--active')
+                    itemChecker.setBodyChecker()
+                }
+            })
+        });
+    }
+
+    if (optionsList) {
+        optionsList.forEach((option, i) => {
+            option.addEventListener('click', () => {
+                option.parentNode.nextElementSibling.innerHTML = option.querySelector('label').innerHTML
+
+                option.parentNode.classList.remove('sort__container--active')
+                option.parentNode.nextElementSibling.classList.remove('sort__selected--active')
+            });
+        });
+    }
 });
