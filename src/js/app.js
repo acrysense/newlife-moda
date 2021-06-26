@@ -188,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // POP-UP
     const popUpBtn = document.querySelectorAll('.pop-up__btn')
-    const popUp = document.querySelectorAll('.pop-up__wrapper')
 
     const useItemChecker = (el, onClickOutside) => {
         const checkBodyClick = (e) => {
