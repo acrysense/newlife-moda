@@ -3,7 +3,8 @@
     &--active
         display: block
 
-.overlay
+.overlay,
+.modal-overlay
     opacity: 0
     visibility: hidden
     position: fixed
@@ -15,7 +16,7 @@
     height: 100%
     z-index: 1000
     background: rgba($primary-color, 0.75)
-    transition: all 0.4s ease-in-out
+    transition: all 0.3s ease-in-out
     &--active
         opacity: 1
         visibility: visible
