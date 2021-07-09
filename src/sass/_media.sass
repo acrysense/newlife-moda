@@ -604,9 +604,15 @@
         &__list
             justify-content: space-between
             overflow-x: scroll
+            scrollbar-width: none
+            &::-webkit-scrollbar
+                display: none
         &__button
             padding: 6px 14.5px
             font-size: 10px
+        &__btn
+            padding: 15px 18px
+            font-size: 12px
 
     // CTA
     .cta
