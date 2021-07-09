@@ -1,3 +1,10 @@
+@media (hover: hover)
+    .recommendation
+        &__button
+            &:hover
+                color: $white-color
+                background: $primary-color
+
 @media (min-width: 1200px)
     // PRODUCT
     .product
@@ -371,6 +378,36 @@
         &__item
             font-size: 10px
 
+    // BANNERS
+    .banners
+        &__item
+            &:first-child
+                padding-bottom: 385px
+                .banners__content
+                    max-width: 638px
+            &:nth-child(n + 2)
+                margin-top: 18px
+        &__title
+            font-size: 72px
+        &__subtitle
+            font-size: 54px
+        &__title + &__description,
+        &__subtitle + &__description
+            margin-top: 16px
+        &__description
+            font-size: 28px
+
+    // CTA
+    .cta
+        &__title
+            font-size: 26px
+        &__group + &__group
+            margin-left: auto
+            max-width: 335px
+    .cta-form
+        &__control
+            min-width: 100%
+
 @media (min-width: 768px)
     // PRODUCT
     .product
@@ -539,6 +576,75 @@
         &__control + &__control
             margin-bottom: 20px
             margin-left: 0
+
+    // BANNERS
+    .banners
+        &__item
+            &:first-child
+                padding-bottom: 298px
+                .banners__content
+                    max-width: 75%
+            &:nth-child(n + 2)
+                padding-bottom: 234px
+                width: 100%
+        &__item + &__item
+            margin-top: 12px
+        &__title
+            font-size: 32px
+        &__subtitle
+            font-size: 32px
+        &__title + &__description,
+        &__subtitle + &__description
+            margin-top: 16px
+        &__description
+            font-size: 22px
+    
+    // RECOMMENDATION
+    .recommendation
+        &__list
+            justify-content: space-between
+            overflow-x: scroll
+        &__button
+            padding: 6px 14.5px
+            font-size: 10px
+
+    // CTA
+    .cta
+        padding: 20px 0
+        margin-top: 40px
+        &__wrapper
+            flex-direction: column
+        &__group
+            width: 100%
+        &__group + &__group
+            margin-top: 34px
+        &__title
+            margin-bottom: 25px
+            font-size: 26px
+        &__block
+            max-width: 50%
+            &:nth-child(2n)
+                margin-left: 0
+        &__value
+            font-size: 16px
+        &__copyright
+            max-width: 254px
+            font-size: 12px
+    .cta-form
+        &__control
+            max-width: 360px
+            min-width: auto
+            width: 100%
+
+    // SITE DESCRIPTION
+    .site-description
+        margin: 30px 0
+        &__title
+            font-size: 26px
+        &__description
+            font-size: 14px
+        &__link
+            font-size: 14px
 
 @media (min-width: 576px) and (max-width: 991px)
     .content
@@ -715,6 +821,11 @@
             font-size: 16px
         &__text
             font-size: 8px
+
+    // CTA
+    .cta
+        &__btn
+            padding: 12px
 
 @media (max-width: 459px)
     // PRODUCT

@@ -150,14 +150,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // TRIGGER
     document.querySelectorAll('.product__trigger:not(.product__trigger--static)').forEach((item) => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', () => {
             item.parentNode.classList.toggle('product__inner--hidden')
         });
     })
 
     // FOOTER TRIGGER
     document.querySelectorAll('.footer__heading').forEach((item) => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', () => {
             document.querySelectorAll('.footer__list').forEach((child) => child.classList.remove('footer__list--open'))
 
             item.parentNode.classList.toggle('footer__list--open')
@@ -165,8 +165,16 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // FILTER TRIGGER
-    document.querySelectorAll('.filter__btn').forEach((item) => {
-        item.addEventListener('click', function() {
+    document.querySelectorAll('.filter__item:not(.filter__item--plus) .filter__btn').forEach((item) => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.filter__item:not(.filter__item--plus)').forEach((child) => child.classList.remove('filter__item--active'))
+            
+            item.parentNode.parentNode.classList.toggle('filter__item--active')
+        });
+    })
+
+    document.querySelectorAll('.filter__item--plus .filter__btn').forEach((item) => {
+        item.addEventListener('click', () => {
             item.parentNode.parentNode.classList.toggle('filter__item--active')
         });
     })
@@ -298,15 +306,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // CATALOG CONTENT
-    const filterList = document.querySelectorAll('.filter__list')
+    const filterList = document.querySelectorAll('.filter__list .simplebar-content-wrapper')
 
     if (filterList) {
         filterList.forEach(item => {
             item.addEventListener('scroll', () => {
                 if (item.scrollTop > 0) {
-                    item.parentNode.classList.remove('filter__content--hidden')
+                    item.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove('filter__content--hidden')
                 } else {
-                    item.parentNode.classList.add('filter__content--hidden')
+                    item.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add('filter__content--hidden')
                 }
             })
         })

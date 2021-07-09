@@ -1,14 +1,28 @@
 .simplebar-track.simplebar-vertical
-    width: 6px
+    width: 8px
     background: transparent
+    background-clip: content-box
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+        display: inline-block
+        width: 2px
+        height: 100%
+        background: $light-grey-color
 
-.simplebar-scrollbar::before
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    opacity: 1
-    background: $black-color
+.simplebar-scrollbar
+    &::before
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        opacity: 1
+        background: $black-color
+        border-radius: 0
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
     top: 0
