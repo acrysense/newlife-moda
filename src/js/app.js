@@ -76,6 +76,22 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    // SEARCH
+    const searchBtn = document.querySelector('.search-btn')
+    const searchWrapper = document.querySelector('.search')
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            if (!searchWrapper.classList.contains('search--active')) {
+                searchWrapper.classList.add('search--active')
+                //overlay.classList.add('overlay--active')
+            } else {
+                searchWrapper.classList.remove('search--active')
+                overlay.classList.remove('overlay--active')
+            }
+        });
+    }
+
     // TOP PROMO
     const topPromoContainer = document.querySelector('.top-promo')
     const topPromoCloseBtn = document.querySelector('.top-promo__close')

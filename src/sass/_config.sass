@@ -328,6 +328,9 @@ svg path,
     background-size: cover
     background-position: center center
     border: 0
+    &--big
+        width: 24px
+        height: 24px
 
 .square-checkbox
     display: flex
@@ -543,3 +546,9 @@ svg path,
 @media (min-width: 1200px)
     .container
         padding: 0 15px
+
+@media (max-width: 767px)
+    .close-btn
+        &--big
+            width: 18px
+            height: 18px

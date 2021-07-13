@@ -48,7 +48,7 @@
                 <div class="header__control">
                     <ul class="icons">
                         <li class="icons__item">
-                            <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-search);">Поиск</a>
+                            <a href="#" class="icons__link search-btn" style="background-image: url(img/dist/sprite.svg#icon-search);">Поиск</a>
                         </li>
                         <li class="icons__item">
                             <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-star);">Избранное</a>
@@ -98,6 +98,137 @@
             </div>
         </div>
     </header>
+    <div class="search">
+        <div class="search__container">
+            <div class="search__control">
+                <input type="text" class="search__input input" placeholder="Поиск">
+                <button class="search__close close-btn close-btn--big" aria-label="Закрыть"></button>
+            </div>
+        </div>
+        <div class="search__container">
+            <div class="search__content">
+                <!-- If empty -->
+                <!--<p class="search__description">По запросу  “fgghfhfhfc”  ничего не найдено.</p>
+                <p class="search__help">Попробуйте поискать что-нибудь еще или посмотрите наши <a href="#">бренды в А-Я</a></p>-->
+                <!-- End of empty -->
+                <div class="search__wrapper">
+                    <div class="search__block">
+                        <h3 class="search__title">ВЫ ИСКАЛИ</h3>
+                        <ul class="search__list" data-simplebar>
+                            <li class="search__item">
+                                <a href="#" class="search__link"><span>Gu</span>c</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Instapump</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Lacoste</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">fgghfhfhfc</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link"><span>Gu</span>cci</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Луи витон кроссовки</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">сумка гуччи</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Луи витон кроссовки</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">сумка гуччи</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Луи витон кроссовки</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">сумка гуччи</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">сумка гуччи</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">Луи витон кроссовки</a>
+                            </li>
+                            <li class="search__item">
+                                <a href="#" class="search__link">сумка гуччи</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search__block">
+                        <h3 class="search__title">НЕДАВНО ПРОСМОТРЕННО</h3>
+                        <div class="search__products">
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                            <a href="#" class="search__product">
+                                <div class="search__img">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                </div>
+                                <span class="search__link">Cумка Gucci Chanel</span>
+                            </a>
+                        </div>
+                        <a href="#" class="search__more">Посмотреть все 856 товаров</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="mobile-menu">
         <button class="mobile-menu__close">
             Закрыть

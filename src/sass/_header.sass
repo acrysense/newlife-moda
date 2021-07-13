@@ -212,6 +212,130 @@
             display: block
             margin-top: 5px
 
+.search
+    position: absolute
+    top: 114px
+    right: 0
+    left: 0
+    z-index: 1001
+    //display: none
+    overflow: hidden
+    max-height: 0
+    width: 100%
+    height: 100%
+    background: $white-color
+    transition: all 0.6s ease-in-out
+    &--active
+        //display: block
+        max-height: 640px
+    &__container
+        padding: 0 10px
+        margin: 0 auto
+        max-width: 1220px
+    &__container + &__container
+        &::before
+            content: ''
+            position: absolute
+            right: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 1px
+            background: $light-gray-color
+    &__control
+        display: flex
+        align-items: center
+        padding: 0 20px
+        &::before
+            content: ''
+            display: block
+            width: 25px
+            height: 24px
+            background-image: url(../img/dist/sprite.svg#icon-search)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__input
+        padding: 30px 20px
+        width: 100%
+        font-size: 18px
+        font-weight: 500
+        letter-spacing: 1px
+        color: $black-color
+        &::placeholder
+            color: $light-gray-color
+    &__close
+        display: block
+        padding: 0
+        background-color: transparent
+        border: 0
+    &__content
+        padding: 30px 20px
+    &__wrapper
+        display: flex
+    &__block
+        width: 100%
+        &:first-child
+            max-width: 262px
+    &__block + &__block
+        margin-left: 60px
+    &__title
+        margin-bottom: 34px
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: 2px
+        text-transform: uppercase
+    &__list
+        min-width: 262px
+        max-height: 409px
+        overflow-y: scroll
+    &__item + &__item
+        margin-top: 20px
+    &__link
+        max-width: 262px
+        font-size: 14px
+        span
+            color: $dark-gray-color
+    &__products
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        overflow: hidden
+        max-height: 338px
+    &__product
+        display: flex
+        align-items: center
+        width: 45%
+        &:nth-child(n + 3)
+            margin-top: 30px
+    &__img
+        overflow: hidden
+        margin-right: 20px
+        max-width: 62px
+        max-height: 62px
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__more
+        display: block
+        margin-top: 40px
+        width: fit-content
+        font-size: 14px
+        color: $dark-gray-color
+    &__description
+        font-size: 20px
+    &__help
+        display: block
+        margin-top: 30px
+        font-size: 14px
+        font-weight: 300
+        color: $dark-gray-color
+        a
+            border-bottom: 1px solid $dark-gray-color
+
 // MEDIA QUARIES
 @media (min-width: 1024px)
     .header
@@ -403,6 +527,17 @@
     .mobile-nav
         display: none
 
+@media (min-width: 768px) and (max-width: 991px)
+    .search
+        &__control
+            padding: 0 8px
+        &__content
+            padding: 30px 8px
+        &__product
+            width: 100%
+        &__product + &__product
+            margin-top: 30px
+
 @media (max-width: 767px)
     .top-promo
         padding: 15px 0
@@ -418,3 +553,52 @@
     .subheader
         &__wrapper--bottom
             display: none
+    .search
+        top: 0
+        height: 100vh
+        overflow-y: scroll
+        &__control
+            padding: 0
+            &::before
+                width: 19px
+                height: 18px
+        &__input
+            padding: 20px 10px
+            font-size: 16px
+        &__content
+            padding: 20px 0
+        &__wrapper
+            flex-direction: column
+        &__title
+            margin-bottom: 20px
+            font-size: 12px
+        &__item + &__item
+            margin-top: 15px
+        &__link
+            font-size: 12px
+        &__block
+            &:first-child
+                max-width: 100%
+        &__block + &__block
+            padding-top: 20px
+            margin-top: 20px
+            margin-left: 0
+            border-top: 1px solid $light-gray-color
+        &__products
+            max-height: 100%
+        &__product
+            width: 100%
+        &__product + &__product
+            margin-top: 15px
+        &__img
+            max-width: 42px
+            max-height: 42px
+        &__more
+            padding-top: 20px
+            border-top: 1px solid $light-gray-color
+        &__description
+            margin-top: 20px
+            font-size: 16px
+        &__help
+            margin-top: 24px
+            font-size: 12px
