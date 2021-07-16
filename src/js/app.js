@@ -62,6 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 mobileMenu.classList.remove('mobile-menu--open')
                 document.body.classList.remove('scroll-disabled')
             }
+
+            if (searchWrapper && searchWrapper.classList.contains('search--active')) {
+                searchWrapper.classList.remove('search--active')
+                overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
+
+            if (basketWrapper && basketWrapper.classList.contains('basket-modal--active')) {
+                basketWrapper.classList.remove('basket-modal--active')
+                overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
         })
     }
 
@@ -79,17 +91,63 @@ document.addEventListener('DOMContentLoaded', function () {
     // SEARCH
     const searchBtn = document.querySelector('.search-btn')
     const searchWrapper = document.querySelector('.search')
+    const searchClose = document.querySelector('.search__close')
 
     if (searchBtn) {
-        searchBtn.addEventListener('click', () => {
+        searchBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+
             if (!searchWrapper.classList.contains('search--active')) {
                 searchWrapper.classList.add('search--active')
-                //overlay.classList.add('overlay--active')
+                overlay.classList.add('overlay--active')
+                document.body.classList.add('scroll-disabled')
             } else {
                 searchWrapper.classList.remove('search--active')
                 overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
             }
         });
+    }
+
+    if (searchClose) {
+        searchClose.addEventListener('click', () => {
+            if (searchWrapper.classList.contains('search--active')) {
+                searchWrapper.classList.remove('search--active')
+                overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
+        })
+    }
+
+    // BASKET MODAl
+    const basketBtn = document.querySelector('.basket-btn')
+    const basketWrapper = document.querySelector('.basket-modal')
+    const basketClose = document.querySelector('.basket-modal__close')
+
+    if (basketBtn) {
+        basketBtn.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            if (!basketWrapper.classList.contains('basket-modal--active')) {
+                basketWrapper.classList.add('basket-modal--active')
+                overlay.classList.add('overlay--active')
+                document.body.classList.add('scroll-disabled')
+            } else {
+                basketWrapper.classList.remove('basket-modal--active')
+                overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
+        });
+    }
+
+    if (basketClose) {
+        basketClose.addEventListener('click', () => {
+            if (basketWrapper.classList.contains('basket-modal--active')) {
+                basketWrapper.classList.remove('basket-modal--active')
+                overlay.classList.remove('overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
+        })
     }
 
     // TOP PROMO

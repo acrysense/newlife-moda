@@ -652,6 +652,14 @@
         &__link
             font-size: 14px
 
+    // PROMOCODE
+    .promocode
+        &__input
+            font-size: 12px
+            &:focus + label,
+            &:not(:placeholder-shown) + label
+                transform: translate(-24%, -22px) scale(0.5)
+
 @media (min-width: 576px) and (max-width: 991px)
     .content
         margin-right: 11.5px

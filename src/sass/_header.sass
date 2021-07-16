@@ -1,4 +1,6 @@
 .top-promo
+    position: relative
+    z-index: 1001
     padding: 10px 0
     text-align: center
     background: $light-yellow-color
@@ -41,6 +43,7 @@
         align-items: center
 
 .subheader
+    position: relative
     &__wrapper
         display: flex
         align-items: center
@@ -133,15 +136,22 @@
         &--sm
             .header-brand__item + .header-brand__item
                 margin-left: 10px
+    &__item
+        &:hover
+            .header-brand__link
+                border-bottom: 1px solid $primary-color
+            & > .categories
+                display: block
     &__item + &__item
-        margin-left: 22px
+        margin-left: 12px
     &__link
-        padding: 5px
+        padding: 5px 10px
         font-size: 12px
         font-weight: bold
         text-transform: uppercase
+        border-bottom: 1px solid transparent
         &:hover
-            background: $light-grey-color
+            border-bottom: 1px solid $primary-color
 
 .hamburger
     display: inline-block
@@ -213,8 +223,8 @@
             margin-top: 5px
 
 .search
-    position: absolute
-    top: 114px
+    position: fixed
+    top: 46px
     right: 0
     left: 0
     z-index: 1001
@@ -243,14 +253,21 @@
             height: 1px
             background: $light-gray-color
     &__control
+        position: relative
         display: flex
         align-items: center
         padding: 0 20px
         &::before
             content: ''
+            //position: absolute
+            //top: 45px
+            //right: 244px
+            //z-index: 1
             display: block
-            width: 25px
-            height: 24px
+            min-width: 24px
+            min-height: 24px
+            max-width: 24px
+            max-height: 24px
             background-image: url(../img/dist/sprite.svg#icon-search)
             background-repeat: no-repeat
             background-size: cover
@@ -286,9 +303,9 @@
         letter-spacing: 2px
         text-transform: uppercase
     &__list
+        overflow: hidden
         min-width: 262px
-        max-height: 409px
-        overflow-y: scroll
+        max-height: 370px
     &__item + &__item
         margin-top: 20px
     &__link
@@ -336,6 +353,217 @@
         a
             border-bottom: 1px solid $dark-gray-color
 
+.basket-modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 1001
+    transform: translateX(100%)
+    opacity: 0
+    overflow: hidden
+    visibility: hidden
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 488px
+    height: 100vh
+    background: $white-color
+    transition: all 0.4s ease-in-out
+    &--active
+        transform: translateX(0)
+        opacity: 1
+        visibility: visible
+        transition: transform 0.4s ease-in-out, opacity 0.2s, visibility 0.2s
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 30px
+    &__title
+        font-size: 24px
+        font-weight: 500
+        letter-spacing: 2px
+    &__products
+        padding: 35px 25px 35px 30px
+        overflow-y: scroll
+        height: 100%
+        border-top: 1px solid $light-grey-color
+    &__product
+        display: flex
+        justify-content: space-between
+    &__product + &__product
+        margin-top: 32px
+    &__img
+        overflow: hidden
+        margin-right: 20px
+        max-width: 82px
+        max-height: 82px
+        width: 100%
+        height: 100%
+        img
+            width: 82px
+            height: 82px
+            object-fit: cover
+    &__img + &__group
+        width: 100%
+    &__group
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__name
+        font-family: $cormorant
+        font-size: 24px
+        font-weight: normal
+    &__description
+        overflow: hidden
+        margin-top: 4px
+        height: 59px
+        font-size: 12px
+        color: $dark-gray-color
+    &__price
+        display: block
+        font-size: 18px
+        font-weight: 500
+        white-space: nowrap
+    &__delete
+        display: block
+        padding: 0
+        margin-top: 14px
+        margin-left: auto
+        min-width: 24px
+        min-height: 24px
+        max-width: 24px
+        max-height: 24px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-trash)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        border: 0
+    &__bottom
+        padding: 30px 20px 24px
+        border-top: 1px solid $light-grey-color
+    &__total
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 16px 20px
+        margin: 0 -20px
+        background: $light-yellow-color
+    &__summary
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            display: block
+            width: 28px
+            height: 28px
+            background-image: url(../img/dist/sprite.svg#icon-basket)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+        .basket-modal__text
+            margin-left: 10px
+            max-width: 93px
+    &__text
+        display: block
+        font-size: 12px
+        &--light
+            font-weight: 300
+            letter-spacing: 1px
+    &__down-payment
+        margin: 20px 0
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &--end
+            justify-content: flex-end
+        .basket-modal__text + .basket-modal__text,
+        .basket-modal__text + .basket-modal__price
+            margin-left: 6px
+    &__inner + &__inner
+        margin-top: 2px
+    &__btn
+        padding: 18px
+        width: 100%
+    &__reserve
+        margin-left: 16px
+        padding: 19px
+    &__help
+        display: block
+        margin-top: 15px
+        font-size: 10px
+    &__payment
+        margin-top: 25px
+        .payment__list
+            justify-content: center
+
+.categories
+    position: absolute
+    top: 35px
+    right: 0
+    left: 0
+    z-index: 10
+    display: none
+    width: 100vw
+    background: $white-color
+    &:hover
+        display: block
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        padding: 25px 10px 25px 20px
+    &__title
+        margin-bottom: 20px
+        font-size: 14px
+        font-weight: 500
+    &__inner
+        width: 100%
+        &:first-child
+            margin-right: 10px
+            max-width: 180px
+    &__list
+        &--flex
+            display: flex
+            flex-wrap: wrap
+            .categories__item + .categories__item
+                margin-top: 0
+                margin-left: 5%
+            .categories__item
+                width: 30%
+                color: $boulder-color
+                &:nth-child(3n + 1)
+                    margin-left: 0
+                &:nth-child(n + 4)
+                    margin-top: 10px
+    &__item + &__item
+        margin-top: 10px
+    &__link
+        font-size: 12px
+        font-weight: normal
+        letter-spacing: 1px
+    &__more
+        font-size: 12px
+        text-decoration: underline
+        color: $primary-color
+        &:hover
+            color: $primary-color
+    &__img
+        overflow: hidden
+        max-width: 320px
+        max-height: 320px
+        min-width: 320px
+        min-height: 320px
+        width: 100%
+        height: 100%
+        background: $copyright-light-color
+        img
+            width: 320px
+            height: 320px
+            object-fit: cover
+
 // MEDIA QUARIES
 @media (min-width: 1024px)
     .header
@@ -362,10 +590,10 @@
     .mobile-menu
         display: none
 
-@media (min-width: 1024px) and (max-width: 1099px)
+@media (min-width: 1024px) and (max-width: 1199px)
     .header-brand
         &__item + &__item
-            margin-left: 10px
+            margin-left: 5px
 
 @media (max-width: 1023px)
     .header
@@ -521,7 +749,25 @@
         display: none
     .header-brand
         &__item + &__item
-            margin-left: 8px
+            margin-left: 5px
+        &__link
+            padding: 5px
+    .categories
+        &__wrapper
+            padding: 24px 0
+        &__inner
+            width: 100%
+            &:first-child
+                margin-right: 10px
+                max-width: 140px
+        &__img
+            max-width: 200px
+            max-height: 200px
+            min-width: 200px
+            min-height: 200px
+            img
+                width: 200px
+                height: 200px
 
 @media (min-width: 992px)
     .mobile-nav
@@ -537,6 +783,25 @@
             width: 100%
         &__product + &__product
             margin-top: 30px
+    .basket-modal
+        width: 444px
+        &__top
+            padding: 20px 24px
+        &__title
+            font-size: 18px
+        &__products
+            padding: 15px 24px
+        &__name
+            font-size: 20px
+        &__description
+            font-size: 10px
+        &__price
+            font-size: 16px
+        &__delete
+            min-width: 22px
+            min-height: 22px
+            max-width: 22px
+            max-height: 22px
 
 @media (max-width: 767px)
     .top-promo
@@ -557,11 +822,15 @@
         top: 0
         height: 100vh
         overflow-y: scroll
+        &--active
+            max-height: 100vh
         &__control
             padding: 0
             &::before
-                width: 19px
-                height: 18px
+                min-width: 18px
+                min-height: 18px
+                max-width: 18px
+                max-height: 18px
         &__input
             padding: 20px 10px
             font-size: 16px
@@ -602,3 +871,22 @@
         &__help
             margin-top: 24px
             font-size: 12px
+    .basket-modal
+        width: 100%
+        &__top
+            padding: 20px 8px
+        &__title
+            font-size: 14px
+        &__products
+            padding: 15px 24px
+        &__name
+            font-size: 20px
+        &__description
+            font-size: 10px
+        &__price
+            font-size: 16px
+        &__delete
+            min-width: 22px
+            min-height: 22px
+            max-width: 22px
+            max-height: 22px
