@@ -323,8 +323,10 @@ svg path,
     display: block
     padding: 0
     font-size: 0
-    width: 12px
-    height: 12px
+    min-width: 12px
+    min-height: 12px
+    max-width: 12px
+    max-height: 12px
     background-color: transparent
     background-image: url(../img/dist/sprite.svg#icon-close)
     background-repeat: no-repeat
@@ -332,8 +334,10 @@ svg path,
     background-position: center center
     border: 0
     &--big
-        width: 24px
-        height: 24px
+        min-width: 24px
+        min-height: 24px
+        max-width: 24px
+        max-height: 24px
 
 .square-checkbox
     display: flex
@@ -553,5 +557,7 @@ svg path,
 @media (max-width: 991px)
     .close-btn
         &--big
-            width: 18px
-            height: 18px
+            min-width: 18px
+            min-height: 18px
+            max-width: 18px
+            max-height: 18px

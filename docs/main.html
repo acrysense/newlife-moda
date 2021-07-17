@@ -99,9 +99,10 @@
         </div>
     </header>
     <div class="search">
+        <span class="search__icon"></span>
         <div class="search__container">
             <div class="search__control">
-                <input type="text" class="search__input input" placeholder="Поиск">
+                <input type="text" class="search__input input" placeholder="Поиск по брендам, товару и ID...">
                 <button class="search__close close-btn close-btn--big" aria-label="Закрыть"></button>
             </div>
         </div>
@@ -152,63 +153,63 @@
                         <div class="search__products">
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                                <span class="search__link">Gucci Кожаное пальто</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                                <span class="search__link">Gucci Кожаное пальто</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                    <img src="img/dist/products-slide-03.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                    <img src="img/dist/products-slide-03.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                    <img src="img/dist/products-slide-02.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                                <span class="search__link">Gucci Кожаное пальто</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                    <img src="img/dist/products-slide-02.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Gucci Chanel Кожаные кроссовки Rhyton на шнуровке</span>
+                                <span class="search__link">Gucci Кожаное пальто</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                             <a href="#" class="search__product">
                                 <div class="search__img">
-                                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                                 </div>
-                                <span class="search__link">Cумка Gucci Chanel</span>
+                                <span class="search__link">Cумка Gucci</span>
                             </a>
                         </div>
                         <a href="#" class="search__more">Посмотреть все 856 товаров</a>
@@ -218,17 +219,19 @@
         </div>
     </div>
     <div class="mobile-menu">
-        <button class="mobile-menu__close">
-            Закрыть
-            <span class="mobile-menu__close--inner"></span>
-            <span class="mobile-menu__close--inner"></span>
-            <span class="mobile-menu__close--inner"></span>
-        </button>
+        <div class="mobile-menu__top">
+            <button class="mobile-menu__close">
+                Закрыть
+                <span class="mobile-menu__close--inner"></span>
+                <span class="mobile-menu__close--inner"></span>
+            </button>
+            <a href="#" class="mobile-menu__appraisal link link--accent-bg">ОЦЕНИТЬ ВЕЩЬ</a>
+        </div>
         <div class="mobile-menu__content">
-            <label for="mobile-search" class="input-shell mobile-menu__search">
-                <input type="text" id="mobile-search" class="input-shell__input" placeholder="Поиск по брендам, по товару...">
+            <!--<label for="mobile-search" class="input-shell mobile-menu__search">
+                <input type="text" id="mobile-search" class="input-shell__input" placeholder="Поиск по брендам, товару и ID...">
                 <span class="input-shell__icon"></span>
-            </label>
+            </label>-->
             <div class="section section--mobile">
                 <ul class="section__list">
                     <li class="section__item section__item--active">
@@ -288,7 +291,6 @@
                 </ul>
             </nav>
             <div class="mobile-menu__contacts">
-                <a href="#" class="mobile-menu__appraisal link link--accent-bg">ОЦЕНИТЬ ТОВАР</a>
                 <a href="tel:88123456789" class="mobile-menu__phone">8 812 345 6789</a>
                 <div class="social">
                     <ul class="social__list social__list--space-between">
@@ -405,7 +407,7 @@
                                             </ul>
                                         </div>
                                         <div class="categories__img">
-                                            <img src="" alt="Banner">
+                                            <img src="img/dist/bags-banner.jpg" alt="Banner">
                                         </div>
                                     </div>
                                 </div>
@@ -792,13 +794,13 @@
             <h2 class="basket-modal__title">КОРЗИНА ТОВАРОВ</h2>
             <button class="basket-modal__close close-btn close-btn--big" aria-label="Закрыть"></button>
         </div>
-        <div class="basket-modal__products">
+        <div class="basket-modal__products" data-simplebar>
             <div class="basket-modal__product">
                 <div class="basket-modal__img">
-                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                 </div>
                 <div class="basket-modal__group">
-                    <h3 class="basket-modal__name">Gucci Chanel</h3>
+                    <h3 class="basket-modal__name">Gucci</h3>
                     <p class="basket-modal__description">
                         Кожанные кросовки Phyton на шнуровке<br>
                         Размер: 44<br>
@@ -812,10 +814,10 @@
             </div>
             <div class="basket-modal__product">
                 <div class="basket-modal__img">
-                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                 </div>
                 <div class="basket-modal__group">
-                    <h3 class="basket-modal__name">Gucci Chanel</h3>
+                    <h3 class="basket-modal__name">Gucci</h3>
                     <p class="basket-modal__description">
                         Кожанные кросовки Phyton на шнуровке<br>
                         Размер: 44<br>
@@ -829,10 +831,10 @@
             </div>
             <div class="basket-modal__product">
                 <div class="basket-modal__img">
-                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                 </div>
                 <div class="basket-modal__group">
-                    <h3 class="basket-modal__name">Gucci Chanel</h3>
+                    <h3 class="basket-modal__name">Gucci</h3>
                     <p class="basket-modal__description">
                         Кожанные кросовки Phyton на шнуровке<br>
                         Размер: 44<br>
@@ -846,10 +848,10 @@
             </div>
             <div class="basket-modal__product">
                 <div class="basket-modal__img">
-                    <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                    <img src="img/dist/product-slide-01.png" alt="Gucci">
                 </div>
                 <div class="basket-modal__group">
-                    <h3 class="basket-modal__name">Gucci Chanel</h3>
+                    <h3 class="basket-modal__name">Gucci</h3>
                     <p class="basket-modal__description">
                         Кожанные кросовки Phyton на шнуровке<br>
                         Размер: 44<br>
@@ -863,7 +865,7 @@
             </div>
         </div>
         <div class="basket-modal__bottom">
-            <div class="promocode">
+            <!--<div class="promocode">
                 <div class="promocode__inner">
                     <h4 class="promocode__title">ПРОМОКОД</h4>
                     <span class="promocode__help">при наличии</span>
@@ -876,7 +878,7 @@
                     </div>
                     <button class="promocode__btn btn btn--transparent">применить</button>
                 </div>
-            </div>
+            </div>-->
             <div class="basket-modal__total">
                 <div class="basket-modal__block">
                     <div class="basket-modal__summary">
@@ -905,7 +907,7 @@
                 <a href="#" class="basket-modal__reserve link link--bg link--lg">РЕЗЕРВ</a>
             </div>
             <p class="basket-modal__help">Стоимость доставки будет рассчитана при оформлении заказа.</p>
-            <div class="payment basket-modal__payment">
+            <!--<div class="payment basket-modal__payment">
                 <ul class="payment__list">
                     <li class="payment__item">
                         <a href="#" class="payment__link">
@@ -923,7 +925,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="overlay"></div>
@@ -994,11 +996,11 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
+                                    <h3 class="goods__title">Gucci</h3>
                                     <p class="goods__description">Кожаные кроссовки</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
@@ -1022,12 +1024,12 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
-                                    <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                    <h3 class="goods__title">Gucci</h3>
+                                    <p class="goods__description">Кожаное пальто</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
                                         <span class="goods__old-price">33 000</span>
@@ -1050,12 +1052,12 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
-                                    <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                    <h3 class="goods__title">Gucci</h3>
+                                    <p class="goods__description">Кожаное пальто</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
                                         <span class="goods__old-price">33 000</span>
@@ -1078,12 +1080,12 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
-                                    <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                    <h3 class="goods__title">Gucci</h3>
+                                    <p class="goods__description">Кожаное пальто</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
                                         <span class="goods__old-price">33 000</span>
@@ -1106,12 +1108,12 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
-                                    <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                    <h3 class="goods__title">Gucci</h3>
+                                    <p class="goods__description">Кожаное пальто</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
                                         <span class="goods__old-price">33 000</span>
@@ -1134,12 +1136,12 @@
                                 <a href="#" class="goods__img">
                                     <picture>
                                         <source data-srcset="img/dist/products-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <img data-src="img/dist/products-slide-01.png" alt="Gucci" class="swiper-lazy">
                                     </picture>
                                 </a>
                                 <div class="goods__info">
-                                    <h3 class="goods__title">Gucci Chanel</h3>
-                                    <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                    <h3 class="goods__title">Gucci</h3>
+                                    <p class="goods__description">Кожаное пальто</p>
                                     <div class="goods__price">
                                         <span class="goods__new-price">23 000</span>
                                         <span class="goods__old-price">33 000</span>
@@ -1163,20 +1165,13 @@
                     <h3 class="cta__title">Нужна помощь с заказом?</h3>
                     <div class="cta__wrap">
                         <div class="cta__block">
-                            <span class="cta__help">Телефон</span>
                             <a href="tel:+78123456789" class="cta__value">+7 812 345 6789</a>
                         </div>
                         <div class="cta__block">
-                            <span class="cta__help">WhatsApp</span>
                             <a href="tel:+79819857634" class="cta__value">+7 981 985 7634</a>
                         </div>
                         <div class="cta__block">
-                            <span class="cta__help">Email</span>
                             <a href="mailto:info@newlife.moda" class="cta__value">info@newlife.moda</a>
-                        </div>
-                        <div class="cta__block">
-                            <a href="#" class="cta__link">Форма связи</a>
-                            <a href="#" class="cta__link">Продать товар</a>
                         </div>
                     </div>
                 </div>

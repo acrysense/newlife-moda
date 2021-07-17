@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--open')) {
-                if (overlay.classList.contains('overlay--active')) {
-                    overlay.classList.remove('overlay--active')
+                if (modalOverlay.classList.contains('modal-overlay--active')) {
+                    modalOverlay.classList.remove('modal-overlay--active')
                 }
                 hamburger.classList.remove('hamburger--active')
                 mobileMenu.classList.remove('mobile-menu--open')
                 document.body.classList.remove('scroll-disabled')
             } else {
-                if (!overlay.classList.contains('overlay--active')) {
-                    overlay.classList.add('overlay--active')
+                if (!modalOverlay.classList.contains('modal-overlay--active')) {
+                    modalOverlay.classList.add('modal-overlay--active')
                 }
                 hamburger.classList.add('hamburger--active')
                 mobileMenu.classList.add('mobile-menu--open')
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (mobileMenuClose && mobileMenu) {
         mobileMenuClose.addEventListener('click', () => {
             if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--open')) {
-                if (overlay.classList.contains('overlay--active')) {
-                    overlay.classList.remove('overlay--active')
+                if (modalOverlay.classList.contains('modal-overlay--active')) {
+                    modalOverlay.classList.remove('modal-overlay--active')
                 }
                 hamburger.classList.remove('hamburger--active')
                 mobileMenu.classList.remove('mobile-menu--open')
@@ -54,23 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (overlay) {
         overlay.addEventListener('click', () => {
-            if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--open')) {
-                if (overlay.classList.contains('overlay--active')) {
-                    overlay.classList.remove('overlay--active')
-                }
-                hamburger.classList.remove('hamburger--active')
-                mobileMenu.classList.remove('mobile-menu--open')
-                document.body.classList.remove('scroll-disabled')
-            }
-
             if (searchWrapper && searchWrapper.classList.contains('search--active')) {
                 searchWrapper.classList.remove('search--active')
-                overlay.classList.remove('overlay--active')
-                document.body.classList.remove('scroll-disabled')
-            }
-
-            if (basketWrapper && basketWrapper.classList.contains('basket-modal--active')) {
-                basketWrapper.classList.remove('basket-modal--active')
                 overlay.classList.remove('overlay--active')
                 document.body.classList.remove('scroll-disabled')
             }
@@ -92,6 +77,68 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBtn = document.querySelector('.search-btn')
     const searchWrapper = document.querySelector('.search')
     const searchClose = document.querySelector('.search__close')
+    const topPromo = document.querySelector('.top-promo')
+
+    if (topPromo && searchWrapper) {
+        const topPromoHeight = topPromo.getBoundingClientRect().height;
+        let searchTop = topPromoHeight - window.pageYOffset
+
+        if (window.pageYOffset < topPromoHeight) {
+            searchWrapper.style.setProperty('top', `${searchTop}px`)
+        } else {
+            searchWrapper.style.setProperty('top', `${0}px`)
+        }
+    
+        if (window.innerWidth < 768) {
+            if (window.pageYOffset < topPromoHeight) {
+                searchWrapper.style.setProperty('--vh', `calc(100vh - ${searchTop}px)`)
+            } else {
+                searchWrapper.style.setProperty('--vh', `100vh`)
+            }
+        }
+    }
+
+    window.addEventListener('scroll', () => {
+        if (topPromo && searchWrapper) {
+            const topPromoHeight = topPromo.getBoundingClientRect().height;
+            let searchTop = topPromoHeight - window.pageYOffset
+
+            if (window.pageYOffset < topPromoHeight) {
+                searchWrapper.style.setProperty('top', `${searchTop}px`)
+            } else {
+                searchWrapper.style.setProperty('top', `${0}px`)
+            }
+
+            if (window.innerWidth < 768) {
+                if (window.pageYOffset < topPromoHeight) {
+                    searchWrapper.style.setProperty('--vh', `calc(100vh - ${searchTop}px)`)
+                } else {
+                    searchWrapper.style.setProperty('--vh', `100vh`)
+                }
+            }
+        }
+    })
+    
+    window.addEventListener('resize', () => {
+        if (topPromo && searchWrapper) {
+            const topPromoHeight = topPromo.getBoundingClientRect().height;
+            let searchTop = topPromoHeight - window.pageYOffset
+
+            if (window.pageYOffset < topPromoHeight) {
+                searchWrapper.style.setProperty('top', `${searchTop}px`)
+            } else {
+                searchWrapper.style.setProperty('top', `${0}px`)
+            }
+
+            if (window.innerWidth < 768) {
+                if (window.pageYOffset < topPromoHeight) {
+                    searchWrapper.style.setProperty('--vh', `calc(100vh - ${searchTop}px)`)
+                } else {
+                    searchWrapper.style.setProperty('--vh', `100vh`)
+                }
+            }
+        }
+    })
 
     if (searchBtn) {
         searchBtn.addEventListener('click', (event) => {
@@ -130,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (!basketWrapper.classList.contains('basket-modal--active')) {
                 basketWrapper.classList.add('basket-modal--active')
-                overlay.classList.add('overlay--active')
+                modalOverlay.classList.add('modal-overlay--active')
                 document.body.classList.add('scroll-disabled')
             } else {
                 basketWrapper.classList.remove('basket-modal--active')
@@ -144,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
         basketClose.addEventListener('click', () => {
             if (basketWrapper.classList.contains('basket-modal--active')) {
                 basketWrapper.classList.remove('basket-modal--active')
-                overlay.classList.remove('overlay--active')
+                modalOverlay.classList.remove('modal-overlay--active')
                 document.body.classList.remove('scroll-disabled')
             }
         })
@@ -157,6 +204,25 @@ document.addEventListener('DOMContentLoaded', function () {
     if (topPromoCloseBtn) {
         topPromoCloseBtn.addEventListener('click', () => {
             topPromoContainer.classList.add('top-promo--hidden')
+
+            if (topPromo && searchWrapper) {
+                const topPromoHeight = topPromo.getBoundingClientRect().height;
+                let searchTop = topPromoHeight - window.pageYOffset
+    
+                if (window.pageYOffset < topPromoHeight) {
+                    searchWrapper.style.setProperty('top', `${searchTop}px`)
+                } else {
+                    searchWrapper.style.setProperty('top', `${0}px`)
+                }
+    
+                if (window.innerWidth < 768) {
+                    if (window.pageYOffset < topPromoHeight) {
+                        searchWrapper.style.setProperty('--vh', `calc(100vh - ${searchTop}px)`)
+                    } else {
+                        searchWrapper.style.setProperty('--vh', `100vh`)
+                    }
+                }
+            }
         })
     }
 
@@ -475,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalBtn = document.querySelectorAll('.modal-btn'),
         modal = document.querySelectorAll('.modal'),
         modalClose = document.querySelectorAll('.modal__close'),
-        modalOverlay = document.querySelector('.overlay')
+        modalOverlay = document.querySelector('.modal-overlay')
     
     if (modalBtn) {
         modalBtn.forEach((item, i) => {
@@ -516,6 +582,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.header').classList.remove('header--active')
                 document.querySelectorAll('.modal.modal--active').forEach((child) => child.classList.remove('modal--active'))
                 modalOverlay.classList.remove('modal-overlay--active')
+            }
+
+            if (basketWrapper && basketWrapper.classList.contains('basket-modal--active')) {
+                basketWrapper.classList.remove('basket-modal--active')
+                modalOverlay.classList.remove('modal-overlay--active')
+                document.body.classList.remove('scroll-disabled')
+            }
+
+            if (hamburger.classList.contains('hamburger--active') && mobileMenu.classList.contains('mobile-menu--open')) {
+                if (overlay.classList.contains('overlay--active')) {
+                    overlay.classList.remove('overlay--active')
+                }
+                hamburger.classList.remove('hamburger--active')
+                mobileMenu.classList.remove('mobile-menu--open')
+                document.body.classList.remove('scroll-disabled')
             }
         });
     }

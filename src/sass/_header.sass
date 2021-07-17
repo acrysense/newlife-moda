@@ -133,19 +133,14 @@
     &__list
         display: flex
         align-items: center
-        &--sm
-            .header-brand__item + .header-brand__item
-                margin-left: 10px
     &__item
         &:hover
             .header-brand__link
                 border-bottom: 1px solid $primary-color
             & > .categories
                 display: block
-    &__item + &__item
-        margin-left: 12px
     &__link
-        padding: 5px 10px
+        padding: 5px 15px
         font-size: 12px
         font-weight: bold
         text-transform: uppercase
@@ -228,20 +223,58 @@
     right: 0
     left: 0
     z-index: 1001
-    //display: none
     overflow: hidden
     max-height: 0
     width: 100%
     height: 100%
     background: $white-color
-    transition: all 0.6s ease-in-out
+    transition: all 0.5s ease-in-out
     &--active
-        //display: block
         max-height: 640px
-    &__container
+        .search__icon
+            &::before
+                right: calc(100% - 20px)
+                transition: all 0.6s ease 0.1s
+        .search__container
+            opacity: 1
+            visibility: visible
+            transition: all 0.6s ease 0.6s
+    &__icon
+        display: block
+        position: absolute
+        top: 45px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: -1
         padding: 0 10px
         margin: 0 auto
         max-width: 1220px
+        width: 100%
+        height: 24px
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            right: 283px
+            transform: translateX(100%)
+            z-index: 1
+            display: block
+            min-width: 24px
+            min-height: 24px
+            max-width: 24px
+            max-height: 24px
+            background-image: url(../img/dist/sprite.svg#icon-search)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            transition: all 0.4s ease-in-out 0s
+    &__container
+        margin: 0 auto
+        max-width: 1220px
+        opacity: 0
+        visibility: hidden
+        transition: all 0.3s ease-in-out 0s
     &__container + &__container
         &::before
             content: ''
@@ -257,23 +290,25 @@
         display: flex
         align-items: center
         padding: 0 20px
-        &::before
-            content: ''
-            //position: absolute
-            //top: 45px
-            //right: 244px
-            //z-index: 1
-            display: block
-            min-width: 24px
-            min-height: 24px
-            max-width: 24px
-            max-height: 24px
-            background-image: url(../img/dist/sprite.svg#icon-search)
-            background-repeat: no-repeat
-            background-size: cover
-            background-position: center center
+        margin-top: 16.5px
+        //&::before
+        //    content: ''
+        //    position: absolute
+        //    top: 28px
+        //    right: 249px
+        //    z-index: 1
+        //    display: block
+        //    min-width: 24px
+        //    min-height: 24px
+        //    max-width: 24px
+        //    max-height: 24px
+        //    background-color: #fff
+        //    background-image: url(../img/dist/sprite.svg#icon-search)
+        //    background-repeat: no-repeat
+        //    background-size: cover
+        //    background-position: center center
     &__input
-        padding: 30px 20px
+        padding: 30px 20px 30px 44px
         width: 100%
         font-size: 18px
         font-weight: 500
@@ -358,7 +393,7 @@
     top: 0
     right: 0
     bottom: 0
-    z-index: 1001
+    z-index: 1011
     transform: translateX(100%)
     opacity: 0
     overflow: hidden
@@ -381,11 +416,11 @@
         justify-content: space-between
         padding: 30px
     &__title
-        font-size: 24px
+        font-size: 20px
         font-weight: 500
         letter-spacing: 2px
     &__products
-        padding: 35px 25px 35px 30px
+        padding: 30px 25px
         overflow-y: scroll
         height: 100%
         border-top: 1px solid $light-grey-color
@@ -552,16 +587,17 @@
             color: $primary-color
     &__img
         overflow: hidden
-        max-width: 320px
-        max-height: 320px
-        min-width: 320px
-        min-height: 320px
+        margin-left: 40px
+        max-width: 400px
+        max-height: 366px
+        min-width: 400px
+        min-height: 366px
         width: 100%
         height: 100%
         background: $copyright-light-color
         img
-            width: 320px
-            height: 320px
+            width: 400px
+            height: 366px
             object-fit: cover
 
 // MEDIA QUARIES
@@ -584,7 +620,7 @@
         &__item + &__item
             margin-left: 10px
         &__link
-            font-size: 11px
+            font-size: 12px
             font-weight: normal
     .hamburger,
     .mobile-menu
@@ -592,14 +628,10 @@
 
 @media (min-width: 1024px) and (max-width: 1199px)
     .header-brand
-        &__item + &__item
-            margin-left: 5px
+        &__link
+            padding: 5px 12px
 
 @media (max-width: 1023px)
-    .header
-        .icons__item
-            &:nth-child(2)
-                display: none
     .subheader
         &__wrapper--top
             display: none
@@ -610,12 +642,12 @@
         position: fixed
         top: 0
         left: 0
-        z-index: 1001
+        z-index: 1011
         transform-origin: left top
         transform: scale(0)
         overflow: hidden
         visibility: hidden
-        width: 300px
+        width: 340px
         height: 100%
         opacity: 0
         background: $white-color
@@ -624,17 +656,21 @@
             transform: scale(1)
             visibility: visible
             opacity: 1
+        &__top
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 10px
+            width: 100%
         &__close
-            position: absolute
-            top: 0
-            left: 0
+            position: relative
             display: block
             padding: 0
             margin: 0
-            min-width: 36px
-            min-height: 36px
-            max-width: 36px
-            max-height: 36px
+            min-width: 40px
+            min-height: 40px
+            max-width: 40px
+            max-height: 40px
             font-size: 0
             text-align: center
             background-color: transparent
@@ -643,41 +679,36 @@
             &--inner
                 display: block
                 position: absolute
-                left: 8px
+                top: 50%
+                left: 50%
                 width: 18px
                 height: 1px
                 background: $primary-color
                 transition: all 0.5s ease-in-out
                 &:first-child
-                    top: 22px
-                    transform: rotate(45deg)
-                &:nth-child(2)
-                    width: 0
-                    opacity: 0
+                    transform: translate(-50%, -50%) rotate(45deg)
                 &:last-child
-                    top: 22px
-                    transform: rotate(-45deg)
-        &__content
-            margin-top: 40px
-            width: 100%
-            height: 100%
-            overflow-x: hidden
-            overflow-y: scroll
-        &__search
-            margin: 12px 10px
-        &__contacts
-            padding: 25px 0
-            width: 100%
+                    transform: translate(-50%, -50%) rotate(-45deg)
         &__appraisal
             display: block
             padding: 12px 28px
-            width: fit-content
-            margin: 0 auto
+            margin-left: 10px
+            width: 100%
             font-size: 14px
             text-align: center
+        &__content
+            margin-top: 5px
+            width: 100%
+            height: calc(100vh - 60px)
+            overflow-x: hidden
+            overflow-y: scroll
+        &__search
+            margin: 0 10px 12px
+        &__contacts
+            padding: 25px 0
+            width: 100%
         &__phone
             display: block
-            margin-top: 25px
             font-size: 18px
             font-weight: 500
             text-align: center
@@ -748,10 +779,12 @@
     .personal-area
         display: none
     .header-brand
-        &__item + &__item
-            margin-left: 5px
+        &__list
+            &--sm
+                .header-brand__link
+                    padding: 5px
         &__link
-            padding: 5px
+            padding: 5px 9px
     .categories
         &__wrapper
             padding: 24px 0
@@ -759,26 +792,58 @@
             width: 100%
             &:first-child
                 margin-right: 10px
-                max-width: 140px
+                max-width: 110px
+        &__title
+            margin-bottom: 16px
+            font-size: 12px
+        &__link
+            font-size: 11px
         &__img
-            max-width: 200px
-            max-height: 200px
-            min-width: 200px
-            min-height: 200px
+            margin-left: 20px
+            max-width: 300px
+            max-height: 266px
+            min-width: 300px
+            min-height: 266px
             img
-                width: 200px
-                height: 200px
+                width: 300px
+                height: 266px
 
 @media (min-width: 992px)
     .mobile-nav
         display: none
 
+@media (min-width: 768px) and (max-width: 1023px)
+    .search
+        &__icon
+            top: 19px
+            height: 18px
+            &::before
+                right: 115px
+                min-width: 18px
+                min-height: 18px
+                max-width: 18px
+                max-height: 18px
+        &__control
+            margin-top: 0
+        &__input
+            padding: 18.5px 20px 18.5px 34px
+            font-size: 16px
+        &__close
+            min-width: 18px
+            min-height: 18px
+            max-width: 18px
+            max-height: 18px
+
 @media (min-width: 768px) and (max-width: 991px)
     .search
+        &--active
+            .search__icon
+                &::before
+                    right: calc(100% - 10px)
         &__control
-            padding: 0 8px
+            padding: 0 10px
         &__content
-            padding: 30px 8px
+            padding: 30px 10px
         &__product
             width: 100%
         &__product + &__product
@@ -804,6 +869,10 @@
             max-height: 22px
 
 @media (max-width: 767px)
+    .header
+        .icons__item
+            &:nth-child(2)
+                display: none
     .top-promo
         padding: 15px 0
         &__wrapper
@@ -812,32 +881,59 @@
             margin-top: 5px
             margin-left: 0
     .mobile-menu
+        width: 80%
         &__top
             .logotype
                 margin-left: auto
+    .section
+        &__link
+            font-size: 11px
+    .nav
+        &__link
+            padding: 18px 12px
+            margin: 0
+            font-size: 11px
+            border-bottom: 1px solid $light-grey-color
     .subheader
         &__wrapper--bottom
             display: none
     .search
         top: 0
-        height: 100vh
         overflow-y: scroll
         &--active
             max-height: 100vh
-        &__control
-            padding: 0
+            max-height: var(--vh)
+            .search__icon
+                &::before
+                    right: calc(100% - 10px)
+        &__icon
+            top: 19px
+            height: 18px
             &::before
+                right: 71.5px
                 min-width: 18px
                 min-height: 18px
                 max-width: 18px
                 max-height: 18px
+        &__container
+            padding: 0
+        &__control
+            padding: 0 10px
+            margin-top: 0
+            //&::before
+            //    min-width: 18px
+            //    min-height: 18px
+            //    max-width: 18px
+            //    max-height: 18px
         &__input
-            padding: 20px 10px
-            font-size: 16px
+            padding: 21px 20px 21px 32px
+            font-size: 12px
         &__content
             padding: 20px 0
         &__wrapper
             flex-direction: column
+        &__block
+            padding: 0 10px
         &__title
             margin-bottom: 20px
             font-size: 12px
@@ -863,7 +959,9 @@
             max-width: 42px
             max-height: 42px
         &__more
-            padding-top: 20px
+            padding: 20px 10px 0
+            margin: 25px -10px 0
+            width: calc(100% + 20px)
             border-top: 1px solid $light-gray-color
         &__description
             margin-top: 20px
@@ -874,11 +972,11 @@
     .basket-modal
         width: 100%
         &__top
-            padding: 20px 8px
+            padding: 20px 10px
         &__title
             font-size: 14px
         &__products
-            padding: 15px 24px
+            padding: 15px 10px
         &__name
             font-size: 20px
         &__description
@@ -890,3 +988,5 @@
             min-height: 22px
             max-width: 22px
             max-height: 22px
+        &__bottom
+            padding: 15px 10px
