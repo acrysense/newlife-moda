@@ -108,7 +108,6 @@
         transition: border 0.5s
         &:hover,
         &:focus
-            border-bottom: 1px solid $primary-color
             text-decoration: none
         &:focus
             outline: none
@@ -117,12 +116,33 @@
     display: none
     &--active
         display: block
+    &__back
+        padding: 14px 10px
+        width: 100%
+        font-size: 12px
+        &::before
+            content: ''
+            display: inline-block
+            margin-top: -2px
+            margin-right: 6px
+            width: 10px
+            height: 10px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#icon-arrow-back)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__list
+        display: none
+        &--active
+            display: block
     &__item
         border-top: 1px solid $light-grey-color
     &__link
-        padding: 15px 10px 15px 25px
+        padding: 14px 10px
         width: 100%
         font-size: 12px
+        letter-spacing: 1px
         text-transform: uppercase
 
 .header-brand
@@ -219,7 +239,7 @@
 
 .search
     position: fixed
-    top: 46px
+    top: 0
     right: 0
     left: 0
     z-index: 1001
@@ -559,6 +579,9 @@
         &:first-child
             margin-right: 10px
             max-width: 180px
+        &--double
+            .categories__item
+                width: 45%!important
     &__list
         &--flex
             display: flex
@@ -573,6 +596,9 @@
                     margin-left: 0
                 &:nth-child(n + 4)
                     margin-top: 10px
+        &--primary
+            .categories__link
+                font-weight: 500
     &__item + &__item
         margin-top: 10px
     &__link
@@ -601,6 +627,13 @@
             object-fit: cover
 
 // MEDIA QUARIES
+@media (hover: hover)
+    .nav
+        &__link
+            &:hover,
+            &:focus
+                border-bottom: 1px solid $primary-color
+
 @media (min-width: 1024px)
     .header
         &__wrapper
@@ -724,13 +757,15 @@
             &--accent
                 .nav__link
                     font-weight: 500
+        &__item + &__item
+            border-top: 1px solid $light-grey-color
         &__link
-            padding: 12px 10px
+            padding: 14px 10px
+            margin: 0
             width: 100%
             font-size: 12px
             font-weight: normal
-            &:hover
-                border-bottom: 1px solid transparent
+            letter-spacing: 1px
             &--dropdown
                 position: relative
                 &::after

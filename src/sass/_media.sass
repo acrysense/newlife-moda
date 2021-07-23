@@ -12,6 +12,16 @@
             width: 670px
         &__right
             width: 450px
+    // BRANDS
+    .brands
+        &__img + &__img
+            margin-left: 12px
+        &__img
+            width: 185px
+            &:nth-child(6n + 1)
+                margin-left: 0
+            &:nth-child(n + 7)
+                margin-top: 20px
 
 @media (max-width: 1199px)
     // RESERVE
@@ -60,6 +70,17 @@
         &__state
             padding: 10px
             width: 100%
+
+    // BRANDS
+    .brands
+        &__img + &__img
+            margin-left: 1.25%
+        &__img
+            width: 19%
+            &:nth-child(5n + 1)
+                margin-left: 0
+            &:nth-child(n + 6)
+                margin-top: 20px
 
 @media (min-width: 992px)
     // CATALOG
@@ -409,6 +430,27 @@
         &__control
             min-width: 100%
 
+    // BRANDS
+    .brands
+        &__title
+            font-size: 20px
+        &__subtitle
+            font-size: 18px
+        &__img + &__img
+            margin-left: 1.33%
+        &__img
+            width: 24%
+            &:nth-child(4n + 1)
+                margin-left: 0
+            &:nth-child(n + 5)
+                margin-top: 25px
+        &__list + &__list
+            margin-top: 60px
+        &__item
+            width: 33.33%
+            &:nth-child(n + 4)
+                margin-top: 22px
+
 @media (min-width: 768px)
     // PRODUCT
     .product
@@ -660,6 +702,34 @@
             &:focus + label,
             &:not(:placeholder-shown) + label
                 transform: translate(-24%, -22px) scale(0.5)
+
+    // BRANDS
+    .brands
+        margin-top: 35px
+        &__title
+            font-size: 20px
+        &__subtitle
+            font-size: 18px
+        &__img
+            width: 46%
+            &:nth-child(2n)
+                margin-left: 8%
+            &:nth-child(n + 3)
+                margin-top: 15px
+        &__list + &__list
+            margin-top: 30px
+        &__item
+            width: 49%
+            &:nth-child(2n)
+                margin-left: 2%
+            &:nth-child(n + 3)
+                margin-top: 10px
+        &__link
+            font-size: 12px
+    .brands-filter
+        margin-bottom: 50px
+        &__control
+            max-width: 100%
 
 @media (min-width: 576px) and (max-width: 991px)
     .content

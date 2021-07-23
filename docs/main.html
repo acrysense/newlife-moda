@@ -248,48 +248,85 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item nav__item--accent">
-                        <a href="#" class="nav__link">НОВИНКИ</a>
+                        <a href="#" class="nav__link" data-mobile-category="1">НОВИНКИ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">АУКЦИОН</a>
+                        <a href="#" class="nav__link" data-mobile-category="2">АУКЦИОН</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">SALE</a>
+                        <a href="#" class="nav__link" data-mobile-category="3">SALE</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link nav__link--dropdown">ОДЕЖДА</a>
-                        <ul class="submenu">
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">брюки</a>
-                            </li>
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">Верхняя одежда</a>
-                            </li>
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">джинсы</a>
-                            </li>
-                        </ul>
+                        <a href="#" class="nav__link nav__link--dropdown" data-mobile-category="4">ОДЕЖДА</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">ОБУВЬ</a>
+                        <a href="#" class="nav__link nav__link--dropdown" data-mobile-category="5">ОБУВЬ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">СУМКИ</a>
+                        <a href="#" class="nav__link nav__link--dropdown" data-mobile-category="6">СУМКИ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">АКСЕССУАРЫ</a>
+                        <a href="#" class="nav__link" data-mobile-category="7">АКСЕССУАРЫ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">LOOK</a>
+                        <a href="#" class="nav__link" data-mobile-category="8">LOOK</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">БРЕНДЫ</a>
+                        <a href="#" class="nav__link" data-mobile-category="9">БРЕНДЫ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">АКЦИИ</a>
+                        <a href="#" class="nav__link" data-mobile-category="10">АКЦИИ</a>
                     </li>
                 </ul>
             </nav>
+            <div class="submenu">
+                <a href="#" class="submenu__back">Назад</a>
+                <ul class="submenu__list" data-mobile-subcategory="4">
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Показать всё</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Брюки</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Верхняя одежда</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Джинсы</a>
+                    </li>
+                </ul>
+                <ul class="submenu__list" data-mobile-subcategory="5">
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Показать всё</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Кроссовки</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Ботинки</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Домашняя обувь</a>
+                    </li>
+                </ul>
+                <ul class="submenu__list" data-mobile-subcategory="6">
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Показать всё</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Сумки на ремешке</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Рюкзаки</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Клатчи</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="#" class="submenu__link">Дорожные сумки</a>
+                    </li>
+                </ul>
+            </div>
             <div class="mobile-menu__contacts">
                 <a href="tel:88123456789" class="mobile-menu__phone">8 812 345 6789</a>
                 <div class="social">
@@ -322,13 +359,13 @@
                                             <h4 class="categories__title">ТОП-5</h4>
                                             <ul class="categories__list">
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 1</a>
+                                                    <a href="#" class="categories__link">Victoria Secret</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 2</a>
+                                                    <a href="#" class="categories__link">Alexander McQueen</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 3</a>
+                                                    <a href="#" class="categories__link">Gucci</a>
                                                 </li>
                                                 <li class="categories__item">
                                                     <a href="#" class="categories__link">БРЕНД 4</a>
@@ -342,19 +379,19 @@
                                             <h4 class="categories__title">ВСЕ БРЕНДЫ</h4>
                                             <ul class="categories__list categories__list--flex">
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 1</a>
+                                                    <a href="#" class="categories__link">Victoria Secret</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 2</a>
+                                                    <a href="#" class="categories__link">Alexander McQueen</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 3</a>
+                                                    <a href="#" class="categories__link">Gucci</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 4</a>
+                                                    <a href="#" class="categories__link">Versace</a>
                                                 </li>
                                                 <li class="categories__item">
-                                                    <a href="#" class="categories__link">БРЕНД 5</a>
+                                                    <a href="#" class="categories__link">Victoria Secret</a>
                                                 </li>
                                                 <li class="categories__item">
                                                     <a href="#" class="categories__link">БРЕНД 6</a>
@@ -715,6 +752,101 @@
                         </li>
                         <li class="header-brand__item">
                             <a href="#" class="header-brand__link">E</a>
+                            <!--<div class="categories">
+                                <div class="container">
+                                    <div class="categories__wrapper">
+                                        <div class="categories__inner">
+                                            <ul class="categories__list categories__list--primary">
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Новинки</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Распродажа</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Рекомендуем</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Аукцион</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="categories__inner categories__inner--double">
+                                            <h4 class="categories__title">ВСЕ БРЕНДЫ</h4>
+                                            <ul class="categories__list categories__list--flex">
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Victoria Secret</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Gucci</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Chanel</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">Alexander McQueen</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 5</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 6</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 7</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 8</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 9</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 10</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 6</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 8</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 9</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 10</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__more">Смотреть все</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="categories__inner">
+                                            <h4 class="categories__title">ТОП-5</h4>
+                                            <ul class="categories__list">
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 1</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 2</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 3</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 4</a>
+                                                </li>
+                                                <li class="categories__item">
+                                                    <a href="#" class="categories__link">БРЕНД 5</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="categories__img">
+                                            <img src="img/dist/bags-banner.jpg" alt="Banner">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
                         </li>
                         <li class="header-brand__item">
                             <a href="#" class="header-brand__link">F</a>

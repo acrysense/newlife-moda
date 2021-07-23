@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.mobile-menu')
     const mobileMenuClose = document.querySelector('.mobile-menu__close')
     const overlay = document.querySelector('.overlay')
-    const subMenuDropdown = document.querySelectorAll('.nav__link--dropdown')
-    const subMenu = document.querySelectorAll('.submenu')
+    const mobileMenuLink = document.querySelectorAll('.nav__link--dropdown')
+    const submenu = document.querySelector('.submenu')
+    const submenuBack = document.querySelector('.submenu__back')
 
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
@@ -62,14 +63,26 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    if (subMenuDropdown && subMenu) {
-        subMenuDropdown.forEach((item) => {
+    if (mobileMenuLink) {
+        mobileMenuLink.forEach((item) => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                item.classList.toggle('nav__link--active')
-                item.nextElementSibling.classList.toggle('submenu--active')
+                let itemData = item.getAttribute('data-mobile-category')
+                item.parentNode.parentNode.parentNode.style.display = 'none'
+                submenu.classList.add('submenu--active')
+                document.querySelector('.submenu__list[data-mobile-subcategory="' + itemData + '"').classList.add('submenu__list--active')
             })
+        })
+    }
+
+    if (submenuBack) {
+        submenuBack.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            submenu.previousElementSibling.style.display = 'block'
+            submenu.classList.remove('submenu--active')
+            document.querySelectorAll('.submenu__list').forEach((child) => child.classList.remove('submenu__list--active'))
         })
     }
 
