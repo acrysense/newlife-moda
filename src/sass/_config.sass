@@ -227,6 +227,8 @@ svg path,
                     border-bottom: 1px solid $error-color
             &__label
                 color: $error-color
+            &__error
+                display: block
     &__input
         display: block
         appearance: none
@@ -254,6 +256,13 @@ svg path,
             border-bottom: 1px solid $primary-color
         &--error
             border-bottom: 1px solid $error-color
+    &__input[type=number]
+        -moz-appearance: textfield
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            display: none
+            appearance: none
+            margin: 0
     &__label
         position: absolute
         top: 0
@@ -289,6 +298,7 @@ svg path,
         position: absolute
         bottom: -5px
         transform: translateY(100%)
+        display: none
         font-size: 9px
         color: $error-color
 

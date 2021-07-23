@@ -1106,7 +1106,7 @@
                             </div>
                             <span class="product__help">Цена новой 45,000</span>
                         </div>
-                        <a href="#" class="product__bid link link--bg">ПРЕДЛОЖИТЬ ЦЕНУ</a>
+                        <a href="#" class="product__bid link link--bg modal-btn" data-id="offer-price">ПРЕДЛОЖИТЬ ЦЕНУ</a>
                     </div>
                     <div class="product__wrapper product__wrapper--justify-center">
                         <a href="#" class="product__info">сообщить о следующей скидке</a>
@@ -1121,7 +1121,7 @@
                     </div>
                     <div class="product__wrapper product__wrapper--center">
                         <button class="product__btn btn">В корзину</button>
-                        <a href="#" class="product__reserve link link--bg link--lg">РЕЗЕРВ</a>
+                        <a href="#" class="product__reserve link link--bg link--lg modal-btn" data-id="product-reserved">РЕЗЕРВ</a>
                         <ul class="icons">
                             <li class="icons__item">
                                 <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-star);">Избранное</a>
@@ -2144,6 +2144,58 @@
                 </div>
                 <button class="auth__close close-btn modal__close">Закрыть</button>
             </div>
+        </div>
+    </div>
+    <div class="modal" id="offer-price">
+        <div class="modal__wrapper" data-simplebar>
+            <h3 class="modal__title">Предложите свою цену</h3>
+            <p class="modal__description">Сделайте предложение продавцу, у которого вы хотите купить следующий товар.</p>
+            <div class="modal__product">
+                <div class="modal__img">
+                    <img src="img/dist/product-slide-01.png" alt="Gucci">
+                </div>
+                <div class="modal__body">
+                    <p class="modal__description">Gucci chanel Кожаные кроссовки Rhyton на шнуровке</p>
+                    <p class="modal__description modal__description--medium">Начальная цена: <span>120 000 руб</span></p>
+                    <div class="input-group input-group--error modal__input-group">
+                        <input type="number" id="input-promocode" class="promocode__input input-group__input" value="99000" placeholder="Цена">
+                        <label for="input-promocode" class="input-group__label">Цена</label>
+                        <span class="input-group__error">предложеная вами цена не может быть меньше 110 000 руб</span>
+                    </div>
+                    <a href="#" class="modal__btn btn">отправить</a>
+                </div>
+            </div>
+            <button class="modal__close" aria-label="Закрыть"></button>
+        </div>
+    </div>
+    <div class="modal" id="product-reserved">
+        <div class="modal__wrapper modal__wrapper--cream modal__wrapper--center" data-simplebar>
+            <h3 class="modal__title">Вещь зарезервирована</h3>
+            <div class="modal__content">
+                <div class="modal__block">
+                    <p>
+                        Мы зарезервировали для Вас вещь.<br>
+                        Резерв доступен в течении 14 часов
+                    </p>
+                </div>
+                <div class="modal__block">
+                    <p>
+                        Вы можете оплатить вещь:<br>
+                        – Онлайн на сайте<br>
+                        – Курьеру<br>
+                        – В магазине
+                    </p>
+                </div>
+                <div class="modal__block">
+                    <p>
+                        По истечении времени резерва, право<br>
+                        на выкуп может перейти к следущему <br>
+                        клиенту в порядке очереди резерва
+                    </p>
+                </div>
+                <a href="#" class="modal__btn btn btn--border">перейти в резерв</a>
+            </div>
+            <button class="modal__close" aria-label="Закрыть"></button>
         </div>
     </div>
     <div class="modal-overlay"></div>
