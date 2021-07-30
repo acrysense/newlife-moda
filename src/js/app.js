@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.mobile-menu')
     const mobileMenuClose = document.querySelector('.mobile-menu__close')
     const overlay = document.querySelector('.overlay')
-    const mobileMenuLink = document.querySelectorAll('.nav__link--dropdown')
+    const submenuOpen = document.querySelectorAll('.nav__link--dropdown')
     const submenu = document.querySelector('.submenu')
     const submenuBack = document.querySelector('.submenu__back')
 
@@ -63,15 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    if (mobileMenuLink) {
-        mobileMenuLink.forEach((item) => {
+    if (submenuOpen) {
+        submenuOpen.forEach((item) => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
                 let itemData = item.getAttribute('data-mobile-category')
                 item.parentNode.parentNode.parentNode.style.display = 'none'
                 submenu.classList.add('submenu--active')
-                document.querySelector('.submenu__list[data-mobile-subcategory="' + itemData + '"').classList.add('submenu__list--active')
+                submenu.querySelector('.submenu__list[data-mobile-subcategory="' + itemData + '"').classList.add('submenu__list--active')
             })
         })
     }
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             submenu.previousElementSibling.style.display = 'block'
             submenu.classList.remove('submenu--active')
-            document.querySelectorAll('.submenu__list').forEach((child) => child.classList.remove('submenu__list--active'))
+            submenu.querySelectorAll('.submenu__list').forEach((child) => child.classList.remove('submenu__list--active'))
         })
     }
 
@@ -127,6 +127,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     searchWrapper.style.setProperty('--vh', `calc(100vh - ${searchTop}px)`)
                 } else {
                     searchWrapper.style.setProperty('--vh', `100vh`)
+                }
+            }
+        }
+
+        if (header) {
+            const headerHeight = header.getBoundingClientRect().height;
+
+            if (window.pageYOffset > headerHeight) {
+                header.querySelector('.header__wrap').classList.add('header__wrap--hidden')
+            } else {
+                header.querySelector('.header__wrap').classList.remove('header__wrap--hidden')
+            }
+
+            if (header.querySelector('.header__wrap').classList.contains('header__wrap--hidden')) {
+                const prevScroll = header.scrollTop;
+
+                if (window.pageYOffset > 500) {
+                    console.log('Up')
+                    header.querySelector('.header__wrap').classList.remove('header__wrap--hidden')
+                    header.querySelector('.header__wrap').classList.add('header__wrap--active')
                 }
             }
         }

@@ -259,7 +259,7 @@
         &--hidden
             max-height: 56px
             transition: max-height 0.25s
-            .product__trigger
+            .product__trigger:not(.product__trigger--static)
                 &::after
                     transform: rotate(90deg)
                     transition: transform 0.35s
@@ -516,15 +516,13 @@
         color: $light-gray-color
     &__state
         display: inline-block
-        padding: 10px 20px
-        margin-top: 10px
+        margin-top: 20px
         font-size: 10px
         font-weight: normal
         letter-spacing: 1px
         text-align: center
         text-transform: uppercase
         color: $black-color
-        border: 1px solid $black-color
 
 // TABS
 .tabs
@@ -536,18 +534,21 @@
     &__item
         &--active
             .tabs__button
-                background: $light-yellow-color
+                color: $white-color
+                background: $primary-color
                 border: 1px solid transparent
-                -webkit-text-stroke: 0.4px
                 &:hover,
                 &:focus
-                    background: $light-yellow-color
+                    background: $primary-color
     &__item:not(.tabs__item--active) + &__item:not(.tabs__item--active)
         .tabs__button
             border-left: 1px solid transparent
     &__button
         padding: 10px 25px
         font-size: 12px
+        font-weight: normal
+        text-align: center
+        text-transform: uppercase
         background: transparent
         border: 1px solid $light-grey-color
         transition: all 0.4s
@@ -1208,7 +1209,10 @@
         &--active
             .recommendation__button
                 color: $white-color
-                background: $black-color
+                background: $primary-color
+                &:hover,
+                &:focus
+                    background: $primary-color
     &__item + &__item
         margin-left: 10px
     &__button
@@ -1220,6 +1224,11 @@
         background: transparent
         border: 0
         transition: all 0.4s
+        &:focus
+            outline: none
+        &:hover,
+        &:focus
+            background: $light-grey-color
     &__btn
         display: block
         width: fit-content
@@ -1246,22 +1255,35 @@
         margin: 0 auto
         max-width: 370px
     &__block
-        display: flex
-        align-items: center
-        flex-direction: column
-        justify-content: space-between
-        max-width: 155px
-        width: 100%
+        width: fit-content
         text-align: center
         &:nth-child(2n)
             margin-left: 60px
         &:nth-child(n + 3)
             margin-top: 24px
     &__value
-        display: block
+        display: flex
+        align-items: center
         margin-top: 10px
         width: fit-content
         font-size: 16px
+        &::before
+            content: ''
+            display: block
+            margin-right: 14px
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+        &--phone
+            &::before
+                width: 14px
+                height: 14px
+                background-image: url(../img/dist/sprite.svg#icon-phone)
+        &--email
+            &::before
+                width: 16px
+                height: 16px
+                background-image: url(../img/dist/sprite.svg#icon-email)
     &__link
         display: block
         width: fit-content

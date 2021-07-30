@@ -29,10 +29,23 @@
         transform: translateY(-50%)
 
 .header
-    position: sticky
-    top: 0
-    z-index: 100
-    background: $white-color
+    overflow: hidden
+    min-height: 180px
+    &__wrap
+        position: relative
+        top: 0
+        right: 0
+        left: 0
+        z-index: 100
+        background: $white-color
+        transform: translate3d(0px, 0px, 0px)
+        &--hidden
+            position: fixed
+            transform: translate3d(0px, -100%, 0px)
+        //&--active
+        //    position: fixed
+        //    transform: translate3d(0px, 0px, 0px)
+        //    transition: all 0.2s ease-in-out
     &__wrapper
         display: flex
         align-items: center
@@ -144,6 +157,22 @@
         font-size: 12px
         letter-spacing: 1px
         text-transform: uppercase
+        &--dropdown
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                top: 50%
+                right: 10px
+                transform: translateY(-50%)
+                display: inline-block
+                width: 12px
+                height: 10px
+                background-image: url(../img/dist/sprite.svg#icon-dropdown-arrow)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                transition: transform 0.25s
 
 .header-brand
     display: flex
@@ -430,13 +459,21 @@
         opacity: 1
         visibility: visible
         transition: transform 0.4s ease-in-out, opacity 0.2s, visibility 0.2s
+    &__empty
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 0 86px
+        height: 100%
+        background: #FCF7F1
     &__top
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 30px
+        padding: 24px 20px
     &__title
-        font-size: 20px
+        font-size: 18px
         font-weight: 500
         letter-spacing: 2px
     &__products
@@ -497,7 +534,7 @@
         background-position: center center
         border: 0
     &__bottom
-        padding: 30px 20px 24px
+        padding: 12px 20px
         border-top: 1px solid $light-grey-color
     &__total
         display: flex
@@ -541,11 +578,11 @@
     &__inner + &__inner
         margin-top: 2px
     &__btn
-        padding: 18px
+        padding: 17px
         width: 100%
     &__reserve
         margin-left: 16px
-        padding: 19px
+        padding: 18px
     &__help
         display: block
         margin-top: 15px
@@ -554,6 +591,30 @@
         margin-top: 25px
         .payment__list
             justify-content: center
+
+.basket-btn
+    position: relative
+    &--amount
+        position: absolute
+        bottom: -4px
+        right: -4px
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        min-width: 16px
+        min-height: 16px
+        max-width: 16px
+        max-height: 16px
+        width: 100%
+        height: 100%
+        font-size: 8px
+        text-align: center
+        line-height: 1
+        white-space: nowrap
+        color: $white-color
+        background: $primary-color
+        border-radius: 50%
 
 .categories
     position: absolute
@@ -902,6 +963,12 @@
             min-height: 22px
             max-width: 22px
             max-height: 22px
+    .basket-btn
+        &--amount
+            min-width: 14px
+            min-height: 14px
+            max-width: 14px
+            max-height: 14px
 
 @media (max-width: 767px)
     .header
@@ -1011,7 +1078,7 @@
         &__title
             font-size: 14px
         &__products
-            padding: 15px 10px
+            padding: 15px 20px 15px 15px
         &__name
             font-size: 20px
         &__description
@@ -1025,3 +1092,12 @@
             max-height: 22px
         &__bottom
             padding: 15px 10px
+    .basket-btn
+        &--amount
+            right: -3px
+            bottom: -3px
+            min-width: 12px
+            min-height: 12px
+            max-width: 12px
+            max-height: 12px
+            font-size: 6px
