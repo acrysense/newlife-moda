@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    let prevScrollpos = window.pageYOffset;
     window.addEventListener('scroll', () => {
         if (topPromo && searchWrapper) {
             const topPromoHeight = topPromo.getBoundingClientRect().height;
@@ -133,22 +134,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (header) {
             const headerHeight = header.getBoundingClientRect().height;
+            const topPromoHeight = topPromo.getBoundingClientRect().height
 
-            if (window.pageYOffset > headerHeight) {
-                header.querySelector('.header__wrap').classList.add('header__wrap--hidden')
-            } else {
-                header.querySelector('.header__wrap').classList.remove('header__wrap--hidden')
-            }
-
-            if (header.querySelector('.header__wrap').classList.contains('header__wrap--hidden')) {
-                const prevScroll = header.scrollTop;
-
-                if (window.pageYOffset > 500) {
-                    console.log('Up')
-                    header.querySelector('.header__wrap').classList.remove('header__wrap--hidden')
-                    header.querySelector('.header__wrap').classList.add('header__wrap--active')
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos || prevScrollpos <= 0) { // If up
+                if (window.pageYOffset <= topPromoHeight) {
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, 0px, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'none'
+                    header.querySelector('.header__wrap').style.position = 'relative'
+                } else {
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, 0px, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'transform 0.2s ease-in-out'
+                    header.querySelector('.header__wrap').style.position = 'fixed'
+                }
+            } else { // If down
+                if (window.pageYOffset >= headerHeight) {
+                    header.querySelector('.header__wrap').style.transform = 'translate3d(0px, -100%, 0px)'
+                    header.querySelector('.header__wrap').style.transition = 'transform 0.2s ease-in-out'
+                    setTimeout(() => header.querySelector('.header__wrap').style.position = 'fixed', 200)
                 }
             }
+            prevScrollpos = currentScrollPos;
         }
     })
     
@@ -202,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // BASKET MODAl
     const basketBtn = document.querySelector('.basket-btn')
     const basketWrapper = document.querySelector('.basket-modal')
-    const basketClose = document.querySelector('.basket-modal__close')
+    const basketClose = document.querySelectorAll('.basket-modal__close')
 
     if (basketBtn) {
         basketBtn.addEventListener('click', (event) => {
@@ -221,12 +227,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (basketClose) {
-        basketClose.addEventListener('click', () => {
-            if (basketWrapper.classList.contains('basket-modal--active')) {
-                basketWrapper.classList.remove('basket-modal--active')
-                modalOverlay.classList.remove('modal-overlay--active')
-                document.body.classList.remove('scroll-disabled')
-            }
+        basketClose.forEach(item => {
+            item.addEventListener('click', () => {
+                if (basketWrapper.classList.contains('basket-modal--active')) {
+                    basketWrapper.classList.remove('basket-modal--active')
+                    modalOverlay.classList.remove('modal-overlay--active')
+                    document.body.classList.remove('scroll-disabled')
+                }
+            })
         })
     }
 

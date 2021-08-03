@@ -9,16 +9,6 @@
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-    <!-- Top promo -->
-    <div class="top-promo">
-        <div class="container">
-            <div class="top-promo__wrapper">
-                <p class="top-promo__text">Last chance! <strong>15% off</strong> everything with code <strong>SPRING15</strong> ends in: <span class="top-promo__timer">20:00:00</span></p>
-                <button class="top-promo__close close-btn">Закрыть</button>
-            </div>
-        </div>
-    </div>
-    <!-- End of top promo -->
     <!-- Header -->
     <header class="header" id="header">
         <div class="header__wrap">
@@ -973,224 +963,895 @@
     <div class="content">
         <div class="container">
             <!-- Breadcrumb -->
-            <nav class="breadcrumb breadcrumb--mobile" aria-label="Breadcrumb">
+            <nav class="breadcrumb breadcrumb--tablet" aria-label="Breadcrumb">
                 <ol class="breadcrumb__list">
                     <li class="breadcrumb__item">
-                        <a class="breadcrumb__link" href="index.html">Главная</a>
+                        <a class="breadcrumb__link" href="personal-area.html">Личный кабинет</a>
                     </li>
                     <li class="breadcrumb__item">
-                        <a class="breadcrumb__link" href="brands.html">Бренды</a>
+                        <a class="breadcrumb__link" href="#">Избранное</a>
                     </li>
                 </ol>
             </nav>
             <!-- End of breadcrumb -->
-            <!-- Brands -->
-            <div class="brands">
-                <div class="brands__top">
-                    <h2 class="brands__title">БРЕНДЫ <i>A-Z</i></h2>
-                    <div class="brands-filter">
-                        <ul class="brands-filter__list">
-                            <li class="brands-filter__item brands-filter__item--active">
-                                <a href="#" class="brands-filter__link">ТОП-БРЕНДЫ</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">A</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">B</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">C</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">D</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">E</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">F</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">G</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">H</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">I</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">J</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">K</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">L</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">M</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">N</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">O</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">P</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">Q</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">R</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">S</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">T</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">U</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">V</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">W</a>
-                            </li>
-                            <li class="brands-filter__item brands-filter__item--disabled">
-                                <a href="#" class="brands-filter__link">X</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">Y</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">Z</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">0-9</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">РУС</a>
-                            </li>
-                            <li class="brands-filter__item">
-                                <a href="#" class="brands-filter__link">ВСЕ</a>
-                            </li>
-                        </ul>
-                        <div class="brands-filter__control">
-                            <input type="text" class="brands-filter__input input" placeholder="ПОИСК БРЕНДА">
+            <div class="cabinet">
+                <h2 class="cabinet__title cabinet__title--mobile">ЛИЧНЫЙ КАБИНЕТ</h2>
+                <div class="cabinet__user-info">
+                    <div class="user-info">
+                        <div class="user-info__ava">
+                            <img src="img/dist/ava-plug.svg" alt="">
+                        </div>
+                        <div class="user-info__body">
+                            <h4 class="user-info__title">Evgeny Kotov</h4>
+                            <div class="user-info__inner">
+                                <span class="user-info__text">скидка по карте:</span>
+                                <span class="user-info__value">0%</span>
+                            </div>
+                            <div class="user-info__inner">
+                                <span class="user-info__text">личный счет:</span>
+                                <span class="user-info__value">0 ₽</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <h3 class="brands__subtitle">ТОП БРЕНДЫ</h3>
-                <div class="brands__logotypes">
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/alexander-mcqueen.svg" alt="Alexander McQueen">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/balenciaga.svg" alt="Balenciaga">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/balmain.svg" alt="Balmain Paris">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/bottega-veneta.svg" alt="Bottega Veneta">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/brunello-cucinelli.svg" alt="Brunello Cucinelli">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/burberry.svg" alt="Burberry">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/bottega-veneta.svg" alt="Bottega Veneta">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/brunello-cucinelli.svg" alt="Brunello Cucinelli">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/burberry.svg" alt="Burberry">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/alexander-mcqueen.svg" alt="Alexander McQueen">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/balenciaga.svg" alt="Balenciaga">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/balmain.svg" alt="Balmain Paris">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/bottega-veneta.svg" alt="Bottega Veneta">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/brunello-cucinelli.svg" alt="Brunello Cucinelli">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/burberry.svg" alt="Burberry">
-                    </a>
-                    <a href="catalog.html" class="brands__img">
-                        <img src="img/dist/alexander-mcqueen.svg" alt="Alexander McQueen">
-                    </a>
+                <div class="cabinet__wrapper">
+                    <ul class="cabinet__list" role="tablist">
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">МОЙ SEARCH LIST</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">запись на оценку</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">запись на выплату</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">запись к стилисту</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">мои договоры</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">мой профиль</button>
+                        </li>
+                        <li class="cabinet__item cabinet__item--active">
+                            <button class="cabinet__button">избранное</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">резерв (3)</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">мои заказы</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">подписки</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">аукцион</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">скидки и бонусы</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">персональные предложения</button>
+                        </li>
+                        <li class="cabinet__item">
+                            <button class="cabinet__button">продать вещь</button>
+                        </li>
+                    </ul>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"> <!-- Мой профиль -->
+                        <div class="cabinet__inner">
+                            <h2 class="cabinet__title">МОЙ ПРОФИЛЬ</h2>
+                        </div>
+                        <div class="profile">
+                            <div class="profile__group">
+                                <h3 class="profile__title">личные данные</h3>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-email" class="profile__input input-group__input" placeholder="E-mail">
+                                        <label for="input-email" class="input-group__label">E-mail</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="tel" id="input-tel" class="profile__input input-group__input" placeholder="Телефон">
+                                        <label for="input-tel" class="input-group__label">Телефон</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="password" id="input-password" class="profile__input input-group__input" placeholder="Сменить пароль">
+                                        <label for="input-password" class="input-group__label">Сменить пароль</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-sex" class="profile__input input-group__input" placeholder="Пол">
+                                        <label for="input-sex" class="input-group__label">Пол</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-surname" class="profile__input input-group__input" placeholder="Фамилия">
+                                        <label for="input-surname" class="input-group__label">Фамилия</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-name" class="profile__input input-group__input" placeholder="Имя">
+                                        <label for="input-name" class="input-group__label">Имя</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-patronymic" class="profile__input input-group__input" placeholder="Отчество">
+                                        <label for="input-patronymic" class="input-group__label">Отчество</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-dob" class="profile__input input-group__input" placeholder="Дата рождения">
+                                        <label for="input-dob" class="input-group__label">Дата рождения</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__group">
+                                <h3 class="profile__title">информация о доставке</h3>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-country" class="profile__input input-group__input" placeholder="Страна">
+                                        <label for="input-country" class="input-group__label">Страна</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-city" class="profile__input input-group__input" placeholder="Город">
+                                        <label for="input-city" class="input-group__label">Город</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-district" class="profile__input input-group__input" placeholder="Район">
+                                        <label for="input-district" class="input-group__label">Район</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-index" class="profile__input input-group__input" placeholder="Индекс">
+                                        <label for="input-index" class="input-group__label">Индекс</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-address" class="profile__input input-group__input" placeholder="Адрес">
+                                        <label for="input-address" class="input-group__label">Адрес</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__group">
+                                <h3 class="profile__title">реквизиты для перевода</h3>
+                                <div class="profile__inner">
+                                    <div class="input-group input-group--error">
+                                        <input type="text" id="input-client-data" class="profile__input input-group__input" value="771" placeholder="Данные клиента">
+                                        <label for="input-client-data" class="input-group__label">Данные клиента</label>
+                                        <span class="input-group__error">Ошибка ввода данных</span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-name-bank" class="profile__input input-group__input" placeholder="Наименование банка">
+                                        <label for="input-name-bank" class="input-group__label">Наименование банка</label>
+                                    </div>
+                                </div>
+                                <div class="profile__inner">
+                                    <div class="input-group">
+                                        <input type="text" id="input-bik-bank" class="profile__input input-group__input" placeholder="БИК банка клиента">
+                                        <label for="input-bik-bank" class="input-group__label">БИК банка клиента</label>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" id="input-bank-score" class="profile__input input-group__input" placeholder="Расчетный счет">
+                                        <label for="input-bank-score" class="input-group__label">Расчетный счет</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__group">
+                                <button class="profile__btn btn" disabled>СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet__content cabinet__content--active"> <!-- Избранное -->
+                        <div class="cabinet__inner cabinet__inner--mobile-bd">
+                            <h2 class="cabinet__title">Избранное</h2>
+                            <div class="cabinet__group">
+                                <button class="share">поделиться избранным</button>
+                                <div class="sort">
+                                    <span class="sort__help">Сортировка:</span>
+                                    <div class="sort__container">
+                                        <div class="sort__option">
+                                            <input type="radio" class="sort__radio" id="desktop-sort-1" name="sort">
+                                            <label for="desktop-sort-1" class="sort__label">По цене</label>
+                                        </div>
+                                        <div class="sort__option">
+                                            <input type="radio" class="sort__radio" id="desktop-sort-2" name="sort">
+                                            <label for="desktop-sort-2" class="sort__label">По дате добавления</label>
+                                        </div>
+                                        <div class="sort__option">
+                                            <input type="radio" class="sort__radio" id="desktop-sort-3" name="sort">
+                                            <label for="desktop-sort-3" class="sort__label">В наличии</label>
+                                        </div>
+                                    </div>
+                                    <span class="sort__selected">По цене</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <ul class="tabs__list" role="tablist">
+                                <li class="tabs__item tabs__item--active">
+                                    <button class="tabs__button">Все</button>
+                                </li>
+                                <li class="tabs__item">
+                                    <button class="tabs__button">В наличии</button>
+                                </li>
+                                <li class="tabs__item">
+                                    <button class="tabs__button">Проданные</button>
+                                </li>
+                            </ul>
+                            <div class="tabs__content tabs__content--active">
+                                <div class="goods goods--sm">
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="goods goods--sm">
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-02.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-02.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="goods goods--sm">
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                    <div class="goods__item">
+                                        <div class="goods__top">
+                                            <span class="goods__status">Аукцион</span>
+                                            <button class="goods__favorites" aria-label="Избранное">
+                                                <svg width="27" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                                </svg>
+                                                <span>55</span>
+                                            </button>
+                                        </div>
+                                        <a href="#" class="goods__img">
+                                            <picture>
+                                                <source srcset="img/dist/products-slide-03.webp" type="image/webp">
+                                                <img src="img/dist/products-slide-03.png" alt="Gucci Chanel">
+                                            </picture>
+                                        </a>
+                                        <div class="goods__info">
+                                            <h3 class="goods__title">Gucci Chanel</h3>
+                                            <p class="goods__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                                            <div class="goods__price">
+                                                <span class="goods__new-price">23 000</span>
+                                                <span class="goods__old-price">33 000</span>
+                                            </div>
+                                            <span class="goods__state">ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet__content"> <!-- Резерв товаров -->
+                        <div class="cabinet__inner cabinet__inner--sm">
+                            <h2 class="cabinet__title cabinet__title--normal">Резерв товаров</h2>
+                        </div>
+                        <!-- If empty reserve -->
+                        <!--<div class="cabinet__block">
+                            <p class="cabinet__text">На данный момент Вы не зарезервировали <br>ни одного товара.</p>
+                            <a href="#" class="cabinet__link">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </div>-->
+                        <div class="reserve">
+                            <div class="reserve__item">
+                                <a href="#" class="reserve__img">
+                                    <picture>
+                                        <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                        <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                    </picture>
+                                </a>
+                                <div class="reserve__content">
+                                    <div class="reserve__top">
+                                        <h3 class="reserve__title">Gucci Chanel</h3>
+                                        <p class="reserve__description">
+                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Размер: <span>44</span><br>
+                                            Цвет: <span>коричневый</span>
+                                        </p>
+                                    </div>
+                                    <div class="reserve__price">
+                                        <span class="reserve__price--new">23 000₽</span>
+                                        <span class="reserve__price--old">33 000₽</span>
+                                    </div>
+                                    <div class="reserve__inner">
+                                        <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
+                                        <div class="reserve__timing link link--bg link--thin">
+                                            <p>Время резерва истечет через</p>
+                                            <span>14:00:00</span>
+                                        </div>
+                                        <a href="#" class="reserve__info">3 человека в очереди</a>
+                                    </div>
+                                    <div class="reserve__controls">
+                                        <button class="reserve__control">
+                                            Вопрос
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0547 0C12.0483 0.00643031 12.0354 0.00643031 12.0161 0.00643031C5.50863 0.00643031 0.216476 5.29858 0.216476 11.806C0.216476 14.4618 1.12315 17.0403 2.78217 19.1173L1.06528 23.1041C0.923811 23.432 1.07814 23.8114 1.39965 23.9465C1.5154 23.9979 1.64401 24.0108 1.76618 23.9915L8.06146 22.8855C9.32181 23.342 10.6465 23.5735 11.984 23.5671C18.4914 23.5671 23.7836 18.2749 23.7836 11.7675C23.7964 5.27928 18.5429 0.00643031 12.0547 0ZM11.9904 22.2875C10.7493 22.2875 9.52114 22.0624 8.35726 21.6251C8.24794 21.5801 8.1322 21.5737 8.01645 21.593L2.71787 22.5189L4.11968 19.2588C4.21613 19.0337 4.17755 18.7701 4.01679 18.5836C3.25802 17.7026 2.65357 16.6995 2.22917 15.6128C1.75332 14.3975 1.50897 13.105 1.50897 11.7996C1.50897 5.99948 6.22882 1.28606 12.0225 1.28606C17.8034 1.2732 22.4975 5.94804 22.504 11.7289C22.504 11.7417 22.504 11.7546 22.504 11.7675C22.504 17.574 17.7841 22.2875 11.9904 22.2875Z" fill="#5F5F5F"/>
+                                                <path d="M11.4888 9.43311H8.01641C7.66274 9.43311 7.37337 9.72247 7.37337 10.0761C7.37337 10.4298 7.66274 10.7192 8.01641 10.7192H11.4888C11.8424 10.7192 12.1318 10.4298 12.1318 10.0761C12.1318 9.72247 11.8424 9.43311 11.4888 9.43311Z" fill="#5F5F5F"/>
+                                                <path d="M15.99 12.6482H8.01641C7.66274 12.6482 7.37337 12.9376 7.37337 13.2913C7.37337 13.6449 7.66274 13.9343 8.01641 13.9343H15.99C16.3437 13.9343 16.633 13.6449 16.633 13.2913C16.633 12.9376 16.3437 12.6482 15.99 12.6482Z" fill="#5F5F5F"/>
+                                            </svg>
+                                        </button>
+                                        <button class="reserve__control">
+                                            Отмена
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip-close)">
+                                                <path d="M12.5494 12.9973L23.8864 1.66031C24.0375 1.50918 24.0375 1.26419 23.8864 1.11306C23.7353 0.961979 23.4903 0.961979 23.3392 1.11306L12.0022 12.4501L0.665153 1.11306C0.511408 0.964592 0.266424 0.968849 0.117904 1.12259C-0.0269385 1.27256 -0.0269385 1.51034 0.117904 1.66031L11.4549 12.9973L0.117904 24.3343C-0.03584 24.4829 -0.0400972 24.7278 0.108422 24.8816C0.256942 25.0353 0.501926 25.0396 0.655671 24.8911C0.658912 24.888 0.662056 24.8848 0.665153 24.8816L12.0022 13.5446L23.3392 24.8816C23.4929 25.0301 23.7379 25.0259 23.8864 24.8721C24.0313 24.7221 24.0313 24.4843 23.8864 24.3343L12.5494 12.9973Z" fill="#5F5F5F"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip-close">
+                                                <rect width="24" height="24" fill="white" transform="translate(0 1)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reserve__item">
+                                <a href="#" class="reserve__img">
+                                    <picture>
+                                        <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                        <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                    </picture>
+                                </a>
+                                <div class="reserve__content">
+                                    <div class="reserve__top">
+                                        <h3 class="reserve__title">Gucci Chanel</h3>
+                                        <p class="reserve__description">
+                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Размер: <span>44</span><br>
+                                            Цвет: <span>коричневый</span>
+                                        </p>
+                                    </div>
+                                    <div class="reserve__price">
+                                        <span class="reserve__price--new">23 000₽</span>
+                                        <span class="reserve__price--old">33 000₽</span>
+                                    </div>
+                                    <div class="reserve__inner">
+                                        <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
+                                        <div class="reserve__timing link link--bg link--thin">
+                                            <p>Время резерва истечет через</p>
+                                            <span>14:00:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="reserve__controls">
+                                        <button class="reserve__control">
+                                            Вопрос
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.0547 0C12.0483 0.00643031 12.0354 0.00643031 12.0161 0.00643031C5.50863 0.00643031 0.216476 5.29858 0.216476 11.806C0.216476 14.4618 1.12315 17.0403 2.78217 19.1173L1.06528 23.1041C0.923811 23.432 1.07814 23.8114 1.39965 23.9465C1.5154 23.9979 1.64401 24.0108 1.76618 23.9915L8.06146 22.8855C9.32181 23.342 10.6465 23.5735 11.984 23.5671C18.4914 23.5671 23.7836 18.2749 23.7836 11.7675C23.7964 5.27928 18.5429 0.00643031 12.0547 0ZM11.9904 22.2875C10.7493 22.2875 9.52114 22.0624 8.35726 21.6251C8.24794 21.5801 8.1322 21.5737 8.01645 21.593L2.71787 22.5189L4.11968 19.2588C4.21613 19.0337 4.17755 18.7701 4.01679 18.5836C3.25802 17.7026 2.65357 16.6995 2.22917 15.6128C1.75332 14.3975 1.50897 13.105 1.50897 11.7996C1.50897 5.99948 6.22882 1.28606 12.0225 1.28606C17.8034 1.2732 22.4975 5.94804 22.504 11.7289C22.504 11.7417 22.504 11.7546 22.504 11.7675C22.504 17.574 17.7841 22.2875 11.9904 22.2875Z" fill="#5F5F5F"/>
+                                                <path d="M11.4888 9.43311H8.01641C7.66274 9.43311 7.37337 9.72247 7.37337 10.0761C7.37337 10.4298 7.66274 10.7192 8.01641 10.7192H11.4888C11.8424 10.7192 12.1318 10.4298 12.1318 10.0761C12.1318 9.72247 11.8424 9.43311 11.4888 9.43311Z" fill="#5F5F5F"/>
+                                                <path d="M15.99 12.6482H8.01641C7.66274 12.6482 7.37337 12.9376 7.37337 13.2913C7.37337 13.6449 7.66274 13.9343 8.01641 13.9343H15.99C16.3437 13.9343 16.633 13.6449 16.633 13.2913C16.633 12.9376 16.3437 12.6482 15.99 12.6482Z" fill="#5F5F5F"/>
+                                            </svg>
+                                        </button>
+                                        <button class="reserve__control">
+                                            Отмена
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip-close)">
+                                                <path d="M12.5494 12.9973L23.8864 1.66031C24.0375 1.50918 24.0375 1.26419 23.8864 1.11306C23.7353 0.961979 23.4903 0.961979 23.3392 1.11306L12.0022 12.4501L0.665153 1.11306C0.511408 0.964592 0.266424 0.968849 0.117904 1.12259C-0.0269385 1.27256 -0.0269385 1.51034 0.117904 1.66031L11.4549 12.9973L0.117904 24.3343C-0.03584 24.4829 -0.0400972 24.7278 0.108422 24.8816C0.256942 25.0353 0.501926 25.0396 0.655671 24.8911C0.658912 24.888 0.662056 24.8848 0.665153 24.8816L12.0022 13.5446L23.3392 24.8816C23.4929 25.0301 23.7379 25.0259 23.8864 24.8721C24.0313 24.7221 24.0313 24.4843 23.8864 24.3343L12.5494 12.9973Z" fill="#5F5F5F"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip-close">
+                                                <rect width="24" height="24" fill="white" transform="translate(0 1)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reserve__item reserve__item--disabled">
+                                <a href="#" class="reserve__img">
+                                    <picture>
+                                        <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                        <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                    </picture>
+                                </a>
+                                <div class="reserve__content">
+                                    <div class="reserve__top">
+                                        <h3 class="reserve__title">Gucci Chanel</h3>
+                                        <p class="reserve__description">
+                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Размер: <span>44</span><br>
+                                            Цвет: <span>коричневый</span>
+                                        </p>
+                                    </div>
+                                    <div class="reserve__price">
+                                        <span class="reserve__price--new">23 000₽</span>
+                                        <span class="reserve__price--old">33 000₽</span>
+                                    </div>
+                                    <div class="reserve__inner"></div>
+                                </div>
+                                <div class="reserve__block">
+                                    <div class="reserve__timing link link--bg link--thin">
+                                        <p>Вещь станет доступна к покупке через</p>
+                                        <span>09:14:49</span>
+                                    </div>
+                                    <a href="#" class="reserve__info">Еще 2 человека в очереди резерва на эту вещь</a>
+                                </div>
+                            </div>
+                            <div class="reserve__item reserve__item--disabled">
+                                <a href="#" class="reserve__img">
+                                    <picture>
+                                        <source srcset="img/dist/products-slide-01.webp" type="image/webp">
+                                        <img src="img/dist/products-slide-01.png" alt="Gucci Chanel">
+                                    </picture>
+                                </a>
+                                <div class="reserve__content">
+                                    <div class="reserve__top">
+                                        <h3 class="reserve__title">Gucci Chanel</h3>
+                                        <p class="reserve__description">
+                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Размер: <span>44</span><br>
+                                            Цвет: <span>коричневый</span>
+                                        </p>
+                                    </div>
+                                    <div class="reserve__price">
+                                        <span class="reserve__price--new">23 000₽</span>
+                                        <span class="reserve__price--old">33 000₽</span>
+                                    </div>
+                                    <div class="reserve__inner"></div>
+                                </div>
+                                <div class="reserve__block">
+                                    <a href="#" class="reserve__info reserve__info--red">Срок действия резерва истек</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"></div>
                 </div>
             </div>
-            <!-- End of brands -->
         </div>
     </div>
     <!-- End of content -->
-    <!-- CTA -->
-    <section class="cta" id="cta">
-        <div class="container">
-            <div class="cta__wrapper">
-                <div class="cta__group">
-                    <h3 class="cta__title">Нужна помощь с заказом?</h3>
-                    <div class="cta__wrap">
-                        <div class="cta__block">
-                            <a href="tel:+78123456789" class="cta__value">+7 812 345 6789</a>
-                        </div>
-                        <div class="cta__block">
-                            <a href="tel:+79819857634" class="cta__value">+7 981 985 7634</a>
-                        </div>
-                        <div class="cta__block">
-                            <a href="mailto:info@newlife.moda" class="cta__value">info@newlife.moda</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cta__group">
-                    <h3 class="cta__title">Подпишитесь на новинки</h3>
-                    <form action="" class="cta-form">
-                        <div class="cta-form__control">
-                            <input type="email" class="cta-form__input input" placeholder="Ваш Email">
-                            <button class="cta-form__btn btn">Отправить</button>
-                        </div>
-                        <div class="cta-form__inner">
-                            <label for="cta-sex-01" class="circle-checkbox cta-form__checkbox">
-                                <input type="radio" class="circle-checkbox__input" name="cta-sex-radio" id="cta-sex-01">
-                                <span class="circle-checkbox__icon"></span>
-                                <span class="circle-checkbox__label">Женские</span>
-                            </label>
-                            <label for="cta-sex-02" class="circle-checkbox cta-form__checkbox">
-                                <input type="radio" class="circle-checkbox__input" name="cta-sex-radio" id="cta-sex-02">
-                                <span class="circle-checkbox__icon"></span>
-                                <span class="circle-checkbox__label">Мужские</span>
-                            </label>
-                            <label for="cta-sex-03" class="circle-checkbox cta-form__checkbox">
-                                <input type="radio" class="circle-checkbox__input" name="cta-sex-radio" id="cta-sex-03">
-                                <span class="circle-checkbox__icon"></span>
-                                <span class="circle-checkbox__label">Детское</span>
-                            </label>
-                        </div>
-                    </form>
-                    <p class="cta__copyright">Отправляя данные формы вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of cta -->
     <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container">

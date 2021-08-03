@@ -1,8 +1,11 @@
 .modal
     position: relative
     display: none
+    opacity: 0
+    transition: all 0.4s
     &--active
         display: block
+        opacity: 1
     &__wrapper
         position: fixed
         top: 50%
@@ -117,6 +120,19 @@
 
 .modal-overlay
     z-index: 1005
+
+// CSS ANIMATION
+@keyframes fadeInTop
+    0%
+        display: none
+        opacity: 0
+    1%
+        display: block
+        opacity: 0
+        transform: translateY(5%)
+    100%
+        opacity: 1
+        transform: translate(0)
 
 // MEDIA
 @media (min-width: 768px) and (max-width: 1023px)
