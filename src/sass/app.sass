@@ -116,7 +116,7 @@
                 stroke: $primary-color
                 fill: $primary-color
     &__block
-        width: calc(100% - 88px)
+        width: calc(100% - 96px)
         &--full
             margin-bottom: 25px
             width: 100%
@@ -136,11 +136,11 @@
         font-weight: 300
         color: $dark-gray-color
     &__id
-        padding: 10px 8px
-        font-size: 12px
+        padding: 10px
+        font-size: 14px
         font-weight: 500
-        color: $white-color
-        background: $primary-color
+        color: $primary-color
+        border: 1px solid $primary-color
         span
             margin-left: 2px
     &__price
@@ -158,6 +158,11 @@
         margin-top: 5px
         font-size: 12px
         color: $dark-gray-color
+        &--light
+            font-weight: 300
+            color: $primary-color
+        &--mt
+            margin-top: 11px
     &__info
         display: block
         font-size: 14px
@@ -203,7 +208,7 @@
         margin-top: 15px
     &__more
         padding: 12px 10px
-        margin-top: 15px
+        margin-top: 25px
         width: 100%
         background: $light-grey-color
         &--badge
@@ -233,7 +238,7 @@
                 content: ''
                 display: inline-block
                 margin-top: -4px
-                margin-left: 4px
+                margin-left: 14px
                 width: 18px
                 height: 18px
                 vertical-align: middle
@@ -241,6 +246,8 @@
                 background-repeat: no-repeat
                 background-size: cover
                 background-position: center center
+        &--medium
+            font-weight: 500
     &__text + &__text
         margin-top: 10px
     &__inner
@@ -441,8 +448,10 @@
     &__icon
         display: block
         padding: 0
-        width: 38px
-        height: 38px
+        min-width: 38px
+        min-height: 38px
+        max-width: 38px
+        max-height: 38px
         background-color: transparent
         background-image: url(../img/dist/sprite.svg#icon-camera)
         background-repeat: no-repeat
@@ -474,6 +483,9 @@
     &--sm
         display: flex
         flex-wrap: wrap
+    &__swiper
+        &--margin
+            margin: 39px 0
     &__item
         padding: 10px
         margin: 0 auto
@@ -592,7 +604,7 @@
             background: $light-grey-color
     &__content
         display: none
-        margin: 35px 0
+        margin: 39px 0
         &--active
             display: block
 
@@ -769,6 +781,9 @@
         &--active
             .cabinet__button
                 color: $primary-color
+        &--accent
+            .cabinet__button
+                color: $primary-color
     &__item + &__item
         margin-top: 20px
     &__button
@@ -851,6 +866,7 @@
         border-radius: 50%
     &__body
         margin-left: 20px
+        width: 100%
     &__title
         margin-bottom: 7px
         font-size: 16px
@@ -859,7 +875,9 @@
     &__inner
         display: flex
         align-items: center
-        justify-content: space-between
+        .user-info__text
+            max-width: 84px
+            width: 100%
     &__inner + &__inner
         margin-top: 5px
     &__text
@@ -881,21 +899,22 @@
     &__group + &__group
         margin-top: 50px
     &__title
-        margin-bottom: 30px
+        margin-bottom: 38px
         font-size: 14px
-        font-weight: 500
+        font-weight: 600
         text-transform: uppercase
+        letter-spacing: 1px
     &__inner
         display: flex
         align-items: center
-        .input-group
-            width: 100%
-            &__input
-                width: 100%
-        .input-group + .input-group
-            margin-left: 25px
+        justify-content: space-between
+        width: 100%
     &__inner + &__inner
-        margin-top: 36px
+        margin-top: 48px
+    &__block
+        width: 48%
+    &__input
+        width: 100%
     &__btn
         display: block
 
@@ -911,6 +930,11 @@
                 &__img,
                 &__content
                     opacity: 0.4
+                &__timing
+                    padding: 9.5px 20px
+                    margin-left: auto
+                    max-width: 388px
+                    width: 100%
     &__item + &__item
         padding-top: 30px
         border-top: 1px solid $light-grey-color
@@ -977,12 +1001,6 @@
         transform: translateY(-50%)
         & > * + *
             margin-top: 15px
-        & > .reserve__timing
-            padding: 9.5px 20px
-            margin-left: auto
-            width: fit-content
-            & > *:not(span)
-                display: block
         & > .reserve__info
             margin-right: 10px
             font-size: 14px
@@ -990,9 +1008,31 @@
     &__timing
         display: flex
         align-items: center
+        padding: 7.5px 20px
+        width: fit-content
+        font-size: 16px
+        font-weight: 300
+        background: $light-yellow-color
         transition: background 0.4s
         span
             margin-left: 5px
+    &__place
+        display: block
+        padding: 8px 30px
+        margin: 15px auto 0
+        width: fit-content
+        font-size: 14px
+        font-weight: normal
+        letter-spacing: 1px
+        color: $primary-color
+        background: transparent
+        border: 1px solid $primary-color
+        &:focus
+            outline: none
+        &:hover,
+        &:focus
+            color: $white-color
+            background: $primary-color
     &__controls
         position: absolute
         top: 0
@@ -1104,6 +1144,7 @@
         padding: 0
         font-size: 14px
         font-weight: normal
+        text-align: right
         letter-spacing: 1px
         color: $copyright-light-color
         border-bottom: 1px solid $copyright-light-color
@@ -1136,10 +1177,6 @@
         margin-bottom: 20px
     &__list
         max-height: 256px
-        //overflow: auto
-        //scrollbar-width: none
-        //&::-webkit-scrollbar
-        //    display: none
     &__checkbox
         padding: 5px 0
         margin-left: 20px
@@ -1183,6 +1220,22 @@
         &:focus
             color: $primary-color
             border: 1px solid $primary-color
+    &__clear
+        padding: 11px
+        font-size: 10px
+        font-weight: 300
+        letter-spacing: 1px
+        text-transform: uppercase
+        text-decoration: underline
+        color: $boulder-color
+        background: transparent
+        border: 1px solid transparent
+        transition: all 0.4s
+        &:focus
+            outline: none
+        &:hover,
+        &:focus
+            color: $primary-color
 
 // BANNERS
 .banners

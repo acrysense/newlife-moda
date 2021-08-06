@@ -232,21 +232,26 @@ svg path,
     &__input
         display: block
         appearance: none
-        padding: 0 0 5px
-        font-size: 18px
+        //padding: 0 0 5px
+        padding: 0 0 10px
+        //font-size: 18px
+        font-size: 12px
+        font-weight: normal
+        letter-spacing: 1px
         color: $primary-color
         background: transparent
         border: 0
         border-bottom: 1px solid $copyright-color
         border-radius: 0
-        transition: border 0.4s
+        transition: border 0.3s
         &::-webkit-input-placeholder
             opacity: 0
         &::-moz-placeholder
             opacity: 0
         &:focus + label,
         &:not(:placeholder-shown) + label
-            transform: translate(-17%, -22px) scale(0.65)
+            //transform: translate(-17%, -22px) scale(0.65)
+            transform: translate(-8%, -22px) scale(0.85)
             & > span
                 opacity: 0
             & + .input-group__eye
@@ -268,14 +273,18 @@ svg path,
         top: 0
         left: 0
         margin: 0
-        font-size: 18px
+        //font-size: 18px
+        font-size: 12px
+        font-weight: normal
+        letter-spacing: 1px
         color: $copyright-color
         cursor: text
-        transition: all 0.4s
+        transition: all 0.3s
         span
             transition: opacity 0.2s
         &--active
-            transform: translate(-15%, -22px) scale(0.65)
+            //transform: translate(-15%, -22px) scale(0.65)
+            transform: translate(-8%, -22px) scale(0.85)
     &__eye
         position: absolute
         top: 50%
@@ -293,25 +302,31 @@ svg path,
         background-size: 85%
         background-position: center right
         border: 0
-        transition: opacity 0.4s
+        transition: opacity 0.3s
     &__error
         position: absolute
         bottom: -5px
         transform: translateY(100%)
         display: none
         font-size: 9px
+        letter-spacing: 1px
         color: $error-color
 
 .select
     appearance: none
-    padding: 0 0 5px
-    font-size: 18px
+    //padding: 0 0 5px
+    padding: 0 0 10px
+    //font-size: 18px
+    font-size: 12px
+    font-weight: normal
+    letter-spacing: 1px
     color: $copyright-color
     background-color: transparent
     background-image: url(../img/dist/sprite.svg#icon-caret)
     background-repeat: no-repeat
-    background-size: 12px
-    background-position: top 50% right 0
+    //background-size: 12px
+    background-size: 10px
+    background-position: bottom 12px right 0
     border: 0
     border-bottom: 1px solid $copyright-color
     border-radius: 0

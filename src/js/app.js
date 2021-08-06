@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const submenuOpen = document.querySelectorAll('.nav__link--dropdown')
     const submenu = document.querySelector('.submenu')
     const submenuBack = document.querySelector('.submenu__back')
+    const subCategoriesOpen= document.querySelectorAll('.submenu__link--dropdown')
+    const subCategories = document.querySelector('.subcategories')
+    const subCategoriesBack = document.querySelector('.subcategories__back')
 
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
@@ -68,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                let itemData = item.getAttribute('data-mobile-category')
+                let itemData = item.getAttribute('data-mobile-item')
                 item.parentNode.parentNode.parentNode.style.display = 'none'
                 submenu.classList.add('submenu--active')
-                submenu.querySelector('.submenu__list[data-mobile-subcategory="' + itemData + '"').classList.add('submenu__list--active')
+                submenu.querySelector('.submenu__list[data-mobile-category="' + itemData + '"').classList.add('submenu__list--active')
             })
         })
     }
@@ -85,6 +88,30 @@ document.addEventListener('DOMContentLoaded', function () {
             submenu.querySelectorAll('.submenu__list').forEach((child) => child.classList.remove('submenu__list--active'))
         })
     }
+
+    if (subCategoriesOpen) {
+        subCategoriesOpen.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+
+                let itemData = item.getAttribute('data-mobile-subitem')
+                submenu.classList.remove('submenu--active')
+                subCategories.classList.add('subcategories--active')
+                subCategories.querySelector('.subcategories__list[data-mobile-subcategory="' + itemData + '"').classList.add('subcategories__list--active')
+            })
+        })
+    }
+
+    //if (subCategoriesBack) {
+    //    subCategoriesBack.addEventListener('click', (event) => {
+    //        event.preventDefault()
+
+    //        let itemData = item.getAttribute('data-mobile-subitem')
+    //        subCategories.classList.remove('subcategories--active')
+    //        submenu.classList.add('submenu--active')
+    //        submenu.querySelector('.submenu__list[data-mobile-category="' + itemData + '"').classList.add('submenu__list--active')
+    //    })
+    //}
 
     // SEARCH
     const searchBtn = document.querySelector('.search-btn')
@@ -134,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (header) {
             const headerHeight = header.getBoundingClientRect().height;
-            const topPromoHeight = topPromo.getBoundingClientRect().height
+            const topPromoHeight = topPromo ? topPromo.getBoundingClientRect().height : 0
 
             let currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos || prevScrollpos <= 0) { // If up
@@ -235,6 +262,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.body.classList.remove('scroll-disabled')
                 }
             })
+        })
+    }
+
+    // REQUEST PHOTO
+    const requestPhotoIcon = document.querySelector('.request-photo__icon')
+
+    if (requestPhotoIcon) {
+        requestPhotoIcon.addEventListener('click', (event) => {
+            event.preventDefault()
         })
     }
 

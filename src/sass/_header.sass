@@ -47,10 +47,15 @@
     &__control
         display: flex
         align-items: center
+    &__logotype
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
 
 .subheader
     position: relative
     &__wrapper
+        position: relative
         display: flex
         align-items: center
         justify-content: space-between
@@ -73,12 +78,10 @@
                 &:hover,
                 &:focus
                     background: $light-grey-hover-color
-    &__item + &__item
-        margin-left: 10px
     &__link
-        padding: 10px 20px
+        padding: 10px
         font-size: 12px
-        font-weight: 500
+        font-weight: 400
         letter-spacing: 1px
         text-transform: uppercase
         &:hover,
@@ -123,6 +126,55 @@
             outline: none
 
 .submenu
+    display: none
+    &--active
+        display: block
+    &__back
+        padding: 14px 10px
+        width: 100%
+        font-size: 12px
+        &::before
+            content: ''
+            display: inline-block
+            margin-top: -2px
+            margin-right: 6px
+            width: 10px
+            height: 10px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#icon-arrow-back)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+    &__list
+        display: none
+        &--active
+            display: block
+    &__item
+        border-top: 1px solid $light-grey-color
+    &__link
+        padding: 14px 10px
+        width: 100%
+        font-size: 12px
+        letter-spacing: 1px
+        text-transform: uppercase
+        &--dropdown
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                top: 50%
+                right: 10px
+                transform: translateY(-50%)
+                display: inline-block
+                width: 12px
+                height: 10px
+                background-image: url(../img/dist/sprite.svg#icon-dropdown-arrow)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                transition: transform 0.25s
+
+.subcategories
     display: none
     &--active
         display: block
@@ -490,12 +542,8 @@
         letter-spacing: 2px
     &__products
         padding: 30px 25px
-        //overflow-y: scroll
         max-height: calc(100% - 69px - 267px)
         border-top: 1px solid $light-grey-color
-        //scrollbar-width: none
-        //&::-webkit-scrollbar
-        //    display: none
     &__product
         display: flex
         justify-content: space-between
@@ -641,22 +689,18 @@
     left: 0
     z-index: 10
     display: none
-    width: 100vw
+    width: 100%
     background: $white-color
     &:hover
         display: block
     &--nav
-        width: 1170px
-    &--container
-        top: 25px
-        left: -10px
-        .categories
-            &__wrapper
-                padding: 25px 10px
+        top: 50px
+        .categories__wrapper
+            padding: 25px 0 25px 5px
     &__wrapper
         display: flex
         justify-content: space-between
-        padding: 25px 10px 25px 20px
+        padding: 25px 0 25px 20px
     &__title
         margin-bottom: 20px
         font-size: 14px
@@ -666,10 +710,7 @@
         &:first-child
             margin-right: 10px
             max-width: 180px
-        &--double
-            .categories__item
-                width: 45%!important
-        &--double + .categories__inner
+    &__inner--double + .categories__inner
             max-width: 180px
     &__list
         &--flex
@@ -684,6 +725,18 @@
                 &:nth-child(3n + 1)
                     margin-left: 0
                 &:nth-child(n + 4)
+                    margin-top: 10px
+        &--double
+            display: flex
+            flex-wrap: wrap
+            .categories__item + .categories__item
+                margin-top: 0
+            .categories__item
+                width: 45%
+                color: $boulder-color
+                &:nth-child(2n)
+                    margin-left: 10%
+                &:nth-child(n + 3)
                     margin-top: 10px
         &--primary
             .categories__link
@@ -722,10 +775,11 @@
 // MEDIA QUARIES
 @media (hover: hover)
     .nav
-        &__link
+        &__item
             &:hover,
             &:focus
-                border-bottom: 1px solid $primary-color
+                .nav__link
+                    border-bottom: 1px solid $primary-color
 
 @media (max-width: 1199px)
     .categories

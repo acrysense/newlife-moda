@@ -330,11 +330,28 @@
         &__button + &__button
             margin-left: 3%
 
+    // RESERVE
+    .reserve
+        &__item
+            &--disabled
+                .reserve__timing
+                    span
+                        &:first-child
+                            display: block
+        &__timing
+            span
+                margin-left: 0
+                &:first-child
+                    display: none
+ 
 @media (min-width: 768px) and (max-width: 991px)
     // PRODUCT
     .product
         &__left
             width: 50%
+        &__favorites,
+        &__request-photo
+            margin-left: 80px
         &__right
             margin-left: 5%
             width: 45%
@@ -459,6 +476,12 @@
             &:nth-child(n + 4)
                 margin-top: 50px
 
+    // CABINET
+    .cabinet
+        &__item
+            &--accent
+                display: none
+
 @media (max-width: 767px)
     .content
         margin: 20px 0
@@ -469,6 +492,9 @@
         &__left,
         &__right
             width: 100%
+        &__favorites,
+        &__request-photo
+            margin-left: 10px
         &__slider
             margin-top: 24px
         &__copyright
@@ -568,6 +594,15 @@
         &__item
             flex-direction: column
             align-items: center
+            &--disabled
+                .reserve__timing
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                    flex-direction: column
+                    padding: 6px 13px
+                    margin: 49px auto
         &__item + &__item
             .reserve__timing
                 top: 32px
@@ -592,16 +627,6 @@
         &__block
             position: static
             transform: none
-            & > .reserve__timing
-                position: absolute
-                top: 0
-                left: 50%
-                transform: translateX(-50%)
-                flex-direction: column
-                padding: 6px 13px
-                margin: 49px auto
-                span
-                    margin-left: 0
             & > .reserve__info
                 margin: 0
                 text-align: center
@@ -872,9 +897,10 @@
     .profile
         &__inner
             flex-direction: column
-            .input-group + .input-group
-                margin-top: 36px
-                margin-left: 0
+        &__block
+            width: 100%
+        &__block + &__block
+            margin-top: 44px
         &__btn
             margin: 0 auto
     
