@@ -65,6 +65,7 @@
 
 // PRODUCT
 .product
+    position: relative
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -78,6 +79,19 @@
         text-align: center
         color: $dark-gray-color
         border-bottom: 1px solid $gray-color
+    &__controls
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 10
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__right
+        position: relative
+    &__fixed
+        position: relative
+        transform: translate3d(0px, 0px, 0px)
     &__wrapper
         display: flex
         align-items: flex-start
@@ -251,21 +265,21 @@
     &__text + &__text
         margin-top: 10px
     &__inner
-        overflow: hidden
+        //overflow: hidden
         margin-top: 25px
-        max-height: 100vh
-        transition: max-height 0.75s
+        //max-height: 100vh
+        //transition: max-height 0.75s
         &--delimiter
             margin-top: 35px
             padding-top: 35px
             border-top: 1px solid $gray-color
-        &--hidden
-            max-height: 56px
-            transition: max-height 0.25s
-            .product__trigger:not(.product__trigger--static)
-                &::after
-                    transform: rotate(90deg)
-                    transition: transform 0.35s
+        //&--hidden
+        //    max-height: 56px
+        //    transition: max-height 0.25s
+        //    .product__trigger:not(.product__trigger--static)
+        //        &::after
+        //            transform: rotate(90deg)
+        //            transition: transform 0.35s
     &__trigger
         padding: 0
         font-size: 18px
@@ -340,6 +354,7 @@
 .product__slider
     position: relative
     display: flex
+    margin-top: 24px
     .gallery-thumbs
         overflow: hidden
         margin-right: 50px
@@ -362,12 +377,20 @@
             height: 75px
             object-fit: cover
     .gallery-main
+        position: relative
         overflow: hidden
         width: 100%
         height: 100%
         &:hover
             .swiper-buttons
                 opacity: 1
+        .swiper-slide
+            height: 560px
+            img
+                display: block
+                width: 100%
+                height: 560px
+                object-fit: contain
     .swiper-pagination
         display: flex
         align-items: center
@@ -382,6 +405,19 @@
         margin-left: 7px
     .swiper-pagination-bullet-active
         background: $primary-color
+
+// new gallery
+.product__gallery
+    &-img
+        margin: 0 auto
+        width: 510px
+        height: 560px
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+
 
 .down-payment
     display: flex
@@ -444,6 +480,7 @@
 .request-photo
     display: flex
     align-items: flex-start
+    flex-direction: row-reverse
     margin-top: 22px
     &__icon
         display: block
@@ -468,10 +505,11 @@
         overflow: hidden
         visibility: hidden
         padding: 8px
-        margin-left: 10px
+        margin-right: 10px
         max-width: 273px
         width: 100%
         color: $copyright-color
+        background: $white-color
         border: 1px solid $copyright-color
         box-shadow: 0px 0px 8px rgba($primary-color, 0.1)
         transition: all 0.2s

@@ -3,7 +3,8 @@
     .product
         &__left
             width: 670px
-        &__right
+        &__right,
+        &__fixed
             width: 450px
     // BRANDS
     .brands
@@ -46,7 +47,8 @@
     .product
         &__left
             width: 540px
-        &__right
+        &__right,
+        &__fixed
             width: 415px
         &__bid
             margin-left: 10px
@@ -79,6 +81,14 @@
         &__mobile-btn
             display: none
     
+    // PRODUCT
+    .product
+        &__wrapper
+            &--mobile
+                display: none
+    .product__slider
+        display: none
+
     // MOBILE SORT
     .mobile-sort
         display: none
@@ -159,6 +169,26 @@
             border-radius: 0
         &__mobile-btn + &__mobile-btn
             border-left: 1px solid $light-gray-color
+    
+    // PRODUCT
+    .product
+        flex-direction: column
+        &__left,
+        &__right,
+        &__fixed
+            width: 100%
+        &__right
+            margin-top: 24px
+        &__gallery
+            display: none
+        &__wrapper--mobile
+            align-items: center
+            .product__id
+                margin-top: 0
+        &__wrapper--desktop
+            .product__id,
+            .product__block--full
+                display: none
     
     // SELECTED FILTERS
     .selected-filters
@@ -347,14 +377,6 @@
 @media (min-width: 768px) and (max-width: 991px)
     // PRODUCT
     .product
-        &__left
-            width: 50%
-        &__favorites,
-        &__request-photo
-            margin-left: 80px
-        &__right
-            margin-left: 5%
-            width: 45%
         &__wrapper
             &--mobile-wrap
                 align-items: flex-start
@@ -372,9 +394,7 @@
             margin-top: 25px
             order: 2
         &__name
-            font-size: 24px
-        &__description
-            font-size: 14px
+            font-size: 36px
         &__bid
             margin-top: 25px
         &__help + &__info
@@ -460,12 +480,6 @@
                 margin-top: 22px
 
 @media (min-width: 768px)
-    // PRODUCT
-    .product
-        &__wrapper
-            &--desktop-hidden
-                display: none
-    
     // GOODS
     .goods--sm
         .goods__item
@@ -488,22 +502,12 @@
 
     // PRODUCT
     .product
-        flex-direction: column
-        &__left,
-        &__right
-            width: 100%
-        &__favorites,
-        &__request-photo
-            margin-left: 10px
+        &__controls
+            right: 10px
         &__slider
             margin-top: 24px
         &__copyright
             display: none
-        &__wrapper
-            &--mobile-hidden
-                display: none
-            &--desktop-hidden
-                margin-top: 0
         &__block
             width: 100%
             &--full
@@ -774,7 +778,6 @@
     // PRODUCT
     .product
         &__favorites
-            margin-right: 10px
             & > svg
                 width: 26px
                 height: 22px
@@ -792,8 +795,6 @@
             font-size: 14px
         &__address
             font-size: 12px
-        &__help
-            text-align: center
         &__bid
             margin-left: auto
             margin-right: 0
@@ -938,6 +939,11 @@
                 flex-direction: column
             &--justify-center
                 justify-content: center
+        &__name
+            text-align: center
+        &__description
+            margin-top: 4px
+            text-align: center
         &__bid
             margin-top: 25px
             margin-left: 0

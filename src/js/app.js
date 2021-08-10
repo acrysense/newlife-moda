@@ -137,8 +137,89 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-
+    
     let prevScrollpos = window.pageYOffset;
+    const product = document.querySelector('.product')
+    const productLeft = document.querySelector('.product__gallery')
+    const productRight = document.querySelector('.product__fixed')
+    let coordOffsetBottom = 0 // Fixed block on bottom position
+    let coordOffsetTop = 0 // Fixed block on offsetop position
+
+    function getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+        
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
+
+    function productScroll() {
+        if (product && productLeft && productRight) {
+            if (window.innerWidth >= 992) {
+                let currentScrollPos = window.pageYOffset;
+
+                if (prevScrollpos > currentScrollPos || prevScrollpos <= 0) { // If up
+                    if (productRight.classList.contains('product__fixed--active')) { // Если при фиксированном блоке скроллим вверх - убираем фиксацию
+                        productRight.classList.remove('product__fixed--active')
+                        productRight.classList.add('product__fixed--bottom')
+                        productRight.style.position = 'relative'
+                        productRight.style.top = '0px'
+                        productRight.style.transform = 'translate3d(0px, ' + coordOffsetTop + 'px, 0px)'
+                    }
+
+                    if (window.pageYOffset <= getCoords(productRight).top && productRight.classList.contains('product__fixed--bottom')) { // Если проскроллили до верха блока - фиксируем
+                        productRight.classList.add('product__fixed--top')
+                        productRight.style.position = 'fixed'
+                        productRight.style.top = '0px'
+                        productRight.style.transform = 'translate3d(0px, 0px, 0px)'
+                    }
+
+                    if (window.pageYOffset <= product.offsetTop && productRight.classList.contains('product__fixed--top')) {
+                        productRight.classList.remove('product__fixed--top')
+                        productRight.style.position = 'relative'
+                        productRight.style.top = '0px'
+                        productRight.style.transform = 'translate3d(0px, 0px, 0px)'
+                    }
+                } else { // If down
+                    coordOffsetTop = getCoords(productRight).top - product.offsetTop
+
+                    if (productRight.classList.contains('product__fixed--top')) {
+                        productRight.classList.remove('product__fixed--top')
+                        productRight.style.position = 'relative'
+                        productRight.style.top = '0px'
+                        productRight.style.transform = 'translate3d(0px, ' + coordOffsetTop + 'px, 0px)'
+                    }
+                    
+                    if (window.pageYOffset >= getCoords(productRight).top + productRight.getBoundingClientRect().height - (document.documentElement.clientHeight - Number(30)) && !productRight.classList.contains('product__fixed--active')) {
+                        if (!((window.pageYOffset - product.offsetTop) - Number(30) >= productLeft.getBoundingClientRect().height - document.documentElement.clientHeight)) {
+                            coordOffsetBottom = (window.pageYOffset - product.offsetTop) - productRight.getBoundingClientRect().height + window.innerHeight - 30
+                        }
+
+                        productRight.classList.add('product__fixed--active')
+                        productRight.style.position = 'fixed'
+                        productRight.style.top = document.documentElement.clientHeight - Number(30) + 'px'
+                        productRight.style.transform = 'translate3d(0px, -100%, 0px)'
+                    }
+                    if ((window.pageYOffset - product.offsetTop) - Number(30) >= productLeft.getBoundingClientRect().height - document.documentElement.clientHeight) {
+                        let transformFixedBottom = product.getBoundingClientRect().height - productRight.getBoundingClientRect().height
+
+                        productRight.classList.remove('product__fixed--active')
+                        productRight.classList.add('product__fixed--bottom')
+                        productRight.style.position = 'relative'
+                        productRight.style.top = '0px'
+                        productRight.style.transform = 'translate3d(0px, ' + transformFixedBottom + 'px, 0px)'
+                    }
+                }
+                prevScrollpos = currentScrollPos;
+            } else {
+                productRight.style.position = 'relative'
+                productRight.style.top = '0px'
+                productRight.style.transform = 'translate3d(0px, 0px, 0px)'
+            }
+        }
+    }
+
     window.addEventListener('scroll', () => {
         if (topPromo && searchWrapper) {
             const topPromoHeight = topPromo.getBoundingClientRect().height;
@@ -159,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        if (header) {
+        if (header && !product) {
             const headerHeight = header.getBoundingClientRect().height;
             const topPromoHeight = topPromo ? topPromo.getBoundingClientRect().height : 0
 
@@ -183,6 +264,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             prevScrollpos = currentScrollPos;
         }
+
+        productScroll()
     })
     
     window.addEventListener('resize', () => {
@@ -204,6 +287,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         }
+
+        //transformVal = productRightHeight - document.documentElement.clientHeight + 30
+        //productRight.style.transform = 'translate3d(0px, -' + transformVal + 'px, 0px)'
     })
 
     if (searchBtn) {
@@ -319,11 +405,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     let mySwiperMain = new Swiper(galleryMain, {
         slidesPerView: 1,
-        spaceBetween: 10,
         loop: true,
         loopedSlides: 5,
         preloadImages: false,
-        lazy: true,
         thumbs: {
             swiper: mySwiperThumb,
         },
@@ -334,12 +418,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true
                 },
             },
-            768: {
-                pagination: {
-                    el: false,
-                    clickable: false
-                },
-            }
         }
     })
 

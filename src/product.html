@@ -1204,14 +1204,8 @@
             <!-- End of breadcrumb -->
             <div class="product">
                 <div class="product__left">
-                    <div class="product__wrapper product__wrapper--wrap product__wrapper--desktop-hidden">
-                        <div class="product__block product__block--full">
-                            <span class="product__status">Зарезервированно</span>
-                        </div>
-                        <div class="product__block">
-                            <h2 class="product__name">Gucci Chanel</h2>
-                            <span class="product__description">Кожаные кроссовки Rhyton на шнуровке</span>
-                        </div>
+                    <div class="product__wrapper product__wrapper--mobile">
+                        <span class="product__status">Зарезервированно</span>
                         <span class="product__id">id:<span>3456665</span></span>
                     </div>
                     <div class="product__slider">
@@ -1260,47 +1254,49 @@
                             </div>
                         </div>
                         <div class="gallery-main">
-                            <button class="product__favorites product__favorites--active" aria-label="Избранное">
-                                <svg width="36" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
-                                </svg>
-                                <span>55</span>
-                            </button>
-                            <div class="request-photo product__request-photo">
-                                <a href="#" class="request-photo__icon"></a>
-                                <div class="request-photo__wrapper">
-                                    <p class="request-photo__description">Вы можете запросить дополнительные ракурсы товара</p>
+                            <div class="product__controls">
+                                <button class="product__favorites product__favorites--active" aria-label="Избранное">
+                                    <svg width="36" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M453.506 300.213L453.501 300.218C423.175 336.806 379.432 374.203 327.62 418.284L327.613 418.289C326.389 419.333 325.152 420.387 323.904 421.45C307.236 435.653 288.531 451.592 269.214 468.575C265.554 471.764 260.901 473.5 256 473.5C251.096 473.5 246.439 471.762 242.778 468.568C222.148 450.529 202.318 433.587 184.79 418.648L184.686 418.544L184.38 418.284C132.568 374.203 88.8254 336.806 58.4991 300.218L58.4943 300.213C24.8997 259.744 10 222.328 10 181.9C10 142.065 23.6151 105.759 47.95 79.3807L47.9588 79.3711C72.5354 52.6615 106.252 38 143 38C170.346 38 195.193 46.5401 217.263 63.6953L217.269 63.6997L217.274 63.7042C228.462 72.3743 238.707 83.0669 247.792 95.6527L255.9 106.886L264.008 95.6527C273.092 83.0686 283.336 72.3773 294.521 63.7078C316.695 46.5434 341.649 38 369 38C405.748 38 439.465 52.6615 464.041 79.3711L464.05 79.3806C488.385 105.759 502 142.065 502 181.9C502 222.328 487.1 259.744 453.506 300.213Z" fill="transparent" stroke="black" stroke-width="30"/>
+                                    </svg>
+                                    <span>55</span>
+                                </button>
+                                <div class="request-photo product__request-photo">
+                                    <a href="#" class="request-photo__icon"></a>
+                                    <div class="request-photo__wrapper">
+                                        <p class="request-photo__description">Вы можете запросить дополнительные ракурсы товара</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/dist/product-slide-01.webp" type="image/webp">
-                                        <img data-src="img/dist/product-slide-01.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <source srcset="img/dist/product-slide-01.webp" type="image/webp">
+                                        <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/dist/product-slide-02.webp" type="image/webp">
-                                        <img data-src="img/dist/product-slide-02.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <source srcset="img/dist/product-slide-02.webp" type="image/webp">
+                                        <img src="img/dist/product-slide-02.png" alt="Gucci Chanel">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/dist/product-slide-03.webp" type="image/webp">
-                                        <img data-src="img/dist/product-slide-03.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <source srcset="img/dist/product-slide-03.webp" type="image/webp">
+                                        <img src="img/dist/product-slide-03.png" alt="Gucci Chanel">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/dist/product-slide-04.webp" type="image/webp">
-                                        <img data-src="img/dist/product-slide-04.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <source srcset="img/dist/product-slide-04.webp" type="image/webp">
+                                        <img src="img/dist/product-slide-04.png" alt="Gucci Chanel">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/dist/product-slide-05.webp" type="image/webp">
-                                        <img data-src="img/dist/product-slide-05.png" alt="Gucci Chanel" class="swiper-lazy">
+                                        <source srcset="img/dist/product-slide-05.webp" type="image/webp">
+                                        <img src="img/dist/product-slide-05.png" alt="Gucci Chanel">
                                     </picture>
                                 </div>
                             </div>
@@ -1309,150 +1305,185 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <p class="product__copyright">Это профессиональные фотографии актуального товара предоженные Newlife.moda</p>
+                    <!--<p class="product__copyright">Это профессиональные фотографии актуального товара предоженные Newlife.moda</p>-->
+                    <div class="product__gallery">
+                        <div class="product__gallery-img">
+                            <picture>
+                                <source srcset="img/dist/product-slide-01.webp" type="image/webp">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci Chanel">
+                            </picture>
+                        </div>
+                        <div class="product__gallery-img">
+                            <picture>
+                                <source srcset="img/dist/product-slide-02.webp" type="image/webp">
+                                <img src="img/dist/product-slide-02.png" alt="Gucci Chanel">
+                            </picture>
+                        </div>
+                        <div class="product__gallery-img">
+                            <picture>
+                                <source srcset="img/dist/product-slide-03.webp" type="image/webp">
+                                <img src="img/dist/product-slide-03.png" alt="Gucci Chanel">
+                            </picture>
+                        </div>
+                        <div class="product__gallery-img">
+                            <picture>
+                                <source srcset="img/dist/product-slide-04.webp" type="image/webp">
+                                <img src="img/dist/product-slide-04.png" alt="Gucci Chanel">
+                            </picture>
+                        </div>
+                        <div class="product__gallery-img">
+                            <picture>
+                                <source srcset="img/dist/product-slide-05.webp" type="image/webp">
+                                <img src="img/dist/product-slide-05.png" alt="Gucci Chanel">
+                            </picture>
+                        </div>
+                    </div>
+                    <!--<p class="product__copyright">Это профессиональные фотографии актуального товара предоженные Newlife.moda</p>-->
                 </div>
                 <div class="product__right">
-                    <div class="product__wrapper product__wrapper--wrap product__wrapper--mobile-hidden">
-                        <div class="product__block product__block--full">
-                            <span class="product__status">Зарезервированно</span>
+                    <div class="product__fixed">
+                        <div class="product__wrapper product__wrapper--wrap product__wrapper--desktop">
+                            <div class="product__block product__block--full">
+                                <span class="product__status">Зарезервированно</span>
+                            </div>
+                            <div class="product__block">
+                                <h2 class="product__name">Gucci</h2>
+                                <p class="product__description">Кожаные кроссовки Rhyton на шнуровке</p>
+                            </div>
+                            <span class="product__id">id:<span>3456665</span></span>
                         </div>
-                        <div class="product__block">
-                            <h2 class="product__name">Gucci Chanel</h2>
-                            <span class="product__description">Кожаные кроссовки Rhyton на шнуровке</span>
+                        <div class="product__wrapper product__wrapper--center product__wrapper--mobile-wrap">
+                            <div class="product__group">
+                                <div class="product__price">
+                                    <span class="product__price--new">23 000</span>
+                                    <span class="product__price--old">33 000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="product__bid link link--bg modal-btn" data-id="offer-price">ПРЕДЛОЖИТЬ ЦЕНУ</a>
                         </div>
-                        <span class="product__id">id:<span>3456665</span></span>
-                    </div>
-                    <div class="product__wrapper product__wrapper--center product__wrapper--mobile-wrap">
-                        <div class="product__group">
-                            <div class="product__price">
-                                <span class="product__price--new">23 000</span>
-                                <span class="product__price--old">33 000</span>
+                        <div class="product__wrapper product__wrapper--justify-center">
+                            <a href="#" class="product__info">сообщить о следующей скидке</a>
+                        </div>
+                        <div class="product__wrapper">
+                            <div class="down-payment">
+                                <span class="down-payment__text">Первый внос 0% от</span>
+                                <div class="down-payment__img">
+                                    <img src="img/dist/logotype-tinkoff.svg" width="67" height="9" alt="Tinkoff">
+                                </div>
                             </div>
                         </div>
-                        <a href="#" class="product__bid link link--bg modal-btn" data-id="offer-price">ПРЕДЛОЖИТЬ ЦЕНУ</a>
-                    </div>
-                    <div class="product__wrapper product__wrapper--justify-center">
-                        <a href="#" class="product__info">сообщить о следующей скидке</a>
-                    </div>
-                    <div class="product__wrapper">
-                        <div class="down-payment">
-                            <span class="down-payment__text">Первый внос 0% от</span>
-                            <div class="down-payment__img">
-                                <img src="img/dist/logotype-tinkoff.svg" width="67" height="9" alt="Tinkoff">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__wrapper product__wrapper--center">
-                        <button class="product__btn btn">В корзину</button>
-                        <a href="#" class="product__reserve link link--bg link--lg modal-btn" data-id="product-reserved">РЕЗЕРВ</a>
-                        <ul class="icons">
-                            <li class="icons__item">
-                                <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-star);">Избранное</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__more product__more--badge">
-                        <div class="product__class">
-                            <span class="product__text">Лучшие условия при перепродаже</span>
-                            <p class="product__text">В течении 6 месяцев гарантированно заберем обратно по сниженной комиссионной ставке</p>
-                        </div>
-                    </div>
-                    <div class="product__inner">
-                        <h3 class="product__title">Состояние</h3>
-                        <div class="state">
-                            <ul class="state__list">
-                                <li class="state__item">Удовлетворительное</li>
-                                <li class="state__item">Хорошее</li>
-                                <li class="state__item state__item--current">Отличное</li>
-                                <li class="state__item">Безупречное</li>
+                        <div class="product__wrapper product__wrapper--center">
+                            <button class="product__btn btn">В корзину</button>
+                            <a href="#" class="product__reserve link link--bg link--lg modal-btn" data-id="product-reserved">РЕЗЕРВ</a>
+                            <ul class="icons">
+                                <li class="icons__item">
+                                    <a href="#" class="icons__link" style="background-image: url(img/dist/sprite.svg#icon-star);">Избранное</a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="product__location">
-                            <h3 class="product__title">Местоположение</h3>
-                            <span class="product__address">Санкт-Петербург, Садовая улица, дом 49</span>
-                            <a href="#" class="product__info product__info--route">построить маршрут</a>
-                            <div class="product__more product__more--yellow">
-                                <span class="product__text product__text--medium">АУТЕНТИК</span>
-                                <p class="product__help product__help--light product__help--mt">Подробнее о процессе оценки и отбора вещей</p>
+                        <div class="product__more product__more--badge">
+                            <div class="product__class">
+                                <span class="product__text">Лучшие условия при перепродаже</span>
+                                <p class="product__text">В течении 6 месяцев гарантированно заберем обратно по сниженной комиссионной ставке</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="product__inner product__inner--delimiter">
-                        <button class="product__trigger">Характеристики</button>
-                        <div class="product__content product__content--flex">
-                            <div class="product__group">
-                                <span class="product__subtitle">Материал верха</span>
-                                <span class="product__subdescription">18К Tri colored Gold</span>
+                        <div class="product__inner">
+                            <h3 class="product__title">Состояние</h3>
+                            <div class="state">
+                                <ul class="state__list">
+                                    <li class="state__item">Удовлетворительное</li>
+                                    <li class="state__item">Хорошее</li>
+                                    <li class="state__item state__item--current">Отличное</li>
+                                    <li class="state__item">Безупречное</li>
+                                </ul>
                             </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">Материал низа</span>
-                                <span class="product__subdescription">Хлопчатобумажная ткань</span>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">Бренд код</span>
-                                <span class="product__subdescription">0789-657GT-345</span>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">Артикул</span>
-                                <span class="product__subdescription">123445</span>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">Сезон</span>
-                                <span class="product__subdescription">Осень-зима</span>
+                            <div class="product__location">
+                                <h3 class="product__title">Местоположение</h3>
+                                <span class="product__address">Санкт-Петербург, Садовая улица, дом 49</span>
+                                <a href="#" class="product__info product__info--route">построить маршрут</a>
+                                <div class="product__more product__more--yellow">
+                                    <span class="product__text product__text--medium">АУТЕНТИК</span>
+                                    <p class="product__help product__help--light product__help--mt">Подробнее о процессе оценки и отбора вещей</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product__inner product__inner--delimiter">
-                        <button class="product__trigger product__trigger--static">
-                            <span>Замеры</span>
-                            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5755 9.23674H13.6387V5.04952C13.6387 2.2984 10.5779 0.0581055 6.80107 0.0581055C3.02412 0.0581055 -0.0367126 2.2984 -0.0367126 5.04952V9.99689C-0.0367126 12.5308 2.55762 14.6224 5.90005 14.9401H5.96848C6.24591 14.9644 6.52751 14.9844 6.81312 14.9844H19.5755C19.7975 14.9844 19.9777 14.8043 19.9777 14.5822V9.63884C19.9777 9.41692 19.7975 9.23674 19.5755 9.23674ZM6.82116 0.866458C10.1393 0.866458 12.8545 2.74482 12.8545 5.05368C12.8545 7.3624 10.1556 9.24076 6.82116 9.24076C3.48676 9.24076 0.78785 7.3624 0.78785 5.05354C0.78785 2.74482 3.50684 0.866458 6.82116 0.866458ZM12.8545 7.39855V9.23674H10.5215C11.4321 8.82403 12.2266 8.19255 12.8342 7.39855H12.8545ZM19.1732 14.18H18.3688V12.1447C18.3688 11.9227 18.1886 11.7424 17.9667 11.7424C17.7446 11.7424 17.5644 11.9226 17.5644 12.1447V14.184H15.9555V13.0778C15.9555 12.8558 15.7753 12.6756 15.5532 12.6756C15.3312 12.6756 15.151 12.8558 15.151 13.0778V14.184H13.5422V13.0778C13.5422 12.8558 13.362 12.6756 13.1399 12.6756C12.9179 12.6756 12.7377 12.8558 12.7377 13.0778V14.184H11.1287V12.1447C11.1287 11.9227 10.9486 11.7424 10.7265 11.7424C10.5046 11.7424 10.3243 11.9226 10.3243 12.1447V14.184H8.78387V13.0778C8.78387 12.8558 8.60355 12.6756 8.38163 12.6756C8.15957 12.6756 7.97939 12.8558 7.97939 13.0778V14.184H6.82087C6.66809 14.184 6.51933 14.184 6.37043 14.184V13.0778C6.37043 12.8558 6.19026 12.6756 5.96819 12.6756C5.74613 12.6756 5.56595 12.8558 5.56595 13.0778V14.0874C2.85126 13.6852 0.807933 12.0039 0.807933 9.99288V7.39855C1.95828 8.97121 4.22281 10.0411 6.84124 10.0411H19.1732V14.18Z" fill="#767676"/>
-                            </svg>
-                        </button>
-                        <div class="product__content product__content--flex">
-                            <ul class="product__list product__group">
-                                <li class="product__item">11.5”W x 7.5”Hx3”D</li>
-                                <li class="product__item">13” handle drop</li>
-                                <li class="product__item">23” strap drop</li>
+                        <div class="product__inner product__inner--delimiter">
+                            <button class="product__trigger">Характеристики</button>
+                            <div class="product__content product__content--flex">
+                                <div class="product__group">
+                                    <span class="product__subtitle">Материал верха</span>
+                                    <span class="product__subdescription">18К Tri colored Gold</span>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">Материал низа</span>
+                                    <span class="product__subdescription">Хлопчатобумажная ткань</span>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">Бренд код</span>
+                                    <span class="product__subdescription">0789-657GT-345</span>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">Артикул</span>
+                                    <span class="product__subdescription">123445</span>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">Сезон</span>
+                                    <span class="product__subdescription">Осень-зима</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__inner product__inner--delimiter">
+                            <button class="product__trigger product__trigger--static">
+                                <span>Замеры</span>
+                                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.5755 9.23674H13.6387V5.04952C13.6387 2.2984 10.5779 0.0581055 6.80107 0.0581055C3.02412 0.0581055 -0.0367126 2.2984 -0.0367126 5.04952V9.99689C-0.0367126 12.5308 2.55762 14.6224 5.90005 14.9401H5.96848C6.24591 14.9644 6.52751 14.9844 6.81312 14.9844H19.5755C19.7975 14.9844 19.9777 14.8043 19.9777 14.5822V9.63884C19.9777 9.41692 19.7975 9.23674 19.5755 9.23674ZM6.82116 0.866458C10.1393 0.866458 12.8545 2.74482 12.8545 5.05368C12.8545 7.3624 10.1556 9.24076 6.82116 9.24076C3.48676 9.24076 0.78785 7.3624 0.78785 5.05354C0.78785 2.74482 3.50684 0.866458 6.82116 0.866458ZM12.8545 7.39855V9.23674H10.5215C11.4321 8.82403 12.2266 8.19255 12.8342 7.39855H12.8545ZM19.1732 14.18H18.3688V12.1447C18.3688 11.9227 18.1886 11.7424 17.9667 11.7424C17.7446 11.7424 17.5644 11.9226 17.5644 12.1447V14.184H15.9555V13.0778C15.9555 12.8558 15.7753 12.6756 15.5532 12.6756C15.3312 12.6756 15.151 12.8558 15.151 13.0778V14.184H13.5422V13.0778C13.5422 12.8558 13.362 12.6756 13.1399 12.6756C12.9179 12.6756 12.7377 12.8558 12.7377 13.0778V14.184H11.1287V12.1447C11.1287 11.9227 10.9486 11.7424 10.7265 11.7424C10.5046 11.7424 10.3243 11.9226 10.3243 12.1447V14.184H8.78387V13.0778C8.78387 12.8558 8.60355 12.6756 8.38163 12.6756C8.15957 12.6756 7.97939 12.8558 7.97939 13.0778V14.184H6.82087C6.66809 14.184 6.51933 14.184 6.37043 14.184V13.0778C6.37043 12.8558 6.19026 12.6756 5.96819 12.6756C5.74613 12.6756 5.56595 12.8558 5.56595 13.0778V14.0874C2.85126 13.6852 0.807933 12.0039 0.807933 9.99288V7.39855C1.95828 8.97121 4.22281 10.0411 6.84124 10.0411H19.1732V14.18Z" fill="#767676"/>
+                                </svg>
+                            </button>
+                            <div class="product__content product__content--flex">
+                                <ul class="product__list product__group">
+                                    <li class="product__item">11.5”W x 7.5”Hx3”D</li>
+                                    <li class="product__item">13” handle drop</li>
+                                    <li class="product__item">23” strap drop</li>
+                                </ul>
+                                <div class="product__group">
+                                    <img src="img/dist/measurements.png" alt="Замеры">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__inner product__inner--delimiter">
+                            <button class="product__trigger">Доставка и возврат</button>
+                            <div class="product__content">
+                                <div class="product__group">
+                                    <span class="product__subtitle">US Standard (6-9 business days)</span>
+                                    <p class="product__subdescription">Free shipping for orders of or above $500, or $20 under $500</p>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">US Expedited (3-5 business days)</span>
+                                    <p class="product__subdescription">Shipping is $50 for all expedited US orders</p>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">International (7-10 business days)</span>
+                                    <p class="product__subdescription">Shipping is $75 for all international orders (excluding taxes & customs; exotic skins cannot be shipped internationally)</p>
+                                </div>
+                                <div class="product__group">
+                                    <span class="product__subtitle">Returns</span>
+                                    <p class="product__subdescription">US returns accepted, for any reason, when initiated within 7 business days of delivery. Initial shipping costs and return shipping costs will be deducted from the total refund. <a href="#">See full details here.</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social social--gray">
+                            <ul class="social__list">
+                                <li class="social__item">
+                                    <a href="#" class="social__link social__link--instagram">Instagram</a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link social__link--telegram">Telegram</a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" class="social__link social__link--facebook">Facebook</a>
+                                </li>
                             </ul>
-                            <div class="product__group">
-                                <img src="img/dist/measurements.png" alt="Замеры">
-                            </div>
                         </div>
-                    </div>
-                    <div class="product__inner product__inner--delimiter">
-                        <button class="product__trigger">Доставка и возврат</button>
-                        <div class="product__content">
-                            <div class="product__group">
-                                <span class="product__subtitle">US Standard (6-9 business days)</span>
-                                <p class="product__subdescription">Free shipping for orders of or above $500, or $20 under $500</p>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">US Expedited (3-5 business days)</span>
-                                <p class="product__subdescription">Shipping is $50 for all expedited US orders</p>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">International (7-10 business days)</span>
-                                <p class="product__subdescription">Shipping is $75 for all international orders (excluding taxes & customs; exotic skins cannot be shipped internationally)</p>
-                            </div>
-                            <div class="product__group">
-                                <span class="product__subtitle">Returns</span>
-                                <p class="product__subdescription">US returns accepted, for any reason, when initiated within 7 business days of delivery. Initial shipping costs and return shipping costs will be deducted from the total refund. <a href="#">See full details here.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social social--gray">
-                        <ul class="social__list">
-                            <li class="social__item">
-                                <a href="#" class="social__link social__link--instagram">Instagram</a>
-                            </li>
-                            <li class="social__item">
-                                <a href="#" class="social__link social__link--telegram">Telegram</a>
-                            </li>
-                            <li class="social__item">
-                                <a href="#" class="social__link social__link--facebook">Facebook</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
