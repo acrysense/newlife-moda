@@ -46,17 +46,26 @@
     // PRODUCT
     .product
         &__left
-            width: 540px
+            width: 520px
         &__right,
         &__fixed
             width: 415px
         &__bid
             margin-left: 10px
             margin-right: 0
-    
-    .product__slider
-        .gallery-thumbs
+    .product__gallery
+        &-thumb
             margin-right: 20px
+            width: 82px
+            .product__gallery-img
+                padding: 12px
+                width: 82px
+                height: 82px
+        &-main
+            width: 400px
+            .product__gallery-img
+                width: 400px
+                height: 500px
     
     // GOODS
     .goods
@@ -178,7 +187,7 @@
         &__fixed
             width: 100%
         &__right
-            margin-top: 24px
+            margin-top: 10px
         &__gallery
             display: none
         &__wrapper--mobile
@@ -787,9 +796,9 @@
         &__slider
             margin: 24px -10px 0
         &__name
-            font-size: 24px
+            font-size: 30px
         &__description
-            font-size: 14px
+            font-size: 16px
         &__title,
         &__trigger
             font-size: 14px
@@ -807,7 +816,11 @@
             font-size: 12px
         &__item
             font-size: 12px
-    
+    .product__slider
+        .gallery-main
+            .swiper-slide
+                img
+                    object-fit: cover
     // GOODS
     .goods
         &__item
@@ -942,7 +955,6 @@
         &__name
             text-align: center
         &__description
-            margin-top: 4px
             text-align: center
         &__bid
             margin-top: 25px
