@@ -232,10 +232,8 @@ svg path,
     &__input
         display: block
         appearance: none
-        //padding: 0 0 5px
         padding: 0 0 10px
-        //font-size: 18px
-        font-size: 12px
+        font-size: 14px
         font-weight: normal
         letter-spacing: 1px
         color: $primary-color
@@ -250,8 +248,7 @@ svg path,
             opacity: 0
         &:focus + label,
         &:not(:placeholder-shown) + label
-            //transform: translate(-17%, -22px) scale(0.65)
-            transform: translate(-8%, -22px) scale(0.85)
+            transform: translate(-10%, -22px) scale(0.8)
             & > span
                 opacity: 0
             & + .input-group__eye
@@ -273,8 +270,7 @@ svg path,
         top: 0
         left: 0
         margin: 0
-        //font-size: 18px
-        font-size: 12px
+        font-size: 14px
         font-weight: normal
         letter-spacing: 1px
         color: $copyright-color
@@ -283,8 +279,7 @@ svg path,
         span
             transition: opacity 0.2s
         &--active
-            //transform: translate(-15%, -22px) scale(0.65)
-            transform: translate(-8%, -22px) scale(0.85)
+            transform: translate(-10%, -22px) scale(0.8)
     &__eye
         position: absolute
         top: 50%
@@ -314,17 +309,14 @@ svg path,
 
 .select
     appearance: none
-    //padding: 0 0 5px
     padding: 0 0 10px
-    //font-size: 18px
-    font-size: 12px
+    font-size: 14px
     font-weight: normal
     letter-spacing: 1px
     color: $copyright-color
     background-color: transparent
     background-image: url(../img/dist/sprite.svg#icon-caret)
     background-repeat: no-repeat
-    //background-size: 12px
     background-size: 10px
     background-position: bottom 12px right 0
     border: 0
@@ -448,6 +440,31 @@ svg path,
         width: 16px
         height: 16px
         border-radius: 50%
+    &__help
+        display: block
+        margin-left: 20px
+        font-size: 18px
+        font-weight: normal
+        color: $boulder-color
+    &__sub
+        display: block
+        margin-left: 20px
+        font-size: 10px
+        font-weight: normal
+        color: $boulder-color
+    &__payment
+        margin-left: 20px
+    &__img
+        display: block
+        margin-left: 20px
+    &__bonus
+        display: block
+        margin-left: 20px
+        font-size: 12px
+        font-weight: normal
+        color: $boulder-color
+        span
+            font-size: 18px
 
 .circle-checkbox
     display: flex
@@ -494,7 +511,7 @@ svg path,
     align-items: center
     &__help
         display: block
-        font-size: 12px
+        font-size: 11px
         font-weight: normal
         letter-spacing: 1px
         text-transform: uppercase
@@ -504,7 +521,7 @@ svg path,
         margin-left: 8px
         overflow-y: hidden
         width: fit-content
-        font-size: 12px
+        font-size: 11px
         letter-spacing: 1px
         text-transform: uppercase
         cursor: pointer
@@ -520,7 +537,7 @@ svg path,
             background-repeat: no-repeat
             background-size: cover
             background-position: center center
-            transition: transform 0.2s
+            transition: transform 0.15s
         &--active
             &::after
                 transform: rotate(-180deg)

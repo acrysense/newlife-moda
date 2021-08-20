@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        if (header && !product) {
+        if (header && header.querySelector('.header__wrap') && !product) {
             const headerHeight = header.getBoundingClientRect().height;
             const topPromoHeight = topPromo ? topPromo.getBoundingClientRect().height : 0
 

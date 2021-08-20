@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWLIFE.MODA - Resale Store №1</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header header--fixed" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#" class="header__back" aria-label="Назад"></a>
+                <a href="index.html" class="logotype header__logotype">
+                    <img src="img/dist/logotype.svg" alt="NEWLIFE.MODA">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- Ordering -->
+    <div class="ordering">
+        <div class="container">
+            <div class="ordering__wrapper">
+                <div class="ordering__content">
+                    <ul class="ordering__list">
+                        <li class="ordering__item ordering__item--active">
+                            <a href="#" class="ordering__stage">АДРЕС</a>
+                        </li>
+                        <li class="ordering__item">
+                            <a href="#" class="ordering__stage">СПОСОБ ДОСТАВКИ</a>
+                        </li>
+                        <li class="ordering__item">
+                            <a href="#" class="ordering__stage">ОПЛАТА</a>
+                        </li>
+                    </ul>
+                    <div class="ordering__body">
+                        <div class="ordering__group">
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-name" class="input-group__input ordering__input" placeholder="Имя*" value="Евгений">
+                                <label for="input-name" class="input-group__label">Имя*</label>
+                            </div>
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-surname" class="input-group__input ordering__input" placeholder="Фамилия*" value="Котов">
+                                <label for="input-surname" class="input-group__label">Фамилия*</label>
+                            </div>
+                        </div>
+                        <div class="ordering__group">
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-country" class="input-group__input ordering__input" placeholder="Cтрана/Регион*">
+                                <label for="input-country" class="input-group__label">Cтрана/Регион*</label>
+                            </div>
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-city" class="input-group__input ordering__input" placeholder="Город*">
+                                <label for="input-city" class="input-group__label">Город*</label>
+                            </div>
+                        </div>
+                        <div class="ordering__group">
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-street" class="input-group__input ordering__input" placeholder="Улица*">
+                                <label for="input-street" class="input-group__label">Улица*</label>
+                            </div>
+                        </div>
+                        <div class="ordering__group">
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-house" class="input-group__input ordering__input" placeholder="Квартира / Дом / Офис">
+                                <label for="input-house" class="input-group__label">Квартира / Дом / Офис</label>
+                            </div>
+                            <div class="input-group ordering__input-group">
+                                <input type="text" id="input-post-code" class="input-group__input ordering__input" placeholder="Индекс*">
+                                <label for="input-post-code" class="input-group__label">Индекс*</label>
+                            </div>
+                        </div>
+                        <div class="ordering__group">
+                            <div class="input-group ordering__input-group">
+                                <input type="tel" id="input-tel" class="input-group__input ordering__input" placeholder="Телефонный номер*" data-inputmask="'mask': '+7 (999) 999-99-99'" value="+7 995 442 56 54">
+                                <label for="input-tel" class="input-group__label">Телефонный номер*</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ordering__body">
+                        <h4 class="ordering__title">ВАШ АДРЕС</h4>
+                        <div class="ordering__data">
+                            <div class="ordering__value">Москва, Курсовой пер. 15 2а 301321</div>
+                            <a href="#" class="ordering__change">ИЗМЕНИТЬ</a>
+                        </div>
+                        <h4 class="ordering__title">СПОСОБ ДОСТАВКИ</h4>
+                        <div class="ordering__checkboxes">
+                            <label for="delivery-method-01" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="delivery-method" id="delivery-method-01">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">Самовывоз</span>
+                                <span class="square-checkbox__help">Бесплатно</span>
+                            </label>
+                            <label for="delivery-method-02" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="delivery-method" id="delivery-method-02">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">Курьер по Санкт-Петербургу</span>
+                                <span class="square-checkbox__help">450 рублей</span>
+                            </label>
+                            <label for="delivery-method-03" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="delivery-method" id="delivery-method-03">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">Курьер по Ленинградской области</span>
+                                <span class="square-checkbox__help">1450 рублей</span>
+                            </label>
+                            <label for="delivery-method-04" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="delivery-method" id="delivery-method-04">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">ЕМС КУРЬЕР</span>
+                                <span class="square-checkbox__help">500 рублей</span>
+                            </label>
+                            <label for="delivery-method-05" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="delivery-method" id="delivery-method-05">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">СДЭК КУРЬЕР</span>
+                                <span class="square-checkbox__help">1000 рублей</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ordering__body">
+                        <h4 class="ordering__title">ВАШ АДРЕС</h4>
+                        <div class="ordering__data">
+                            <div class="ordering__value">Москва, Курсовой пер. 15 2а 301321</div>
+                            <a href="#" class="ordering__change">ИЗМЕНИТЬ</a>
+                        </div>
+                        <h4 class="ordering__title">СПОСОБ ДОСТАВКИ</h4>
+                        <div class="ordering__data">
+                            <div class="ordering__value">Доставка по Санкт Петербургу</div>
+                            <a href="#" class="ordering__change">ИЗМЕНИТЬ</a>
+                        </div>
+                        <h4 class="ordering__title">СПОСОБ ОПЛАТЫ</h4>
+                        <div class="ordering__checkboxes">
+                            <label for="payment-method-01" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="payment-method" id="payment-method-01">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">ОПЛАТА КАРТОЙ</span>
+                                <div class="payment square-checkbox__payment">
+                                    <ul class="payment__list">
+                                        <li class="payment__item">
+                                            <a href="#" class="payment__link">
+                                                <img src="img/dist/mastercard.svg" width="26" height="16" alt="Mastercard">
+                                            </a>
+                                        </li>
+                                        <li class="payment__item">
+                                            <a href="#" class="payment__link">
+                                                <img src="img/dist/visa.svg" width="51" height="16" alt="VISA">
+                                            </a>
+                                        </li>
+                                        <li class="payment__item">
+                                            <a href="#" class="payment__link">
+                                                <img src="img/dist/mir.svg" width="54" height="16" alt="МИР">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </label>
+                            <label for="payment-method-02" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="payment-method" id="payment-method-02">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">ОФОРМИТЬ В РАССРОЧКУ</span>
+                                <span class="square-checkbox__sub">БЕЗ ПЕРЕПЛАТ НА 12 МЕСЯЦЕВ</span>
+                                <img src="img/dist/logotype-tinkoff.svg" width="67" height="9" alt="Tinkoff" class="square-checkbox__img">
+                            </label>
+                            <label for="payment-method-03" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="payment-method" id="payment-method-03">
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">ОПЛАТИТЬ В МАГАЗИНЕ</span>
+                                <span class="square-checkbox__sub">НАЛИЧНЫМИ ИЛИ КАРТОЙ</span>
+                            </label>
+                            <label for="payment-method-04" class="square-checkbox square-checkbox--radio ordering__checkbox">
+                                <input type="radio" class="square-checkbox__input" name="payment-method" id="payment-method-04" disabled>
+                                <span class="square-checkbox__icon"></span>
+                                <span class="square-checkbox__label">ОПЛАТИТЬ БОНУСАМИ</span>
+                                <div class="square-checkbox__bonus">
+                                    на вашем счету <span>30 000 бонусов</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ordering__summary">
+                    <h1>ВАШ ЗАКАЗ</h1>
+                    <div class="ordering__products" data-simplebar>
+                        <div class="ordering__product">
+                            <div class="ordering__img">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci">
+                            </div>
+                            <div class="ordering__block">
+                                <h3 class="ordering__name">Gucci</h3>
+                                <p class="ordering__description">
+                                    Кожанные кросовки Phyton<br>
+                                    Размер: 44<br>
+                                    Цвет: коричневый
+                                </p>
+                            </div>
+                            <span class="ordering__price">230 000</span>
+                        </div>
+                        <div class="ordering__product">
+                            <div class="ordering__img">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci">
+                            </div>
+                            <div class="ordering__block">
+                                <h3 class="ordering__name">Gucci</h3>
+                                <p class="ordering__description">
+                                    Кожаные кроссовки<br>
+                                    Размер: 44<br>
+                                    Цвет: коричневый
+                                </p>
+                            </div>
+                            <span class="ordering__price">230 000</span>
+                        </div>
+                        <div class="ordering__product">
+                            <div class="ordering__img">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci">
+                            </div>
+                            <div class="ordering__block">
+                                <h3 class="ordering__name">Gucci</h3>
+                                <p class="ordering__description">
+                                    Кожаные кроссовки<br>
+                                    Размер: 44<br>
+                                    Цвет: коричневый
+                                </p>
+                            </div>
+                            <span class="ordering__price">230 000</span>
+                        </div>
+                        <div class="ordering__product">
+                            <div class="ordering__img">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci">
+                            </div>
+                            <div class="ordering__block">
+                                <h3 class="ordering__name">Gucci</h3>
+                                <p class="ordering__description">
+                                    Кожаные кроссовки<br>
+                                    Размер: 44<br>
+                                    Цвет: коричневый
+                                </p>
+                            </div>
+                            <span class="ordering__price">230 000</span>
+                        </div>
+                        <div class="ordering__product">
+                            <div class="ordering__img">
+                                <img src="img/dist/product-slide-01.png" alt="Gucci">
+                            </div>
+                            <div class="ordering__block">
+                                <h3 class="ordering__name">Gucci</h3>
+                                <p class="ordering__description">
+                                    Кожаные кроссовки<br>
+                                    Размер: 44<br>
+                                    Цвет: коричневый
+                                </p>
+                            </div>
+                            <span class="ordering__price">230 000</span>
+                        </div>
+                    </div>
+                    <div class="promocode ordering__promocode">
+                        <div class="promocode__inner">
+                            <h4 class="promocode__title">ПРОМОКОД</h4>
+                            <span class="promocode__help">при наличии</span>
+                        </div>
+                        <div class="promocode__control">
+                            <div class="input-group input-group--error promocode__input-group">
+                                <input type="text" id="input-promocode" class="promocode__input input-group__input" value="1234567890" placeholder="Промокод">
+                                <label for="input-promocode" class="input-group__label">Промокод</label>
+                                <span class="input-group__error">не верный промокод</span>
+                            </div>
+                            <a href="#" class="promocode__btn">применить</a>
+                        </div>
+                    </div>
+                    <div class="ordering__inner">
+                        <span class="ordering__text">3 позиции</span>
+                        <span class="ordering__text">244 353 рублей</span>
+                    </div>
+                    <div class="ordering__inner">
+                        <span class="ordering__text">Доставка</span>
+                        <span class="ordering__text">Рассчитывается на следующем шаге</span>
+                    </div>
+                    <div class="ordering__inner">
+                        <span class="ordering__text">Скидка</span>
+                        <span class="ordering__text">0 рублей</span>
+                    </div>
+                    <div class="ordering__inner ordering__inner--summary">
+                        <span class="ordering__heading">Итого:</span>
+                        <span class="ordering__heading">244 353</span>
+                    </div>
+                    <a href="#" class="ordering__btn btn">ПРОДОЛЖИТЬ ОФОРМЛЕНИЕ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of ordering -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

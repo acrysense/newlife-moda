@@ -8,7 +8,7 @@
 
 // CONTENT
 .content
-    margin: 40px 0
+    margin: 20px 0 40px
 
 // SOCIAL
 .social
@@ -78,6 +78,13 @@
         text-align: center
         color: $dark-gray-color
         border-bottom: 1px solid $gray-color
+    &__left
+        position: relative
+    &__right
+        position: relative
+    &__fixed
+        position: relative
+        transform: translate3d(0px, 0px, 0px)
     &__controls
         position: absolute
         top: 0
@@ -86,11 +93,6 @@
         display: flex
         flex-direction: column
         align-items: flex-end
-    &__right
-        position: relative
-    &__fixed
-        position: relative
-        transform: translate3d(0px, 0px, 0px)
     &__wrapper
         display: flex
         align-items: flex-start
@@ -129,7 +131,7 @@
                 stroke: $primary-color
                 fill: $primary-color
     &__block
-        width: calc(100% - 96px)
+        width: calc(100% - 180px)
         &--full
             margin-bottom: 25px
             width: 100%
@@ -146,12 +148,13 @@
         font-weight: normal
     &__description
         font-size: 18px
-        font-weight: 300
+        font-weight: normal
         color: $dark-gray-color
     &__id
         padding: 10px
         font-size: 14px
         font-weight: 500
+        letter-spacing: 1px
         color: $primary-color
         border: 1px solid $primary-color
         span
@@ -208,8 +211,10 @@
         font-size: 10px
         letter-spacing: 2px
     &__title
-        font-size: 18px
-        font-weight: normal
+        font-size: 16px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 1px
     &__location
         margin-top: 50px
     &__address
@@ -220,14 +225,13 @@
     &__address + &__info
         margin-top: 15px
     &__more
-        padding: 12px 10px
+        display: flex
+        align-items: center
+        padding: 12px 30px 12px 12px
         margin-top: 25px
         width: 100%
-        background: $light-grey-color
         &--badge
-            display: flex
-            align-items: center
-            padding: 12px 30px 12px 12px
+            background: $light-grey-color
             &::before
                 content: ''
                 display: block
@@ -240,11 +244,26 @@
                 background-repeat: no-repeat
                 background-size: cover
                 background-position: center center
-        &--yellow
+        &--authentic
             background: $light-yellow-color
+            &::before
+                content: ''
+                display: block
+                margin-right: 14px
+                min-width: 38px
+                min-height: 38px
+                max-width: 38px
+                max-height: 38px
+                background-image: url(../img/dist/sprite.svg#icon-search)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
     &__text
         display: block
         font-size: 14px
+        font-weight: 300
+        b, strong
+            font-weight: normal
         &:first-child
             padding: 4px 0
             &::after
@@ -262,27 +281,29 @@
         &--medium
             font-weight: 500
     &__text + &__text
-        margin-top: 10px
+        margin-top: 8px
     &__inner
-        //overflow: hidden
+        overflow: hidden
         margin-top: 25px
-        //max-height: 100vh
-        //transition: max-height 0.75s
+        max-height: 100vh
+        transition: max-height 0.75s
         &--delimiter
             margin-top: 35px
             padding-top: 35px
             border-top: 1px solid $gray-color
-        //&--hidden
-        //    max-height: 56px
-        //    transition: max-height 0.25s
-        //    .product__trigger:not(.product__trigger--static)
-        //        &::after
-        //            transform: rotate(90deg)
-        //            transition: transform 0.35s
+        &--hidden
+            max-height: 56px
+            transition: max-height 0.25s
+            .product__trigger:not(.product__trigger--static)
+                &::after
+                    transform: rotate(90deg)
+                    transition: transform 0.35s
     &__trigger
         padding: 0
-        font-size: 18px
-        font-weight: normal
+        font-size: 16px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 1px
         background: transparent
         border: 0
         & > svg
@@ -541,8 +562,9 @@
     &__description
         font-size: 12px
 
-// PRODUCT SLIDER
+// GOODS SLIDER
 .goods
+    &--md,
     &--sm
         display: flex
         flex-wrap: wrap
@@ -606,7 +628,7 @@
         font-weight: normal
     &__description
         font-size: 14px
-        font-weight: 300
+        font-weight: normal
         color: $boulder-color
     &__price
         display: flex
@@ -976,7 +998,8 @@
         margin-top: 48px
     &__block
         width: 48%
-    &__input
+    &__input,
+    &__select
         width: 100%
     &__btn
         display: block
@@ -1129,7 +1152,7 @@
         display: flex
         align-items: flex-start
     &__sidebar
-        margin-top: 54px
+        margin-top: 102px
         max-width: 270px
         width: 100%
     &__content
@@ -1153,7 +1176,6 @@
             color: $black-color
             font-weight: bold
     &__goods
-        flex-wrap: wrap
         margin-top: 38px
         .goods
             &__item
@@ -1205,8 +1227,8 @@
     &__link
         display: block
         padding: 0
-        font-size: 14px
-        font-weight: normal
+        font-size: 12px
+        font-weight: 300
         text-align: right
         letter-spacing: 1px
         color: $copyright-light-color
@@ -1521,10 +1543,18 @@
     &__input
         width: 100%
     &__btn
-        margin-left: 30px
+        margin-top: 10px
+        margin-left: 40px
+        font-size: 12px
+        font-weight: normal
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 1px
+        border-bottom: 1px solid $primary-color
 
 // BRANDS
 .brands
+    margin-top: 20px
     &__title
         margin-bottom: 26px
         font-size: 28px
@@ -1612,5 +1642,141 @@
         letter-spacing: 1px
         &::placeholder
             color: $dark-gray-color
+
+// ORDERING
+.ordering
+    border-top: 14px solid #FAFAFA
+    &__wrapper
+        display: flex
+        padding: 40px 30px
+        h1
+            font-size: 18px
+            font-weight: normal
+            text-transform: uppercase
+            letter-spacing: 2px
+    &__content
+        padding-right: 60px
+        width: 100%
+    &__list
+        display: flex
+        align-items: center
+    &__item
+        &--active
+            .ordering__stage
+                color: $black-color
+                border-bottom: 2px solid $black-color
+    &__item + &__item
+        margin-left: 30px
+    &__stage
+        padding-bottom: 4px
+        font-size: 18px
+        font-weight: normal
+        text-transform: uppercase
+        letter-spacing: 2px
+        color: $light-gray-color
+        border-bottom: 2px solid transparent
+    &__body
+        margin-top: 66px
+    &__group
+        display: flex
+        align-items: center
+    &__group + &__group
+        margin-top: 50px
+    &__input-group
+        width: 100%
+    &__input-group + &__input-group
+        margin-left: 30px
+    &__input
+        width: 100%
+    &__title
+        font-size: 16px
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 2px
+    &__summary
+        padding-left: 40px
+        max-width: 480px
+        width: 100%
+        border-left: 1px solid $light-gray-color
+    &__products
+        padding-right: 20px
+        margin-top: 30px
+        max-height: 286px
+    &__product
+        display: flex
+    &__product + &__product
+        margin-top: 20px
+    &__img
+        overflow: hidden
+        margin-right: 20px
+        max-width: 82px
+        max-height: 82px
+        width: 100%
+        height: 100%
+        img
+            display: block
+            width: 82px
+            height: 82px
+            object-fit: cover
+    &__name
+        font-family: $cormorant
+        font-size: 24px
+        font-weight: normal
+    &__description
+        margin-top: 4px
+        font-size: 12px
+        font-weight: normal
+        color: $dark-gray-color
+    &__price
+        display: block
+        margin-left: auto
+        font-size: 18px
+        font-weight: bold
+        white-space: nowrap
+    &__promocode
+        margin: 60px 0
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__inner + &__inner
+        margin-top: 20px
+    &__text
+        display: block
+        font-size: 14px
+        font-weight: normal
+    &__heading
+        display: block
+        font-size: 18px
+        font-weight: bold
+        letter-spacing: 1px
+    &__btn
+        margin-top: 38px
+        width: 100%
+    &__data
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 14px 12px
+        margin: 10px 0 30px
+        width: 100%
+        border: 1px solid $light-gray-color
+    &__value
+        display: block
+        font-size: 14px
+        font-weight: normal
+        letter-spacing: 2px
+        color: $boulder-color
+    &__change
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 2px
+    &__checkboxes
+        margin-top: 28px
+    &__checkbox
+        padding: 5px 0
+    &__checkbox + &__checkbox
+        margin-top: 20px
 
 @import "media" // Always at the end

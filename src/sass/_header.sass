@@ -30,7 +30,9 @@
 
 .header
     position: relative
-    height: 180px
+    height: 162px
+    &--fixed
+        height: auto!important
     &__wrap
         position: relative
         top: 0
@@ -51,6 +53,17 @@
         position: absolute
         left: 50%
         transform: translateX(-50%)
+    &__back
+        display: block
+        padding: 0
+        width: 30px
+        height: 30px
+        background-image: url(../img/dist/sprite.svg#icon-arrow-back)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        &:focus
+            outline: none
 
 .subheader
     position: relative
@@ -818,12 +831,12 @@
 @media (min-width: 1024px)
     .header
         &__wrapper
-            padding: 35px 0
+            padding: 32px 0
         &__control
             padding: 5px 0
     .subheader
         &__wrapper--top
-            padding: 16px 0
+            padding: 10px 0
     .section
         &--mobile
             display: none
@@ -1009,6 +1022,12 @@
         display: none
 
 @media (min-width: 768px) and (max-width: 1023px)
+    .header
+        &--fixed
+            padding: 10px 0
+        &__back
+            width: 18px
+            height: 18px
     .search
         &__icon
             top: 19px
@@ -1072,6 +1091,11 @@
 
 @media (max-width: 767px)
     .header
+        &--fixed
+            padding: 12px 0
+        &__back
+            width: 14px
+            height: 14px
         .icons__item
             &:nth-child(2)
                 display: none
@@ -1087,6 +1111,9 @@
         &__top
             .logotype
                 margin-left: auto
+    .icons
+        &__item + &__item
+            margin-left: 15px
     .section
         &__link
             font-size: 11px

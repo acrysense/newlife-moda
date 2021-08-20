@@ -35,12 +35,28 @@
         &__content
             margin-left: 0
 
+    // PRODUCT
     .product
         &__more
             &--badge
                 padding: 12px
                 &::before
                     display: none
+
+    // ORDERING
+    .ordering
+        &__wrapper
+            flex-direction: column
+        &__content
+            padding-right: 0
+        &__summary
+            padding-left: 0
+            margin-top: 30px
+            max-width: 100%
+            border-left: 0
+        &__inner
+            &--summary
+                display: none
 
 @media (min-width: 992px) and (max-width: 1199px)
     // PRODUCT
@@ -85,11 +101,6 @@
                 margin-top: 20px
 
 @media (min-width: 992px)
-    // CATALOG
-    .catalog
-        &__mobile-btn
-            display: none
-    
     // PRODUCT
     .product
         &__wrapper
@@ -97,10 +108,201 @@
                 display: none
     .product__slider
         display: none
+    
+    // GOODS
+    .goods
+        &--sm
+            .goods__item
+                margin-right: 5%
+                width: 30%
+                &:nth-child(3n)
+                    margin-right: 0
+                &:nth-child(n + 4)
+                    margin-top: 50px
 
-    // MOBILE SORT
-    .mobile-sort
+@media (max-width: 991px)
+    // AUTH
+    .auth
+        &__left
+            display: none
+        &__right
+            width: 100%
+    
+    // PRODUCT
+    .product
+        flex-direction: column
+        &__left,
+        &__right,
+        &__fixed
+            width: 100%
+        &__right
+            margin-top: 10px
+        &__gallery
+            display: none
+        &__wrapper--mobile
+            align-items: center
+            .product__id
+                margin-top: 0
+        &__wrapper--desktop
+            .product__id,
+            .product__block--full
+                display: none
+    
+    // SELECTED FILTERS
+    .selected-filters
         display: none
+
+    // RESERVE
+    .reserve
+        &__item
+            &--disabled
+                .reserve__timing
+                    span
+                        &:first-child
+                            display: block
+        &__timing
+            span
+                margin-left: 0
+                &:first-child
+                    display: none
+
+@media (min-width: 768px) and (max-width: 991px)
+    // PRODUCT
+    .product
+        &__wrapper
+            &--mobile-wrap
+                align-items: flex-start
+                flex-direction: column
+        &__block
+            width: 100%
+            &--full
+                margin-top: 25px
+                margin-bottom: 0
+                order: 1
+                width: fit-content
+        &__status
+            padding: 6.5px 15px
+        &__id
+            margin-top: 25px
+            order: 2
+        &__name
+            font-size: 36px
+        &__bid
+            margin-top: 25px
+        &__help + &__info
+            margin-top: 25px
+        &__text:not(:first-child)
+            font-size: 12px
+        &__subtitle,
+        &__subdescription
+            font-size: 12px
+        &__item
+            font-size: 12px
+    
+    .product__slider
+        .gallery-thumbs
+            position: absolute
+            z-index: 10
+            width: 63px
+            height: 325px
+        .gallery-thumbs .swiper-slide
+            width: 63px
+            height: 63px
+        .swiper-img
+            picture img
+                width: 45px
+                height: 45px
+                opacity: 0.75
+    
+    // CATALOG
+    .catalog
+        &__content
+            margin-left: 20px
+
+    // GOODS
+    .goods
+        &--sm
+            .goods__item
+                margin-right: 2%
+                width: 48%
+                &:nth-child(2n)
+                    margin-right: 0
+                &:nth-child(n + 3)
+                    margin-top: 50px
+
+    // STATE
+    .state
+        &__item
+            font-size: 10px
+
+    // BANNERS
+    .banners
+        margin-top: 10px
+        &__item
+            &:first-child
+                padding-bottom: 385px
+                .banners__content
+                    max-width: 638px
+            &:nth-child(n + 2)
+                margin-top: 18px
+        &__title
+            font-size: 72px
+        &__subtitle
+            font-size: 54px
+        &__title + &__description,
+        &__subtitle + &__description
+            margin-top: 16px
+        &__description
+            font-size: 28px
+
+    // CTA
+    .cta
+        &__title
+            font-size: 26px
+        &__group + &__group
+            margin-left: auto
+            max-width: 335px
+    .cta-form
+        &__control
+            min-width: 100%
+
+    // BRANDS
+    .brands
+        &__title
+            font-size: 20px
+        &__subtitle
+            font-size: 18px
+        &__img + &__img
+            margin-left: 1.33%
+        &__img
+            width: 24%
+            &:nth-child(4n + 1)
+                margin-left: 0
+            &:nth-child(n + 5)
+                margin-top: 25px
+        &__list + &__list
+            margin-top: 60px
+        &__item
+            width: 33.33%
+            &:nth-child(n + 4)
+                margin-top: 22px
+
+@media (min-width: 768px)
+    // GOODS
+    .goods
+        &--md
+            .goods__item
+                margin-right: 5%
+                width: 30%
+                &:nth-child(3n)
+                    margin-right: 0
+                &:nth-child(n + 4)
+                    margin-top: 50px
+
+    // CATALOG
+    .catalog
+        &__mobile-btn
+            display: none
     
     // FILTER
     .filter
@@ -138,13 +340,43 @@
                     &::after
                         transform: translateY(-50%) rotate(90deg)
 
-@media (max-width: 991px)
-    // AUTH
-    .auth
-        &__left
+    // MOBILE SORT
+    .mobile-sort
+        display: none
+
+    // CABINET
+    .cabinet
+        &__item
+            &--accent
+                display: none
+
+@media (max-width: 767px)
+    .content
+        margin: 20px 0
+
+    // PRODUCT
+    .product
+        &__controls
+            right: 10px
+        &__slider
+            margin-top: 24px
+        &__copyright
             display: none
-        &__right
+        &__block
             width: 100%
+            &--full
+                margin-top: 25px
+                margin-bottom: 0
+                order: 1
+                width: fit-content
+        &__status
+            padding: 6.5px 15px
+        &__id
+            margin-top: 25px
+            order: 2
+    .product__slider
+        .gallery-thumbs
+            display: none
     
     // CATALOG
     .catalog
@@ -178,30 +410,6 @@
             border-radius: 0
         &__mobile-btn + &__mobile-btn
             border-left: 1px solid $light-gray-color
-    
-    // PRODUCT
-    .product
-        flex-direction: column
-        &__left,
-        &__right,
-        &__fixed
-            width: 100%
-        &__right
-            margin-top: 10px
-        &__gallery
-            display: none
-        &__wrapper--mobile
-            align-items: center
-            .product__id
-                margin-top: 0
-        &__wrapper--desktop
-            .product__id,
-            .product__block--full
-                display: none
-    
-    // SELECTED FILTERS
-    .selected-filters
-        display: none
 
     // MOBILE SORT
     .mobile-sort
@@ -369,172 +577,9 @@
         &__button + &__button
             margin-left: 3%
 
-    // RESERVE
-    .reserve
-        &__item
-            &--disabled
-                .reserve__timing
-                    span
-                        &:first-child
-                            display: block
-        &__timing
-            span
-                margin-left: 0
-                &:first-child
-                    display: none
- 
-@media (min-width: 768px) and (max-width: 991px)
-    // PRODUCT
-    .product
-        &__wrapper
-            &--mobile-wrap
-                align-items: flex-start
-                flex-direction: column
-        &__block
-            width: 100%
-            &--full
-                margin-top: 25px
-                margin-bottom: 0
-                order: 1
-                width: fit-content
-        &__status
-            padding: 6.5px 15px
-        &__id
-            margin-top: 25px
-            order: 2
-        &__name
-            font-size: 36px
-        &__bid
-            margin-top: 25px
-        &__help + &__info
-            margin-top: 25px
-        &__text:not(:first-child)
-            font-size: 12px
-        &__subtitle,
-        &__subdescription
-            font-size: 12px
-        &__item
-            font-size: 12px
-    
-    .product__slider
-        .gallery-thumbs
-            position: absolute
-            z-index: 10
-            width: 63px
-            height: 325px
-        .gallery-thumbs .swiper-slide
-            width: 63px
-            height: 63px
-        .swiper-img
-            picture img
-                width: 45px
-                height: 45px
-                opacity: 0.75
-    
-    // STATE
-    .state
-        &__item
-            font-size: 10px
-
-    // BANNERS
-    .banners
-        margin-top: 10px
-        &__item
-            &:first-child
-                padding-bottom: 385px
-                .banners__content
-                    max-width: 638px
-            &:nth-child(n + 2)
-                margin-top: 18px
-        &__title
-            font-size: 72px
-        &__subtitle
-            font-size: 54px
-        &__title + &__description,
-        &__subtitle + &__description
-            margin-top: 16px
-        &__description
-            font-size: 28px
-
-    // CTA
-    .cta
-        &__title
-            font-size: 26px
-        &__group + &__group
-            margin-left: auto
-            max-width: 335px
-    .cta-form
-        &__control
-            min-width: 100%
-
-    // BRANDS
-    .brands
-        &__title
-            font-size: 20px
-        &__subtitle
-            font-size: 18px
-        &__img + &__img
-            margin-left: 1.33%
-        &__img
-            width: 24%
-            &:nth-child(4n + 1)
-                margin-left: 0
-            &:nth-child(n + 5)
-                margin-top: 25px
-        &__list + &__list
-            margin-top: 60px
-        &__item
-            width: 33.33%
-            &:nth-child(n + 4)
-                margin-top: 22px
-
-@media (min-width: 768px)
-    // GOODS
-    .goods--sm
-        .goods__item
-            margin-right: 5%
-            width: 30%
-            &:nth-child(3n)
-                margin-right: 0
-            &:nth-child(n + 4)
-                margin-top: 50px
-
-    // CABINET
-    .cabinet
-        &__item
-            &--accent
-                display: none
-
-@media (max-width: 767px)
-    .content
-        margin: 20px 0
-
-    // PRODUCT
-    .product
-        &__controls
-            right: 10px
-        &__slider
-            margin-top: 24px
-        &__copyright
-            display: none
-        &__block
-            width: 100%
-            &--full
-                margin-top: 25px
-                margin-bottom: 0
-                order: 1
-                width: fit-content
-        &__status
-            padding: 6.5px 15px
-        &__id
-            margin-top: 25px
-            order: 2
-    .product__slider
-        .gallery-thumbs
-            display: none
-    
     // GOODS
     .goods
+        &--md,
         &--sm
             .goods__item
                 max-width: 100%
@@ -653,12 +698,15 @@
     .banners
         &__item
             &:first-child
-                padding-bottom: 298px
+                padding-bottom: 100%
                 .banners__content
                     max-width: 75%
             &:nth-child(n + 2)
-                padding-bottom: 234px
+                padding-bottom: 49%
+                width: 49%
+            &:last-child
                 width: 100%
+                padding-bottom: 50%
         &__item + &__item
             margin-top: 12px
         &__title
@@ -821,6 +869,57 @@
             .swiper-slide
                 img
                     object-fit: cover
+    
+    // ORDERING
+    .ordering
+        border-top: 6px solid #FAFAFA
+        &__wrapper
+            padding: 18px 2px
+            h1
+                font-size: 14px
+        &__list
+            justify-content: center
+        &__stage
+            font-size: 10px
+        &__body
+            margin-top: 50px
+        &__group
+            flex-wrap: wrap
+        &__group + &__group
+            margin-top: 40px
+        &__input-group + &__input-group
+            margin-left: 0
+            margin-top: 40px
+        &__products
+            margin-top: 20px
+        &__product + &__product
+            margin-top: 8px
+        &__img
+            margin-right: 14px
+            max-width: 68px
+            max-height: 68px
+            img
+                width: 68px
+                height: 68px
+        &__name
+            font-size: 16px
+        &__description
+            font-size: 10px
+        &__price
+            font-size: 14px
+        &__promocode
+            margin: 30px 0
+        &__inner
+            .ordering__text + .ordering__text
+                max-width: 60%
+                text-align: right
+        &__text
+            font-size: 12px
+        &__heading
+            font-size: 14px
+        &__btn
+            margin-top: 32px
+    
     // GOODS
     .goods
         &__item
