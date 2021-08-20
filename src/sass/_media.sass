@@ -27,6 +27,11 @@
         margin-right: 12.5px
         margin-left: 12.5px
 
+@media (min-width: 1024px)
+    .ordering
+        &__total
+            display: none
+
 @media (max-width: 1023px)
     // CABINET
     .cabinet
@@ -808,6 +813,24 @@
         &__control
             max-width: 100%
 
+    // ORDERING
+    .ordering
+        &__checkbox
+            .square-checkbox
+                &__icon
+                    margin-right: 10px
+                    min-width: 18px
+                    min-height: 18px
+                    max-width: 18px
+                    max-height: 18px
+                    background-size: 12px
+                &__label
+                    font-size: 14px
+        &__value
+            font-size: 12px
+        &__change
+            font-size: 12px
+
 @media (min-width: 576px) and (max-width: 991px)
     .content
         margin-right: 11.5px
@@ -890,6 +913,13 @@
         &__input-group + &__input-group
             margin-left: 0
             margin-top: 40px
+        &__checkbox
+            flex-wrap: wrap
+            padding: 0
+            .square-checkbox
+                &__label
+                    margin: 10px 0
+                    width: calc(100% - 18px - 10px)
         &__products
             margin-top: 20px
         &__product + &__product
@@ -916,9 +946,21 @@
         &__text
             font-size: 12px
         &__heading
+            margin-left: 10px
             font-size: 14px
+            font-weight: 500
+            letter-spacing: 0
         &__btn
             margin-top: 32px
+        &__title
+            font-size: 14px
+            font-weight: normal
+        &__value
+            font-size: 10px
+        &__change
+            font-size: 10px
+        &__total
+            margin: 26px -12px 0
     
     // GOODS
     .goods

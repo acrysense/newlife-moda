@@ -379,11 +379,6 @@ svg path,
                 font-size: 14px
     &--radio
         .square-checkbox
-            &__input
-                &:checked ~ .square-checkbox__icon
-                    background-image: none
-                    &::before
-                        background: $black-color
             &__icon
                 position: relative
                 margin-right: 20px
@@ -391,17 +386,8 @@ svg path,
                 min-height: 24px
                 max-width: 24px
                 max-height: 24px
-                background-size: 12px
+                background-size: 16px
                 border: 1px solid $black-color
-                &::before
-                    content: ''
-                    display: block
-                    position: absolute
-                    top: 50%
-                    left: 50%
-                    transform: translate(-50%, -50%)
-                    width: 18px
-                    height: 18px
             &__label
                 font-size: 18px
                 color: $black-color
@@ -412,6 +398,16 @@ svg path,
             border: 1px solid $black-color
             & + .square-checkbox__label
                 color: $black-color
+    &__input[disabled]
+        cursor: none
+        & ~ .square-checkbox__icon,
+        & ~ .square-checkbox__label,
+        & ~ .square-checkbox__help,
+        & ~ .square-checkbox__sub,
+        & ~ .square-checkbox__payment,
+        & ~ .square-checkbox__img,
+        & ~ .square-checkbox__bonus
+            opacity: 0.2
     &__icon
         display: block
         margin-right: 10px
@@ -608,3 +604,27 @@ svg path,
             min-height: 18px
             max-width: 18px
             max-height: 18px
+
+@media (max-width: 767px)
+    .square-checkbox
+        &__help
+            font-size: 14px
+        &__help,
+        &__sub
+            margin-left: 10px
+        &__bonus
+            margin-left: 10px
+            span
+                font-size: 14px
+
+@media (max-width: 575px)
+    .square-checkbox
+        &__help
+            margin-left: 0
+        &__sub
+            margin-left: 0
+        &__payment,
+        &__img
+            display: none
+        &__bonus
+            margin-left: 0
