@@ -44,7 +44,6 @@
         display: flex
         align-items: center
         justify-content: space-between
-        padding: 10px 0
     &__control
         display: flex
         align-items: center
@@ -67,7 +66,6 @@
 .subheader
     position: relative
     &__wrapper
-        position: relative
         display: flex
         align-items: center
         justify-content: space-between
@@ -124,8 +122,7 @@
     &__item
         &:hover
             & > .categories
-                visibility: visible
-                opacity: 1
+                display: block
     &__link
         margin: 5px
         letter-spacing: 1px
@@ -249,8 +246,7 @@
             .header-brand__link
                 border-bottom: 1px solid $primary-color
             & > .categories
-                visibility: visible
-                opacity: 1
+                display: block
     &__link
         padding: 5px 15px
         font-size: 12px
@@ -702,16 +698,14 @@
     right: 0
     left: 0
     z-index: 101
-    visibility: hidden
-    opacity: 0
+    display: none
     width: 100%
     background: $white-color
-    transition: all 0.4s
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.09)
     &:hover
-        visibility: visible
-        opacity: 1
+        display: block
     &--nav
-        top: 47px
+        top: 153px
         .categories__wrapper
             padding: 25px 0 25px 5px
     &__wrapper
@@ -836,11 +830,10 @@
     .header
         &__wrapper
             padding: 32px 0
+            &--bottom
+                padding: 8.5px 0
         &__control
             padding: 5px 0
-    .subheader
-        &__wrapper--top
-            padding: 10px 0
     .section
         &--mobile
             display: none
@@ -865,9 +858,11 @@
 @media (max-width: 1023px)
     .header:not(.header--fixed)
         height: 56px
-    .subheader
-        &__wrapper--top
-            display: none
+    .header
+        &__wrapper
+            padding: 10px 0
+            &--bottom
+                display: none
     .mobile-menu
         display: flex
         align-items: flex-start
@@ -1103,6 +1098,8 @@
         .icons__item
             &:nth-child(2)
                 display: none
+    .subheader
+        display: none
     .top-promo
         padding: 15px 0
         &__wrapper
@@ -1127,9 +1124,6 @@
             margin: 0
             font-size: 11px
             border-bottom: 1px solid $light-grey-color
-    .subheader
-        &__wrapper--bottom
-            display: none
     .search
         top: 0
         overflow-y: scroll
