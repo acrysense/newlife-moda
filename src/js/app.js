@@ -175,16 +175,15 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    //if (subCategoriesBack) {
-    //    subCategoriesBack.addEventListener('click', (event) => {
-    //        event.preventDefault()
+    if (subCategoriesBack) {
+        subCategoriesBack.addEventListener('click', (event) => {
+            event.preventDefault()
 
-    //        let itemData = item.getAttribute('data-mobile-subitem')
-    //        subCategories.classList.remove('subcategories--active')
-    //        submenu.classList.add('submenu--active')
-    //        submenu.querySelector('.submenu__list[data-mobile-category="' + itemData + '"').classList.add('submenu__list--active')
-    //    })
-    //}
+            subCategories.classList.remove('subcategories--active')
+            subCategories.querySelectorAll('.subcategories__list').forEach((child) => child.classList.remove('subcategories__list--active'))
+            submenu.classList.add('submenu--active')
+        })
+    }
 
     // SEARCH
     const searchBtn = document.querySelector('.search-btn')
