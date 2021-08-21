@@ -122,9 +122,12 @@
         display: flex
         align-items: center
     &__item
+        padding: 6px 0
         &:hover
             & > .categories
-                display: block
+                //display: block
+                visibility: visible
+                opacity: 1
     &__link
         margin: 5px
         letter-spacing: 1px
@@ -248,7 +251,9 @@
             .header-brand__link
                 border-bottom: 1px solid $primary-color
             & > .categories
-                display: block
+                //display: block
+                visibility: visible
+                opacity: 1
     &__link
         padding: 5px 15px
         font-size: 12px
@@ -700,13 +705,18 @@
     right: 0
     left: 0
     z-index: 101
-    display: none
+    //display: none
+    visibility: hidden
+    opacity: 0
     width: 100%
     background: $white-color
+    transition: all 0.4s
     &:hover
-        display: block
+        //display: block
+        visibility: visible
+        opacity: 1
     &--nav
-        top: 50px
+        top: 47px
         .categories__wrapper
             padding: 25px 0 25px 5px
     &__wrapper
