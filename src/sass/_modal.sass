@@ -1,22 +1,26 @@
 .modal
     position: relative
-    display: none
-    opacity: 0
-    transition: all 0.4s
+    visibility: hidden
+    transition: all 0.3s ease-in-out
     &--active
-        display: block
-        opacity: 1
+        visibility: visible
+        .auth,
+        .modal__wrapper
+            opacity: 1
+            transform: translate(-50%, -50%) scale(1)
     &__wrapper
         position: fixed
         top: 50%
         left: 50%
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, 0) scale(0)
         z-index: 1010
         padding: 35px 30px
         max-width: 680px
         max-height: 70vh
         width: 100%
         background: $white-color
+        opacity: 0
+        transition: all 0.3s ease-in-out
         &--cream
             background: #FBFAF8
         &--center
