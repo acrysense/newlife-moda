@@ -122,10 +122,8 @@
         display: flex
         align-items: center
     &__item
-        padding: 6px 0
         &:hover
             & > .categories
-                //display: block
                 visibility: visible
                 opacity: 1
     &__link
@@ -251,7 +249,6 @@
             .header-brand__link
                 border-bottom: 1px solid $primary-color
             & > .categories
-                //display: block
                 visibility: visible
                 opacity: 1
     &__link
@@ -705,14 +702,12 @@
     right: 0
     left: 0
     z-index: 101
-    //display: none
     visibility: hidden
     opacity: 0
     width: 100%
     background: $white-color
     transition: all 0.4s
     &:hover
-        //display: block
         visibility: visible
         opacity: 1
     &--nav
@@ -850,11 +845,11 @@
         &--mobile
             display: none
     .nav
-        &__item--accent
-            .nav__link
-                font-weight: 500
-        &__item + &__item
-            margin-left: 10px
+        &__item
+            padding: 6px 5px
+            &--accent
+                .nav__link
+                    font-weight: 500
         &__link
             font-size: 12px
             font-weight: normal
