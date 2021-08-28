@@ -267,6 +267,14 @@
         &__group + &__group
             margin-left: auto
             max-width: 335px
+        &__block
+            width: 100%
+            &:nth-child(2n)
+                margin-left: 0
+        &__block + &__block
+            margin-top: 24px
+        &__value
+            margin: 0 auto
     .cta-form
         &__control
             min-width: 100%
@@ -752,14 +760,10 @@
         &__title
             margin-bottom: 25px
             font-size: 26px
-        &__block
-            max-width: 50%
-            &:nth-child(2n)
-                margin-left: 0
         &__value
             font-size: 16px
         &__copyright
-            max-width: 254px
+            max-width: 270px
             font-size: 12px
     .cta-form
         &__control
@@ -773,7 +777,7 @@
         &__title
             font-size: 26px
         &__description
-            font-size: 14px
+            font-size: 12px
         &__link
             font-size: 14px
 
@@ -1081,6 +1085,14 @@
 
     // CTA
     .cta
+        &__block
+            width: 100%
+            &:nth-child(2n)
+                margin-left: 0
+        &__block + &__block
+            margin-top: 24px
+        &__value
+            margin: 0 auto
         &__btn
             padding: 12px
 

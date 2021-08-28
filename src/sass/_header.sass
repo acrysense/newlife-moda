@@ -124,10 +124,11 @@
             & > .categories
                 display: block
     &__link
-        margin: 5px
+        padding: 4px 0
+        margin: 1px 5px
         letter-spacing: 1px
         text-transform: uppercase
-        border-bottom: 1px solid transparent
+        border-bottom: 2px solid transparent
         transition: border 0.5s
         &:hover,
         &:focus
@@ -399,22 +400,6 @@
         align-items: center
         padding: 0 20px
         margin-top: 16.5px
-        //&::before
-        //    content: ''
-        //    position: absolute
-        //    top: 28px
-        //    right: 249px
-        //    z-index: 1
-        //    display: block
-        //    min-width: 24px
-        //    min-height: 24px
-        //    max-width: 24px
-        //    max-height: 24px
-        //    background-color: #fff
-        //    background-image: url(../img/dist/sprite.svg#icon-search)
-        //    background-repeat: no-repeat
-        //    background-size: cover
-        //    background-position: center center
     &__input
         padding: 30px 20px 30px 44px
         width: 100%
@@ -758,7 +743,6 @@
     &__link
         font-size: 14px
         font-weight: 300
-        //letter-spacing: 1px
     &__more
         font-size: 12px
         text-decoration: underline
@@ -788,7 +772,7 @@
             &:hover,
             &:focus
                 .nav__link
-                    border-bottom: 1px solid $primary-color
+                    border-bottom: 2px solid $primary-color
 
 @media (max-width: 1199px)
     .categories
