@@ -69,6 +69,7 @@ svg path,
     padding: 0 10px
     margin: 0 auto
     max-width: 1200px
+    width: 100%
 
 .link
     padding: 10px 20px
@@ -120,6 +121,29 @@ svg path,
         height: 14px
         vertical-align: middle
         background-image: url(../img/dist/sprite.svg#icon-gift-box)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+
+.btn-delete
+    display: block
+    padding: 0
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $brown-color
+    background: transparent
+    border: 0
+    &::before
+        content: ''
+        display: inline-block
+        margin-top: -2px
+        margin-right: 10px
+        width: 14px
+        height: 14px
+        vertical-align: middle
+        background-image: url(../img/dist/sprite.svg#icon-delete)
         background-repeat: no-repeat
         background-size: cover
         background-position: center center
@@ -327,7 +351,7 @@ svg path,
     cursor: pointer
     transition: border 0.4s
     &.is-selected
-        color: $asphalt-color
+        color: $primary-color
     &:focus
         outline: none
         border-bottom: 1px solid $primary-color
@@ -395,10 +419,11 @@ svg path,
                 color: $black-color
     &__input
         display: none
-        &:checked ~ .square-checkbox__icon
-            background-image: url(../img/dist/sprite.svg#icon-checkbox-mark-black)
-            border: 1px solid $black-color
-            & + .square-checkbox__label
+        &:checked 
+            & ~ .square-checkbox__icon
+                background-image: url(../img/dist/sprite.svg#icon-checkbox-mark-black)
+                border: 1px solid $black-color
+            & ~ .square-checkbox__label
                 color: $black-color
     &__input[disabled]
         cursor: none
@@ -425,7 +450,6 @@ svg path,
     &__label
         display: block
         font-size: 12px
-        //font-weight: normal
         font-weight: 300
         text-align: left
         color: $copyright-color
@@ -503,6 +527,118 @@ svg path,
         text-align: left
         color: $primary-color
         user-select: none
+
+.size-checkbox
+    display: flex
+    align-items: center
+    margin: 0
+    cursor: pointer
+    &__input
+        display: none
+        &:checked ~ .size-checkbox__label
+            color: $primary-color
+            background: $light-yellow-color
+    &__input[disabled]
+        cursor: none
+        & ~ .size-checkbox__label
+            opacity: 0.2
+    &__label
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 35px
+        min-height: 35px
+        max-width: 35px
+        max-height: 35px
+        font-size: 12px
+        font-weight: normal
+        color: $dark-gray-color
+        background: $background-color
+
+.data-checkbox
+    display: flex
+    align-items: center
+    margin: 0
+    cursor: pointer
+    &__input
+        display: none
+        &:checked ~ .data-checkbox__label
+            color: $primary-color
+            background: $light-yellow-color
+            border: 1px solid transparent
+    &__input[disabled]
+        cursor: none
+        & ~ .data-checkbox__label
+            background: $background-color
+            border: 1px solid $background-color
+    &__label
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 90px
+        min-height: 36px
+        max-width: 90px
+        max-height: 36px
+        font-size: 12px
+        font-weight: normal
+        color: $boulder-color
+        background: transparent
+        border: 1px solid $gray-color
+
+.form-of-payment
+    display: flex
+    align-items: center
+    margin: 0
+    cursor: pointer
+    &__input
+        display: none
+        &:checked ~ .form-of-payment__label
+            color: $primary-color
+            border: 1px solid $primary-color
+    &__input[disabled]
+        cursor: none
+        & ~ .form-of-payment__label
+            background: $background-color
+            border: 1px solid $background-color
+    &__label
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: 15.5px 10px
+        width: 100%
+        font-size: 14px
+        font-weight: 500
+        color: $boulder-color
+        background: transparent
+        border: 1px solid $gray-color
+    &__info
+        position: relative
+        margin-left: 10px
+        &:hover
+            .form-of-payment__text
+                display: block
+    &__icon
+        display: block
+        width: 12px
+        height: 12px
+        background-image: url(../img/dist/sprite.svg#icon-info-grey)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+    &__text
+        position: absolute
+        bottom: -4px
+        z-index: 1
+        transform: translate(-50%, 100%)
+        display: none
+        padding: 8px
+        min-width: 275px
+        font-size: 12px
+        font-weight: normal
+        color: $copyright-color
+        background: $white-color
+        border: 1px solid $copyright-color
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1)
 
 .sort
     position: relative
@@ -602,6 +738,8 @@ svg path,
     .input-group
         &__input
             font-size: 16px
+    .select
+        font-size: 16px
 
 @media (max-width: 991px)
     .close-btn

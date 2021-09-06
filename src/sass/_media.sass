@@ -171,6 +171,14 @@
                 &:first-child
                     display: none
 
+    // ENTRIES
+    .entries
+        &__inner
+            flex-direction: column
+        &__form-of-payment + &__form-of-payment
+            margin-top: 10px
+            margin-left: 0
+
 @media (min-width: 768px) and (max-width: 991px)
     // PRODUCT
     .product
@@ -835,6 +843,41 @@
         &__change
             font-size: 12px
 
+    // ENTRIES
+    .entry-payout
+        &__info
+            align-items: flex-start
+            flex-direction: column
+            padding: 0
+            background: transparent
+        &__block
+            padding: 14px 12px
+            width: 100%
+            &--primary
+                color: $white-color
+                background: $black-color
+            &--shop
+                border: 1px solid $primary-color
+                .entry-payout__help
+                    max-width: 120px
+                    width: 100%
+        &__block + &__block
+            margin-top: 10px
+        &__summary
+            align-items: flex-start
+            flex-direction: column
+            .entry-payout__help + .entry-payout__sum
+                margin-top: 6px
+                margin-left: 0
+        &__table
+            table-layout: fixed
+            background: $light-grey-color
+            tbody
+                display: block
+                padding-left: 10px
+                width: 100%
+                overflow-x: auto
+
 @media (min-width: 576px) and (max-width: 991px)
     .content
         margin-right: 11.5px
@@ -1051,6 +1094,8 @@
     // CABINET
     .cabinet
         margin: 25px 0
+        &__inner
+            margin-bottom: 30px
     
     // PROFILE
     .profile
@@ -1096,6 +1141,17 @@
         &__btn
             padding: 12px
 
+    // PERSONAL OFFERS
+    .personal-offers
+        &__delete
+            background-size: 14px
+        &__title
+            font-size: 14px
+        &__description,
+        &__status,
+        &__date
+            font-size: 10px
+      
 @media (max-width: 459px)
     // PRODUCT
     .product

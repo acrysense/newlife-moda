@@ -1323,7 +1323,7 @@
                         <li class="cabinet__item">
                             <button class="cabinet__button">запись на оценку</button>
                         </li>
-                        <li class="cabinet__item">
+                        <li class="cabinet__item cabinet__item--active">
                             <button class="cabinet__button">запись на выплату</button>
                         </li>
                         <li class="cabinet__item">
@@ -1332,7 +1332,7 @@
                         <li class="cabinet__item">
                             <button class="cabinet__button">мои договоры</button>
                         </li>
-                        <li class="cabinet__item cabinet__item--active">
+                        <li class="cabinet__item">
                             <button class="cabinet__button">мой профиль</button>
                         </li>
                         <li class="cabinet__item">
@@ -1365,12 +1365,141 @@
                     </ul>
                     <div class="cabinet__content"></div>
                     <div class="cabinet__content"></div>
+                    <div class="cabinet__content cabinet__content--active"> <!-- Запись на выплату -->
+                        <div class="cabinet__inner cabinet__inner--sm">
+                            <h2 class="cabinet__title">ЗАПИСЬ НА ВЫПЛАТУ</h2>
+                        </div>
+                        <div class="entries entry-payout">
+                            <div class="entry-payout__info">
+                                <div class="entry-payout__block entry-payout__block--primary">
+                                    <span class="entry-payout__help">К выплате доступно</span>
+                                    <span class="entry-payout__sum entry-payout__sum--big">13.124 ₽</span>
+                                </div>
+                                <div class="entry-payout__block entry-payout__block--shop">
+                                    <span class="entry-payout__help">КУЗНЕЧНЫЙ</span>
+                                    <span class="entry-payout__sum">10.124 ₽</span>
+                                </div>
+                                <div class="entry-payout__block entry-payout__block--shop">
+                                    <span class="entry-payout__help">САДОВАЯ</span>
+                                    <span class="entry-payout__sum">3.000 ₽</span>
+                                </div>
+                            </div>
+                            <h3 class="entries__title">ВЫБЕРИТЕ ФОРМУ ВЫПЛАТЫ</h3>
+                            <div class="entries__inner">
+                                <label for="form-of-payment-01" class="form-of-payment entries__form-of-payment">
+                                    <input type="radio" class="form-of-payment__input" name="form-of-payment" id="form-of-payment-01">
+                                    <span class="form-of-payment__label">
+                                        <span>Перевод по реквизитам  – 1,5%</span>
+                                        <span class="form-of-payment__info">
+                                            <span class="form-of-payment__icon"></span>
+                                            <span class="form-of-payment__text">Для перевода денег на рассчетный счет необходимо сообщить реквизиты при посещении магазина</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label for="form-of-payment-02" class="form-of-payment entries__form-of-payment">
+                                    <input type="radio" class="form-of-payment__input" name="form-of-payment" id="form-of-payment-02">
+                                    <span class="form-of-payment__label">
+                                        <span>Наличными в магазине – 1,5%</span>
+                                        <span class="form-of-payment__info">
+                                            <span class="form-of-payment__icon"></span>
+                                            <span class="form-of-payment__text">Для перевода денег на рассчетный счет необходимо сообщить реквизиты при посещении магазина</span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <label for="form-of-payment-03" class="form-of-payment entries__form-of-payment">
+                                    <input type="radio" class="form-of-payment__input" name="form-of-payment" id="form-of-payment-03" disabled>
+                                    <span class="form-of-payment__label">
+                                        <span>Перевести на личный счет + 1,5%</span>
+                                        <span class="form-of-payment__info">
+                                            <span class="form-of-payment__icon"></span>
+                                            <span class="form-of-payment__text">Для перевода денег на рассчетный счет необходимо сообщить реквизиты при посещении магазина</span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <h3 class="entries__title">ВЫБЕРИТЕ дату посещения</h3>
+                            <div class="entries__checkboxes">
+                                <label for="data-01" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-01">
+                                    <span class="data-checkbox__label">1 апреля</span>
+                                </label>
+                                <label for="data-02" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-02">
+                                    <span class="data-checkbox__label">2 апреля</span>
+                                </label>
+                                <label for="data-03" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-03" disabled>
+                                    <span class="data-checkbox__label">3 апреля</span>
+                                </label>
+                                <label for="data-04" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-04">
+                                    <span class="data-checkbox__label">4 апреля</span>
+                                </label>
+                                <label for="data-05" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-05">
+                                    <span class="data-checkbox__label">5 апреля</span>
+                                </label>
+                                <label for="data-06" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-06">
+                                    <span class="data-checkbox__label">6 апреля</span>
+                                </label>
+                                <label for="data-07" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-07">
+                                    <span class="data-checkbox__label">7 апреля</span>
+                                </label>
+                                <label for="data-08" class="data-checkbox entries__checkbox">
+                                    <input type="radio" class="data-checkbox__input" name="data-payout" id="data-08">
+                                    <span class="data-checkbox__label">8 апреля</span>
+                                </label>
+                            </div>
+                            <table class="entry-payout__table">
+                                <tr class="entry-payout__group">
+                                    <td class="entry-payout__heading"></td>
+                                    <td class="entry-payout__heading">ID</td>
+                                    <td class="entry-payout__heading entry-payout__heading--left">НАИМЕНОВАНИЕ</td>
+                                    <td class="entry-payout__heading">КОЛ-ВО УЦЕНКИ</td>
+                                    <td class="entry-payout__heading">ЦЕНА</td>
+                                    <td class="entry-payout__heading entry-payout__heading--right">МАГАЗИН</td>
+                                </tr>
+                                <tr class="entry-payout__group">
+                                    <td class="entry-payout__elem">
+                                        <label for="entry-payout-checkbox-01" class="square-checkbox entry-payout__checkbox">
+                                            <input type="checkbox" class="square-checkbox__input" id="entry-payout-checkbox-01">
+                                            <span class="square-checkbox__icon"></span>
+                                        </label>
+                                    </td>
+                                    <td class="entry-payout__elem">6000013</td>
+                                    <td class="entry-payout__elem entry-payout__elem--bold entry-payout__elem--left">Джинсы Armani</td>
+                                    <td class="entry-payout__elem">2</td>
+                                    <td class="entry-payout__elem">6000</td>
+                                    <td class="entry-payout__elem entry-payout__elem--right">САДОВАЯ</td>
+                                </tr>
+                                <tr class="entry-payout__group">
+                                    <td class="entry-payout__elem">
+                                        <label for="entry-payout-checkbox-02" class="square-checkbox entry-payout__checkbox">
+                                            <input type="checkbox" class="square-checkbox__input" id="entry-payout-checkbox-02">
+                                            <span class="square-checkbox__icon"></span>
+                                        </label>
+                                    </td>
+                                    <td class="entry-payout__elem">6000013</td>
+                                    <td class="entry-payout__elem entry-payout__elem--bold entry-payout__elem--left">Джинсы Armani</td>
+                                    <td class="entry-payout__elem">2</td>
+                                    <td class="entry-payout__elem">6000</td>
+                                    <td class="entry-payout__elem entry-payout__elem--right">САДОВАЯ</td>
+                                </tr>
+                            </table>
+                            <div class="entry-payout__summary">
+                                <span class="entry-payout__help">Итого к выплате</span>
+                                <span class="entry-payout__sum">22.000</span>
+                            </div>
+                            <a href="#" class="entries__btn entries__btn--center btn">ЗАПИСАТЬСЯ НА ВЫПЛАТУ</a>
+                        </div>
+                    </div>
                     <div class="cabinet__content"></div>
                     <div class="cabinet__content"></div>
-                    <div class="cabinet__content"></div>
-                    <div class="cabinet__content cabinet__content--active"> <!-- Мой профиль -->
+                    <div class="cabinet__content"> <!-- Мой профиль -->
                         <div class="cabinet__inner">
-                            <h2 class="cabinet__title">МОЙ ПРОФИЛЬ</h2>
+                            <h2 class="cabinet__title cabinet__title--bold">МОЙ ПРОФИЛЬ</h2>
                         </div>
                         <div class="profile">
                             <div class="profile__group">
@@ -1479,7 +1608,7 @@
                     </div>
                     <div class="cabinet__content"> <!-- Избранное -->
                         <div class="cabinet__inner cabinet__inner--mobile-bd">
-                            <h2 class="cabinet__title">Избранное</h2>
+                            <h2 class="cabinet__title cabinet__title--bold">Избранное</h2>
                             <div class="cabinet__group">
                                 <button class="share">поделиться избранным</button>
                                 <div class="sort">
@@ -2009,7 +2138,7 @@
                     </div>
                     <div class="cabinet__content"> <!-- Резерв товаров -->
                         <div class="cabinet__inner cabinet__inner--sm">
-                            <h2 class="cabinet__title cabinet__title--normal">Резерв товаров</h2>
+                            <h2 class="cabinet__title">Резерв товаров</h2>
                         </div>
                         <!-- If empty reserve -->
                         <!--<div class="cabinet__block">
@@ -2028,14 +2157,14 @@
                                     <div class="reserve__top">
                                         <h3 class="reserve__title">Gucci Chanel</h3>
                                         <p class="reserve__description">
-                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Кожанные кросовки Phyton<br>
                                             Размер: <span>44</span><br>
                                             Цвет: <span>коричневый</span>
                                         </p>
                                     </div>
                                     <div class="reserve__price">
-                                        <span class="reserve__price--new">23 000₽</span>
-                                        <span class="reserve__price--old">33 000₽</span>
+                                        <span class="reserve__price--new">23 000</span>
+                                        <span class="reserve__price--old">33 000</span>
                                     </div>
                                     <div class="reserve__inner">
                                         <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
@@ -2081,14 +2210,14 @@
                                     <div class="reserve__top">
                                         <h3 class="reserve__title">Gucci Chanel</h3>
                                         <p class="reserve__description">
-                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Кожанные кросовки Phyton<br>
                                             Размер: <span>44</span><br>
                                             Цвет: <span>коричневый</span>
                                         </p>
                                     </div>
                                     <div class="reserve__price">
-                                        <span class="reserve__price--new">23 000₽</span>
-                                        <span class="reserve__price--old">33 000₽</span>
+                                        <span class="reserve__price--new">23 000</span>
+                                        <span class="reserve__price--old">33 000</span>
                                     </div>
                                     <div class="reserve__inner">
                                         <button class="reserve__btn btn btn--sm btn--border">КУПИТЬ</button>
@@ -2133,14 +2262,14 @@
                                     <div class="reserve__top">
                                         <h3 class="reserve__title">Gucci Chanel</h3>
                                         <p class="reserve__description">
-                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Кожанные кросовки Phyton<br>
                                             Размер: <span>44</span><br>
                                             Цвет: <span>коричневый</span>
                                         </p>
                                     </div>
                                     <div class="reserve__price">
-                                        <span class="reserve__price--new">23 000₽</span>
-                                        <span class="reserve__price--old">33 000₽</span>
+                                        <span class="reserve__price--new">23 000</span>
+                                        <span class="reserve__price--old">33 000</span>
                                     </div>
                                     <div class="reserve__inner"></div>
                                 </div>
@@ -2163,14 +2292,14 @@
                                     <div class="reserve__top">
                                         <h3 class="reserve__title">Gucci Chanel</h3>
                                         <p class="reserve__description">
-                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Кожанные кросовки Phyton<br>
                                             Размер: <span>44</span><br>
                                             Цвет: <span>коричневый</span>
                                         </p>
                                     </div>
                                     <div class="reserve__price">
-                                        <span class="reserve__price--new">23 000₽</span>
-                                        <span class="reserve__price--old">33 000₽</span>
+                                        <span class="reserve__price--new">23 000</span>
+                                        <span class="reserve__price--old">33 000</span>
                                     </div>
                                     <div class="reserve__inner"></div>
                                 </div>
@@ -2189,14 +2318,14 @@
                                     <div class="reserve__top">
                                         <h3 class="reserve__title">Gucci Chanel</h3>
                                         <p class="reserve__description">
-                                            Кожанные кросовки Phyton на шнуровке<br>
+                                            Кожанные кросовки Phyton<br>
                                             Размер: <span>44</span><br>
                                             Цвет: <span>коричневый</span>
                                         </p>
                                     </div>
                                     <div class="reserve__price">
-                                        <span class="reserve__price--new">23 000₽</span>
-                                        <span class="reserve__price--old">33 000₽</span>
+                                        <span class="reserve__price--new">23 000</span>
+                                        <span class="reserve__price--old">33 000</span>
                                     </div>
                                     <div class="reserve__inner"></div>
                                 </div>
@@ -2212,10 +2341,201 @@
                         </div>
                     </div>
                     <div class="cabinet__content"></div>
+                    <div class="cabinet__content"> <!-- Подписки -->
+                        <div class="cabinet__inner cabinet__inner--sm">
+                            <h2 class="cabinet__title">ПОДПИСКИ</h2>
+                        </div>
+                        <div class="subscriptions">
+                            <label for="new-items-and-promotions" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="new-items-and-promotions">
+                                <span class="square-checkbox__label">Новинки и акции</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <h4 class="subscriptions__subtitle">Подписаться на рассылку:</h4>
+                            <label for="subscriptions-email" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-email">
+                                <span class="square-checkbox__label">E-mail</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <label for="subscriptions-telegram" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-telegram">
+                                <span class="square-checkbox__label">Telegram</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <label for="subscriptions-whatsapp" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-whatsapp">
+                                <span class="square-checkbox__label">WhatsApp</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <h3 class="subscriptions__title">ПАРАМЕТРЫ РАССЫЛКИ</h3>
+                            <h4 class="subscriptions__subtitle">Выберите пол</h4>
+                            <label for="subscriptions-male" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-male">
+                                <span class="square-checkbox__label">Мужское</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <label for="subscriptions-feminine" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-feminine">
+                                <span class="square-checkbox__label">Женское</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <label for="subscriptions-baby" class="subscriptions__inner square-checkbox">
+                                <input type="checkbox" class="square-checkbox__input" id="subscriptions-baby">
+                                <span class="square-checkbox__label">Детское</span>
+                                <span class="square-checkbox__icon"></span>
+                            </label>
+                            <h4 class="subscriptions__subtitle">Размер обуви</h4>
+                            <div class="subscriptions__checkboxes">
+                                <label for="size-shoe-35" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-35">
+                                    <span class="size-checkbox__label">35</span>
+                                </label>
+                                <label for="size-shoe-36" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-36">
+                                    <span class="size-checkbox__label">36</span>
+                                </label>
+                                <label for="size-shoe-37" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-37">
+                                    <span class="size-checkbox__label">37</span>
+                                </label>
+                                <label for="size-shoe-38" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-38">
+                                    <span class="size-checkbox__label">38</span>
+                                </label>
+                                <label for="size-shoe-39" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-39">
+                                    <span class="size-checkbox__label">39</span>
+                                </label>
+                                <label for="size-shoe-40" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-40">
+                                    <span class="size-checkbox__label">40</span>
+                                </label>
+                                <label for="size-shoe-41" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-41">
+                                    <span class="size-checkbox__label">41</span>
+                                </label>
+                                <label for="size-shoe-42" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-42">
+                                    <span class="size-checkbox__label">42</span>
+                                </label>
+                                <label for="size-shoe-43" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-shoe-43">
+                                    <span class="size-checkbox__label">43</span>
+                                </label>
+                            </div>
+                            <h4 class="subscriptions__subtitle">Размер одежды</h4>
+                            <div class="subscriptions__checkboxes">
+                                <label for="size-35" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-35">
+                                    <span class="size-checkbox__label">35</span>
+                                </label>
+                                <label for="size-36" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-36">
+                                    <span class="size-checkbox__label">36</span>
+                                </label>
+                                <label for="size-37" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-37">
+                                    <span class="size-checkbox__label">37</span>
+                                </label>
+                                <label for="size-38" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-38">
+                                    <span class="size-checkbox__label">38</span>
+                                </label>
+                                <label for="size-39" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-39">
+                                    <span class="size-checkbox__label">39</span>
+                                </label>
+                                <label for="size-40" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-40">
+                                    <span class="size-checkbox__label">40</span>
+                                </label>
+                                <label for="size-41" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-41">
+                                    <span class="size-checkbox__label">41</span>
+                                </label>
+                                <label for="size-42" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-42">
+                                    <span class="size-checkbox__label">42</span>
+                                </label>
+                                <label for="size-43" class="size-checkbox subscriptions__checkbox">
+                                    <input type="checkbox" class="size-checkbox__input" id="size-43">
+                                    <span class="size-checkbox__label">43</span>
+                                </label>
+                            </div>
+                            <select class="select subscriptions__select" id="select-brand">
+                                <option value="0" selected>Любимые бренды</option>
+                                <option value="1">Gucci</option>
+                                <option value="2">Prada</option>
+                            </select>
+                            <div class="subscriptions__inner">
+                                <span class="subscriptions__text">Gucci</span>
+                                <button class="subscriptions__delete" aria-label="Удалить" title="Удалить"></button>
+                            </div>
+                            <div class="subscriptions__inner">
+                                <span class="subscriptions__text">Gucci</span>
+                                <button class="subscriptions__delete" aria-label="Удалить" title="Удалить"></button>
+                            </div>
+                            <div class="subscriptions__inner">
+                                <span class="subscriptions__text">Gucci</span>
+                                <button class="subscriptions__delete" aria-label="Удалить" title="Удалить"></button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="cabinet__content"></div>
                     <div class="cabinet__content"></div>
-                    <div class="cabinet__content"></div>
-                    <div class="cabinet__content"></div>
+                    <div class="cabinet__content"> <!-- Предложения -->
+                        <div class="cabinet__inner cabinet__inner--mobile-bd">
+                            <h2 class="cabinet__title">ПРЕДЛОЖЕНИЯ</h2>
+                            <div class="cabinet__group">
+                                <button class="btn-delete">удалить все</button>
+                            </div>
+                        </div>
+                        <!-- If empty offers -->
+                        <!--<div class="cabinet__block">
+                            <p class="cabinet__text">На данный момент предложения отсуствуют</p>
+                            <a href="#" class="cabinet__link">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </div>-->
+                        <div class="personal-offers">
+                            <div class="personal-offers__list personal-offers__list--all">
+                                <div class="personal-offers__item">
+                                    <button class="personal-offers__delete" aria-label="Удалить"></button>
+                                    <h3 class="personal-offers__title">Неделя скидок на Gucci. Скидки до 50% !</h3>
+                                    <p class="personal-offers__description">Вас согласована персональная скидка на весь ассортимент бренда Gucci в наших бутиках</p>
+                                    <div class="personal-offers__inner">
+                                        <a href="#" class="personal-offers__status personal-offers__status--more">Подробнее</a>
+                                        <span class="personal-offers__date">21 июня 2021</span>
+                                    </div>
+                                </div>
+                                <div class="personal-offers__item personal-offers__item--viewed">
+                                    <button class="personal-offers__delete" aria-label="Удалить"></button>
+                                    <h3 class="personal-offers__title">Уважаемая, Валентина Петрова</h3>
+                                    <p class="personal-offers__description">Для Вас согласована персональная скидка на весь ассортимент бренда Gucci в наших бутиках . <br>Ждём Вас с 21.06.2021 по 28.06...</p>
+                                    <div class="personal-offers__inner">
+                                        <a href="#" class="personal-offers__status">Просмотрено</a>
+                                        <span class="personal-offers__date">20 июня 2021</span>
+                                    </div>
+                                </div>
+                                <div class="personal-offers__item personal-offers__item--viewed">
+                                    <button class="personal-offers__delete" aria-label="Удалить"></button>
+                                    <h3 class="personal-offers__title">Только 5 дней</h3>
+                                    <p class="personal-offers__description">Только 5 дней, успей выставить вещи по сниженной комиссионной ставке!</p>
+                                    <div class="personal-offers__inner">
+                                        <a href="#" class="personal-offers__status">Подробнее</a>
+                                        <span class="personal-offers__date">6 июня 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personal-offers__list">
+                                <div class="personal-offers__offer">
+                                    <h3 class="personal-offers__title">Неделя скидок на Gucci. Скидки до 50% !</h3>
+                                    <p class="personal-offers__description">Для Вас согласована персональная скидка на весь ассортимент бренда Gucci в наших бутиках. Ждём Вас с 21.06.2021 по 28.06... Для Вас согласована персональная скидка на весь ассортимент бренда Gucci в наших бутиках . Ждём Вас с 21.06.2021 по 28.06...</p>
+                                    <div class="personal-offers__inner">
+                                        <a href="#" class="personal-offers__status personal-offers__status--back">< НАЗАД</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="cabinet__content"></div>
                 </div>
             </div>

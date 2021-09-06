@@ -568,6 +568,33 @@ document.addEventListener('DOMContentLoaded', function () {
             item.parentNode.parentNode.classList.toggle('filter__item--active')
         });
     })
+
+    // PERSONAL OFFERS
+    const offersList = document.querySelector('.personal-offers__list--all')
+    const offersBtn = document.querySelectorAll('.personal-offers__status--more')
+    const offersBackBtn = document.querySelectorAll('.personal-offers__status--back')
+
+    if (offersBtn) {
+        offersBtn.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                event.preventDefault()
+
+                offersList.classList.add('personal-offers__list--hidden')
+                document.querySelectorAll('.personal-offers__offer')[i].classList.add('personal-offers__offer--active')
+            })
+        })
+    }
+
+    if (offersBackBtn) {
+        offersBackBtn.forEach((item) => {
+            item.addEventListener('click', () => {
+                event.preventDefault()
+
+                offersList.classList.remove('personal-offers__list--hidden')
+                document.querySelectorAll('.personal-offers__offer').forEach((child) => child.classList.remove('personal-offers__offer--active'))
+            })
+        })
+    }
     
     // TABS
     const tabsItems = document.querySelectorAll('.tabs__item')

@@ -909,10 +909,10 @@
             margin-bottom: 30px
     &__title
         font-size: 18px
-        font-weight: 500
+        font-weight: normal
         text-transform: uppercase
-        &--normal
-            font-weight: normal
+        &--bold
+            font-weight: 500
         &--mobile
             display: none
         &--active
@@ -1831,5 +1831,233 @@
             background-repeat: no-repeat
             background-size: cover
             background-position: center center
+
+// SUBSCRIPTIONS
+.subscriptions
+    &__title
+        margin-top: 26px
+        margin-bottom: 18px
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        letter-spacing: 1px
+        color: $dull-gray-color
+    &__subtitle
+        margin-top: 16px
+        margin-bottom: 12px
+        font-size: 14px
+        font-weight: normal
+        color: $copyright-color
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 5px 0
+        max-width: 255px
+    &__inner + &__inner
+        margin-top: 6px
+    &__checkboxes
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+    &__checkbox
+        margin-bottom: 5px
+        margin-right: 5px
+    &__select
+        margin-top: 42px
+        margin-bottom: 24px
+        max-width: 255px
+        width: 100%
+    &__text
+        display: block
+        font-size: 12px
+        font-weight: normal
+    &__delete
+        display: block
+        padding: 0
+        width: 15px
+        height: 15px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-trash)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        border: 0
+
+// PERSONAL OFFERS
+.personal-offers
+    &__list
+        &--hidden
+            display: none
+    &__item
+        position: relative
+        padding: 20px 14px
+        width: 100%
+        border: 1px solid $dark-gray-color
+        &--viewed
+            background: $light-grey-color
+            border: 1px solid transparent
+            .personal-offers
+                &__title,
+                &__description,
+                &__date
+                    color: $dark-gray-color
+    &__item + &__item
+        margin-top: 15px
+    &__delete
+        position: absolute
+        top: 10px
+        right: 10px
+        display: block
+        padding: 0
+        width: 32px
+        height: 32px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-close)
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center center
+        border: 0
+    &__title
+        max-width: 90%
+        font-size: 16px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 1px
+    &__description
+        margin-top: 12px
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 1px
+        color: $boulder-color
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 12px
+    &__status
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 1px
+        border-bottom: 1px solid transparent
+        &--more,
+        &--back
+            border-bottom: 1px solid $primary-color
+    &__date
+        display: block
+        font-size: 14px
+        font-weight: normal
+        letter-spacing: 1px
+    &__offer
+        display: none
+        &--active
+            display: block
+
+// ENTRIES
+.entries
+    &__title
+        margin-bottom: 20px
+        font-size: 14px
+        font-weight: 600
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #717171
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 20px
+    &__form-of-payment
+        width: 100%
+    &__form-of-payment + &__form-of-payment
+        margin-left: 10px
+    &__checkboxes
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+    &__checkbox
+        margin-right: 10px
+        margin-bottom: 10px
+    &__btn
+        display: block
+        padding: 10px 20px
+        margin-top: 30px
+        width: fit-content
+        &--center
+            margin-right: auto
+            margin-left: auto
+        &--right
+            margin-left: auto
+
+.entry-payout
+    &__info
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        padding: 20px 15px
+        margin-bottom: 30px
+        background: $light-grey-color
+    &__block
+        &--shop
+            display: flex
+            align-items: flex-end
+            .entry-payout__help + .entry-payout__sum
+                margin-top: 0
+                margin-left: 16px
+    &__help
+        display: block
+        margin-bottom: 3px
+        font-size: 14px
+        font-weight: normal
+    &__sum
+        display: block
+        margin-top: 6px
+        font-size: 24px
+        font-weight: bold
+        &--big
+            font-size: 32px
+    &__summary
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+        margin-top: 30px
+        .entry-payout__help + .entry-payout__sum
+            margin-top: 0
+            margin-left: 16px
+    &__table
+        margin-top: 20px
+        width: 100%
+    &__heading
+        padding: 16px 10px
+        font-size: 12px
+        font-weight: normal
+        text-align: center
+        text-transform: uppercase
+        white-space: nowrap
+        color: $boulder-color
+        &--left
+            text-align: left
+        &--right
+            text-align: right
+    &__elem
+        padding: 16px 10px
+        font-size: 14px
+        font-weight: 600
+        text-align: center
+        white-space: nowrap
+        color: $black-color
+        &:first-child
+            max-width: 20px
+        &--bold
+            font-weight: bold
+        &--left
+            text-align: left
+        &--right
+            text-align: right
+    &__checkbox
+        justify-content: center
+        .square-checkbox__icon
+            margin-right: 0
 
 @import "media" // Always at the end
